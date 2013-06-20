@@ -1,0 +1,19 @@
+/* from http://jeyg.info/un-serveur-xmpp-personnel-sous-debian-en-5-minutes/ */
+
+# apt-get install prosody
+
+/* move conf files to /etc/prosody */
+
+# cd /etc/prosody/
+# ln -s ../conf.avail/matthie.io.cfg.lua conf.d/matthieu.io.cfg.lua
+
+# prosodyctl adduser user@example.org
+
+# iptables -A INPUT -p tcp --dport 5222 -j ACCEPT
+# iptables -A INPUT -p tcp --dport 5269 -j ACCEPT
+# iptables -A OUTPUT -p tcp --dport 5269 -j ACCEPT
+
+# cd /etc/prosody/certs/
+# openssl req -new -x509 -days 365 -nodes -out "matthieu.io.cert" -keyout "matthieu.io.key"
+
+# service prosody restart
