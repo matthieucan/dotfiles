@@ -24,6 +24,9 @@
 
 (set-face-font 'default '"-*-monospace-medium-r-normal-*-13-120-*-iso8859-15")
 
+;;disable tool bar
+(tool-bar-mode -1)
+
 ;;parenthèses correspondantes :
 (setq show-paren-mode t)
 ; surlignage du "matching" de parenthèses
