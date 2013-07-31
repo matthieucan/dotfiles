@@ -110,5 +110,5 @@ if ! shopt -oq posix; then
 fi
 
 export PYTHONSTARTUP="$HOME/.pyrc"
-export LESS=FRS
+export LESS=RS
 
