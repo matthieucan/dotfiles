@@ -1,4 +1,3 @@
-<VirtualHost *:80>
 	ServerAdmin webmaster@localhost
 
 	DocumentRoot /var/www/website
@@ -20,4 +19,3 @@
 	LogLevel warn
 
 	CustomLog ${APACHE_LOG_DIR}/access.log combined
-</VirtualHost>
