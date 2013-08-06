@@ -1,10 +1,10 @@
 <VirtualHost *:80>
-    Include /etc/apache2/website.common
+    Include sites-enabled/website.common
 </VirtualHost>
 
 
 <VirtualHost *:443>
-    Include /etc/apache2/website.common
+    Include sites-enabled/website.common
     
     SSLEngine on
     SSLCertificateFile /etc/apache2/certs/ssl.crt
