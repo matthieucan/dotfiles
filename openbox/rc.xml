@@ -363,6 +363,9 @@
 		<command>xscreensaver-command -lock</command>
 	</action>
     </keybind>
+    <keybind key="W-M">
+      <action name="ToggleMaximize" />
+    </keybind>
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>
