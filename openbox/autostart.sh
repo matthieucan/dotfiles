@@ -11,3 +11,5 @@ gnome-sound-applet &
 gnome-settings-daemon &
 #nitrogen --restore
 #(sleep 3 && nitrogen --restore) &
+pidgin &
+
