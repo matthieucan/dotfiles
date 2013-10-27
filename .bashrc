@@ -112,6 +112,11 @@ fi
 export PYTHONSTARTUP="$HOME/.pyrc"
 export LESS=RS
 
-function debsrc {
-which $1 | xargs dpkg -S | awk -F ":" '{print $1}' | xargs apt-cache show | grep "^Package:\|Source:" | tail -n 1 | awk -F " " '{print "http://sources.debian.net/src/"$2"/latest/"}' | xargs w3m
-}
+#function debsrc {
+#which $1 | xargs dpkg -S | awk -F ":" '{print $1}' | xargs apt-cache show | grep "^Package:\|Source:" | tail -n 1 | awk -F " " '{print "http://sources.debian.net/src/"$2"/latest/"}' | xargs w3m
+#}
+
+_JAVA_AWT_WM_NONREPARENTING=1; export _JAVA_AWT_WM_NONREPARENTING
+
+alias e='emacs'
+alias enw='emacs -nw'
