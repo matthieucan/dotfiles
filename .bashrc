@@ -120,3 +120,4 @@ _JAVA_AWT_WM_NONREPARENTING=1; export _JAVA_AWT_WM_NONREPARENTING
 
 alias e='emacs'
 alias enw='emacs -nw'
+alias psgrep='ps aux | grep'
