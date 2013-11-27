@@ -3,7 +3,7 @@ xscreensaver -no-splash &
 thunar --daemon &
 #thunar-volman &
 volti &
-conky &
+#conky &
 osdsh &
 (sleep 1 && osdctl -m 1) &
 #gnome-volume-manager &
