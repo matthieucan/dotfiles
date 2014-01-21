@@ -122,5 +122,5 @@ alias e='emacs'
 alias enw='emacs -nw'
 alias psgrep='ps aux | grep'
 alias evince='evince --fullscreen'
-alias rgrepds='rgrep --exclude-dir=.git --exclude-dir=cache --exclude-dir=testdata'
+alias rgrepds='rgrep --exclude-dir=.git --exclude-dir=cache --exclude-dir=testdata --exclude=*.pyc'
 
