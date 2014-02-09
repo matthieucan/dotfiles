@@ -119,6 +119,6 @@ export LESS=R
 _JAVA_AWT_WM_NONREPARENTING=1; export _JAVA_AWT_WM_NONREPARENTING
 
 alias e='emacs'
-alias enw='emacs -nw'
+alias enw='emacs -nw --no-init-file'
 alias psgrep='ps aux | grep'
 alias rgrepds='rgrep --exclude-dir=.git --exclude-dir=cache --exclude-dir=testdata --exclude=*.pyc'
