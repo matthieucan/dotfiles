@@ -32,3 +32,7 @@ ln ${dir}/openbox ~/.config/openbox --symbolic
 # zsh
 mv ~/.zshrc ~/.zshrc.bak
 ln ${dir}/.zshrc ~/.zshrc --symbolic
+
+# python
+mv ~/.pyrc ~/.pyrc.bak
+ln ${dir}/.pyrc ~/.pyrc --symbolic
