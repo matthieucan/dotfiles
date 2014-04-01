@@ -36,3 +36,9 @@ ln ${dir}/.zshrc ~/.zshrc --symbolic
 # python
 mv ~/.pyrc ~/.pyrc.bak
 ln ${dir}/.pyrc ~/.pyrc --symbolic
+
+# git
+# needed to handle different user.email's
+# yeah, let's say it's temporary
+cp ~/.gitconfig ~/.gitconfig.bak
+cat .gitconfig >> ~/.gitconfig
