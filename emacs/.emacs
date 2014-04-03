@@ -74,3 +74,13 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 	(setq auto-mode-alist 
 		(cons '("\\.md" . markdown-mode) auto-mode-alist)
 	)
+
+; won't automagickally add newline at the end of saved files
+;(setq-default require-final-newline nil)
+
+;; don't let next-line add new lines at end of file
+(setq next-line-add-newlines nil)
+
+;; make edited files end with a carriage return
+(setq require-final-newline nil)
+(setq mode-require-final-newline nil)
