@@ -40,5 +40,5 @@ ln ${dir}/.pyrc ~/.pyrc --symbolic
 # git
 # needed to handle different user.email's
 # yeah, let's say it's temporary
-cp ~/.gitconfig ~/.gitconfig.bak
-cat .gitconfig >> ~/.gitconfig
+#cp ~/.gitconfig ~/.gitconfig.bak
+#cat .gitconfig >> ~/.gitconfig
