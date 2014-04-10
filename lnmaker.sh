@@ -42,3 +42,7 @@ ln ${dir}/.pyrc ~/.pyrc --symbolic
 # yeah, let's say it's temporary
 #cp ~/.gitconfig ~/.gitconfig.bak
 #cat .gitconfig >> ~/.gitconfig
+
+# lynx
+mv ~/.lynx.lss ~/.lynx.lss.bak
+ln ${dir}/.lynx.lss ~/.lynx.lss --symbolic

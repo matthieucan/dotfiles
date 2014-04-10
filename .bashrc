@@ -108,6 +108,7 @@ alias enw='emacs -nw --no-init-file'
 export GREP_OPTIONS="-n --color"
 alias psgrep='ps aux | grep'
 alias rgrepds='rgrep --exclude-dir=.git --exclude-dir=cache --exclude-dir=testdata --exclude=*.pyc'
+alias lynx='lynx -lss ~/.lynx.lss'
 
 
 function color_my_prompt {
