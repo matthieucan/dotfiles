@@ -1,3 +1,5 @@
+; packages: python-rope, python-ropemacs, pymacs
+
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
@@ -84,3 +86,15 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 ;; make edited files end with a carriage return
 (setq require-final-newline nil)
 (setq mode-require-final-newline nil)
+
+(require 'python-mode)
+
+(add-hook 'python-mode-hook
+          (lambda ()
+            (pymacs-load "ropemacs" "rope-")))
+
+(add-hook 'python-mode-hook 'flymake-mode)
+(add-hook 'python-mode-hook 'flymake-python-pyflakes-load)
+(setq flymake-python-pyflakes-executable "flake8")
+;(require 'flymake-cursor)
+
