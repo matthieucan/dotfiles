@@ -46,3 +46,7 @@ ln ${dir}/.pyrc ~/.pyrc --symbolic
 # lynx
 mv ~/.lynx.lss ~/.lynx.lss.bak
 ln ${dir}/.lynx.lss ~/.lynx.lss --symbolic
+
+# tint2
+mv ~/.config/tint2 ~/.config/tint2.bak
+ln ${dir}/.config/tint2 ~/.config/tint2 --symbolic
