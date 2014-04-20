@@ -112,7 +112,7 @@ alias lynx='lynx -lss ~/.lynx.lss'
 
 
 function color_my_prompt {
-    local __user_and_host="\[\033[01;32m\]\u\[\033[00m\]@\[\033[01;37m\]\h"
+    local __user_and_host="\[\033[01;32m\]\u\[\033[00m\]@\[\033[01;37m\]\H"
     local __cur_location="\[\033[01;34m\]\w"
     local __git_branch_color="\[\033[31m\]"
     #local __git_branch="\`ruby -e \"print (%x{git branch 2> /dev/null}.grep(/^\*/).first || '').gsub(/^\* (.+)$/, '(\1) ')\"\`"
