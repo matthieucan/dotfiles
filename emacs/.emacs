@@ -98,3 +98,10 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (setq flymake-python-pyflakes-executable "flake8")
 ;(require 'flymake-cursor)
 
+(setq-default indent-tabs-mode nil)
+
+; disable scroll bar
+(scroll-bar-mode -1)
+
+; disable menu bar
+(menu-bar-mode -1)
