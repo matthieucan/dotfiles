@@ -105,3 +105,6 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 
 ; disable menu bar
 (menu-bar-mode -1)
+
+; consider _ as a punctuation character even in Python mode
+(modify-syntax-entry ?_ "_" py-mode-syntax-table)
