@@ -110,7 +110,7 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (modify-syntax-entry ?_ "_" py-mode-syntax-table)
 
 ; web mode for Django templates & family
-(require 'web-mode)
+(load-file "~/.emacs.d/web-mode.el")
 (add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.[gj]sp\\'" . web-mode))
