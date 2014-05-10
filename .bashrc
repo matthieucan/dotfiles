@@ -110,6 +110,7 @@ alias psgrep='ps aux | grep'
 alias rgrepds='rgrep --exclude-dir=.git --exclude-dir=cache --exclude-dir=testdata --exclude=*.pyc'
 alias lynx='lynx -lss ~/.lynx.lss'
 alias diff='colordiff'
+alias docker='docker.io'
 
 
 function color_my_prompt {
