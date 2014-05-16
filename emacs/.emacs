@@ -119,3 +119,10 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+
+(load-file "~/.emacs.d/dockerfile-mode.el")
+(autoload 'dockerfile-mode "dockerfile-mode.el" 
+  "Major mode for editing Dockerfiles" t) 
+(setq auto-mode-alist 
+      (cons '("Dockerfile\\'" . dockerfile-mode) auto-mode-alist)
+      )
