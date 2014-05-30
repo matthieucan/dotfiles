@@ -126,3 +126,7 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (setq auto-mode-alist 
       (cons '("Dockerfile\\'" . dockerfile-mode) auto-mode-alist)
       )
+
+; scrollers
+(global-set-key "\M-n"  (lambda () (interactive) (scroll-up   1)) )
+(global-set-key "\M-p"  (lambda () (interactive) (scroll-down 1)) )
