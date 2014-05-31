@@ -49,8 +49,8 @@ ln ${dir}/.lynx.lss ~/.lynx.lss --symbolic
 
 # tint2
 mv ~/.config/tint2 ~/.config/tint2.bak
-ln ${dir}/.config/tint2 ~/.config/tint2 --symbolic
+ln ${dir}/tint2 ~/.config/tint2 --symbolic
 
 # terminator
 mv ~/.config/terminator ~/.config/terminator.bak
-ln ${dir}/.config/terminator ~/.config/terminator --symbolic
+ln ${dir}/terminator ~/.config/terminator --symbolic
