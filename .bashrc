@@ -100,6 +100,10 @@ export LESS=R
 #which $1 | xargs dpkg -S | awk -F ":" '{print $1}' | xargs apt-cache show | grep "^Package:\|Source:" | tail -n 1 | awk -F " " '{print "http://sources.debian.net/src/"$2"/latest/"}' | xargs w3m
 #}
 
+function json {
+cat $1 | json_pp
+}
+
 _JAVA_AWT_WM_NONREPARENTING=1; export _JAVA_AWT_WM_NONREPARENTING
 
 alias e='emacs'
