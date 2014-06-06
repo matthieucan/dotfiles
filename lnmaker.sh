@@ -54,3 +54,7 @@ ln ${dir}/tint2 ~/.config/tint2 --symbolic
 # terminator
 mv ~/.config/terminator ~/.config/terminator.bak
 ln ${dir}/terminator ~/.config/terminator --symbolic
+
+# quilt
+mv ~/.quiltrc ~/.quiltrc.bak
+ln ${dir}/.quiltrc ~/.quiltrc --symbolic
