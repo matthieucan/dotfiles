@@ -1,3 +1,5 @@
+export QUILT_PATCHES=debian/patches
+
 QUILT_PUSH_ARGS="--color=auto"
 QUILT_DIFF_ARGS="--no-timestamps --no-index -p ab --color=auto"
 QUILT_REFRESH_ARGS="--no-timestamps --no-index -p ab"
