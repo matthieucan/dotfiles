@@ -54,3 +54,7 @@ ln ${dir}/tint2 ~/.config/tint2 --symbolic
 # terminator
 mv ~/.config/terminator ~/.config/terminator.bak
 ln ${dir}/terminator ~/.config/terminator --symbolic
+
+# volti
+mv ~/.config/volti ~/.config/volti.bak
+ln ${dir}/volti ~/.config/volti --symbolic
