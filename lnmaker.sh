@@ -58,3 +58,7 @@ ln ${dir}/terminator ~/.config/terminator --symbolic
 # volti
 mv ~/.config/volti ~/.config/volti.bak
 ln ${dir}/volti ~/.config/volti --symbolic
+
+# .dir_colors
+mv ~/.dir_colors ~/.dir_colors.bak
+ln ${dir}/.dir_colors ~/.dir_colors --symbolic
