@@ -8,33 +8,33 @@ fi
 dir=$(readlink -f $1)
 
 # .bashrc
-mv ~/.bashrc ~/.bashrc.bak
+rm ~/.bashrc
 ln ${dir}/.bashrc ~/.bashrc --symbolic
 
 # awesome
-mv ~/.config/awesome ~/.config/awesome.bak
+rm ~/.config/awesome
 ln ${dir}/awesome ~/.config/awesome --symbolic
 
 # .conkyrc
-mv ~/.conkyrc ~/.conkyrc.bak
+rm ~/.conkyrc
 ln ${dir}/.conkyrc ~/.conkyrc --symbolic
 
 # emacs
-mv ~/.emacs ~/.emacs.bak
-mv ~/.emacs.d ~/.emacs.d.bak
+rm ~/.emacs
+rm ~/.emacs.d
 ln ${dir}/emacs/.emacs ~/.emacs --symbolic
 ln ${dir}/emacs/.emacs.d ~/.emacs.d --symbolic
 
 # openbox
-mv ~/.config/openbox ~/.config/openbox.bak
+rm ~/.config/openbox
 ln ${dir}/openbox ~/.config/openbox --symbolic
 
 # zsh
-mv ~/.zshrc ~/.zshrc.bak
+rm ~/.zshrc
 ln ${dir}/.zshrc ~/.zshrc --symbolic
 
 # python
-mv ~/.pyrc ~/.pyrc.bak
+rm ~/.pyrc
 ln ${dir}/.pyrc ~/.pyrc --symbolic
 
 # git
@@ -44,25 +44,25 @@ ln ${dir}/.pyrc ~/.pyrc --symbolic
 #cat .gitconfig >> ~/.gitconfig
 
 # lynx
-mv ~/.lynx.lss ~/.lynx.lss.bak
+rm ~/.lynx.lss
 ln ${dir}/.lynx.lss ~/.lynx.lss --symbolic
 
 # tint2
-mv ~/.config/tint2 ~/.config/tint2.bak
+rm ~/.config/tint2
 ln ${dir}/tint2 ~/.config/tint2 --symbolic
 
 # terminator
-mv ~/.config/terminator ~/.config/terminator.bak
+rm ~/.config/terminator
 ln ${dir}/terminator ~/.config/terminator --symbolic
 
 # volti
-mv ~/.config/volti ~/.config/volti.bak
+rm ~/.config/volti
 ln ${dir}/volti ~/.config/volti --symbolic
 
 # .dir_colors
-mv ~/.dir_colors ~/.dir_colors.bak
+rm ~/.dir_colors
 ln ${dir}/.dir_colors ~/.dir_colors --symbolic
 
 # quilt
-mv ~/.quiltrc ~/.quiltrc.bak
+rm ~/.quiltrc
 ln ${dir}/.quiltrc ~/.quiltrc --symbolic
