@@ -6,6 +6,7 @@
   [[default]]
     scrollbar_position = hidden
     scrollback_lines = 5000
+    font = Monospace 10
     background_image = None
     show_titlebar = False
 [layouts]
