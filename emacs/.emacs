@@ -132,3 +132,6 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 ;(global-set-key "\M-p"  (lambda () (interactive) (scroll-down 1)) )
 (global-set-key "\M-n" "\C-u1\C-v\C-n")
 (global-set-key "\M-p" "\C-u1\M-v\C-p")
+
+; makes emacs flash instead of beep
+(setq visible-bell 1)
