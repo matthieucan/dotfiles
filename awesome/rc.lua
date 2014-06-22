@@ -72,10 +72,10 @@ layouts =
 -- {{{ Tags
 -- Define a tag table which hold all screen tags.
 tags = {}
-for s = 1, screen.count() do
-    -- Each screen has its own tag table.
-    tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s, layouts[1])
-end
+-- for s = 1, screen.count() do
+--     -- Each screen has its own tag table.
+--     tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s, layouts[1])
+-- end
 -- }}}
 
 -- {{{ Menu
@@ -332,6 +332,7 @@ awful.rules.rules = {
                      border_color = beautiful.border_normal,
                      focus = true,
                      keys = clientkeys,
+		     size_hints_honor = true,
                      buttons = clientbuttons } },
     { rule = { class = "MPlayer" },
       properties = { floating = true } },
