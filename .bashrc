@@ -115,7 +115,7 @@ alias rgrepds='rgrep --exclude-dir=.git --exclude-dir=cache --exclude-dir=testda
 alias lynx='lynx -lss ~/.lynx.lss'
 alias diff='colordiff'
 alias docker='sudo docker.io'
-alias dockerclean='(sudo docker.io ps -a | tail -n +2 | awk "{print $1}" | xargs sudo docker.io rm) && (sudo docker.io images | tail -n +2 | awk "{print $3}" | xargs sudo docker.io rmi)'
+alias cleandocker='(sudo docker.io ps -a | tail -n +2 | awk "{print $1}" | xargs sudo docker.io rm) && (sudo docker.io images | tail -n +2 | awk "{print $3}" | xargs sudo docker.io rmi)'
 
 
 function color_my_prompt {
