@@ -37,7 +37,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
-beautiful.init("/usr/share/awesome/themes/default/theme.lua")
+beautiful.init("/home/matthieu/.config/awesome/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "x-terminal-emulator"
@@ -72,10 +72,10 @@ layouts =
 -- {{{ Tags
 -- Define a tag table which hold all screen tags.
 tags = {}
--- for s = 1, screen.count() do
---     -- Each screen has its own tag table.
---     tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s, layouts[1])
--- end
+for s = 1, screen.count() do
+    -- Each screen has its own tag table.
+    tags[s] = awful.tag({ 1, 2, 3, 4, 5, 6, 7, 8, 9 }, s, layouts[1])
+end
 -- }}}
 
 -- {{{ Menu
@@ -332,7 +332,6 @@ awful.rules.rules = {
                      border_color = beautiful.border_normal,
                      focus = true,
                      keys = clientkeys,
-		     size_hints_honor = true,
                      buttons = clientbuttons } },
     { rule = { class = "MPlayer" },
       properties = { floating = true } },
@@ -377,7 +376,6 @@ client.add_signal("focus", function(c) c.border_color = beautiful.border_focus e
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
-awesome.util.spawn_with_shell("gnome-settings-daemon")
-awesome.util.spawn_with_shell("nm-applet")
-awesome.util.spawn_with_shell("volti")
-awesome.util.spawn_with_shell("xscreensaver -no-splash")
+awful.util.spawn_with_shell("volti")
+awful.util.spawn_with_shell("wicd-client --tray")
+awful.util.spawn_with_shell("xscreensaver -no-splash")
