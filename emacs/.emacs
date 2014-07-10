@@ -135,3 +135,11 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 
 ; makes emacs flash instead of beep
 (setq visible-bell 1)
+
+; go
+(add-hook 'go-mode-hook 
+  (lambda ()
+    (setq-default) 
+    (setq tab-width 2) 
+    (setq standard-indent 2) 
+    (setq indent-tabs-mode nil)))
