@@ -26,7 +26,7 @@ ln ${dir}/emacs/.emacs ~/.emacs --symbolic
 ln ${dir}/emacs/.emacs.d ~/.emacs.d --symbolic
 
 # openbox
-rm ~/.config/openbox
+rm -r ~/.config/openbox
 ln ${dir}/openbox ~/.config/openbox --symbolic
 
 # zsh
@@ -48,15 +48,15 @@ rm ~/.lynx.lss
 ln ${dir}/.lynx.lss ~/.lynx.lss --symbolic
 
 # tint2
-rm ~/.config/tint2
+rm -r ~/.config/tint2
 ln ${dir}/tint2 ~/.config/tint2 --symbolic
 
 # terminator
-rm ~/.config/terminator
+rm -r ~/.config/terminator
 ln ${dir}/terminator ~/.config/terminator --symbolic
 
 # volti
-rm ~/.config/volti
+rm -r ~/.config/volti
 ln ${dir}/volti ~/.config/volti --symbolic
 
 # .dir_colors
