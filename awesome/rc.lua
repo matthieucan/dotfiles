@@ -376,8 +376,8 @@ client.add_signal("focus", function(c) c.border_color = beautiful.border_focus e
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
-awful.util.spawn_with_shell("volti")
-awful.util.spawn_with_shell("wicd-client --tray")
-awful.util.spawn_with_shell("xscreensaver -no-splash")
-awful.util.spawn_with_shell("pidgin")
+awful.util.spawn_with_shell("run_once volti")
+awful.util.spawn_with_shell("run_once wicd-client --tray")
+awful.util.spawn_with_shell("run_once xscreensaver -no-splash")
+awful.util.spawn_with_shell("run_once pidgin")
 awful.util.spawn_with_shell("synclient TapButton1=1")
