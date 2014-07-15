@@ -117,6 +117,8 @@ alias diff='colordiff'
 alias docker='sudo docker.io'
 alias cleandocker='(sudo docker.io ps -a | tail -n +2 | awk "{print $1}" | xargs sudo docker.io rm) && (sudo docker.io images | tail -n +2 | awk "{print $3}" | xargs sudo docker.io rmi)'
 
+# sudo docker.io ps -a | tail -n +2 | awk "{print $1}" | cut -c '1-12' | xargs sudo docker.io rm
+# docker images | tail -n +2 | awk '{print $3'} | xargs sudo docker.io rmi
 
 function color_my_prompt {
     local __user_and_host="\[\033[01;32m\]\u\[\033[00m\]@\[\033[01;37m\]\H"
