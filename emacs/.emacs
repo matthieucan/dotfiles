@@ -87,6 +87,9 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (setq require-final-newline nil)
 (setq mode-require-final-newline nil)
 
+; Python-mode
+(setq py-install-directory "~/.emacs.d/python-mode.el-6.1.3")
+(add-to-list 'load-path "~/.emacs.d/python-mode.el-6.1.3")
 (require 'python-mode)
 
 (add-hook 'python-mode-hook
@@ -107,7 +110,7 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (menu-bar-mode -1)
 
 ; consider _ as a punctuation character even in Python mode
-(modify-syntax-entry ?_ "_" py-mode-syntax-table)
+(modify-syntax-entry ?_ "_" python-mode-syntax-table)
 
 ; web mode for Django templates & family
 (load-file "~/.emacs.d/web-mode.el")
