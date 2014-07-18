@@ -107,7 +107,7 @@ cat $1 | json_pp
 _JAVA_AWT_WM_NONREPARENTING=1; export _JAVA_AWT_WM_NONREPARENTING
 
 alias e='emacs'
-alias enw='emacs -nw --no-init-file'
+alias enw='emacs -nw'
 #alias rgrep='grep -r --colour'
 export GREP_OPTIONS="-n --color"
 alias psgrep='ps aux | grep'
