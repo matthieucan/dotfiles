@@ -140,3 +140,10 @@ xterm*|rxvt*)
 *)
     ;;
 esac
+
+bind '"\e[5~": history-search-backward'
+bind '"\e[6~": history-search-forward'
+unset HISTSIZE
+export HISTSIZE
+unset HISTFILESIZE
+export HISTFILESIZE
