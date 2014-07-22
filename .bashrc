@@ -147,3 +147,5 @@ unset HISTSIZE
 export HISTSIZE
 unset HISTFILESIZE
 export HISTFILESIZE
+
+export EDITOR='emacs -nw'
