@@ -149,3 +149,6 @@ unset HISTFILESIZE
 export HISTFILESIZE
 
 export EDITOR='emacs -nw'
+
+# mutt background fix
+COLORFGBG="default;default"
