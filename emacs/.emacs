@@ -155,3 +155,6 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
     (setq tab-width 2) 
     (setq standard-indent 2) 
     (setq indent-tabs-mode nil)))
+
+; javascript
+(setq js-indent-level 2)
