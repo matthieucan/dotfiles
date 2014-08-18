@@ -116,6 +116,7 @@ alias lynx='lynx -lss ~/.lynx.lss'
 alias diff='colordiff'
 alias docker='sudo docker.io'
 alias cleandocker='(sudo docker.io ps -a | tail -n +2 | awk "{print $1}" | xargs sudo docker.io rm) && (sudo docker.io images | tail -n +2 | awk "{print $3}" | xargs sudo docker.io rmi)'
+alias gitk='gitk --all'
 
 # sudo docker.io ps -a | tail -n +2 | awk "{print $1}" | cut -c '1-12' | xargs sudo docker.io rm
 # docker images | tail -n +2 | awk '{print $3'} | xargs sudo docker.io rmi
