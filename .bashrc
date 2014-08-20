@@ -121,6 +121,11 @@ alias gitk='gitk --all'
 # sudo docker.io ps -a | tail -n +2 | awk "{print $1}" | cut -c '1-12' | xargs sudo docker.io rm
 # docker images | tail -n +2 | awk '{print $3'} | xargs sudo docker.io rmi
 
+function dockerenter {
+    PID=$(docker inspect --format '{{.State.Pid}}' $1)
+    nsenter --target $PID --mount --uts --ipc --net --pid
+}
+
 function color_my_prompt {
     local __user_and_host="\[\033[01;32m\]\u\[\033[00m\]@\[\033[01;37m\]\H"
     local __cur_location="\[\033[01;34m\]\w"
