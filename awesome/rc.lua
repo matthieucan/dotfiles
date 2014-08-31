@@ -134,8 +134,11 @@ vicious.register(cpuwidget, vicious.widgets.cpu, "cpu $1%", 10)
 --                  end, 10)
 
 -- Battery Status
-battwidget = widget({ type = "textbox" })
-vicious.register(battwidget, vicious.widgets.bat, 'pow $1$2%', 2, 'BAT1')
+battwidget0 = widget({ type = "textbox" })
+vicious.register(battwidget0, vicious.widgets.bat, 'pow $1$2% ', 2, 'BAT0')
+
+battwidget1 = widget({ type = "textbox" })
+vicious.register(battwidget1, vicious.widgets.bat, '$1$2%', 2, 'BAT1')
 
 --Create a weather widget
 
@@ -247,7 +250,8 @@ for s = 1, screen.count() do
         s == 1 and mysystray or nil,
         --mpdwidget,
         myseparator,
-        battwidget, 
+        battwidget1,
+        battwidget0,
         myseparator,
         memwidget,
         myseparator,
