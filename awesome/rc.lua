@@ -1,3 +1,6 @@
+-- Widgets library
+vicious = require("vicious")
+
 -- Standard awesome library
 require("awful")
 require("awful.autofocus")
@@ -104,6 +107,67 @@ mytextclock = awful.widget.textclock({ align = "right" })
 -- Create a systray
 mysystray = widget({ type = "systray" })
 
+-- Separator
+myseparator = widget({ type = "textbox"})--, name = "myseparator", align = "right" })
+myseparator.text = " | "
+
+-- Vicious widgets (warning: not compatible with awesome 3.5, a few changes to do)
+
+-- Memory usage
+memwidget = widget({ type = "textbox" })
+--vicious.register(memwidget, vicious.widgets.mem, "mem $1% ($2MB/$3MB)", 13)
+vicious.register(memwidget, vicious.widgets.mem, "mem $1%", 13)
+
+-- CPU Usage
+cpuwidget = widget({ type = "textbox" })
+vicious.register(cpuwidget, vicious.widgets.cpu, "cpu $1%", 10)
+
+-- MPD
+-- mpdwidget = widget({ type = "textbox" })
+-- vicious.register(mpdwidget, vicious.widgets.mpd,
+--                  function (widget, args)
+--                     if args["{state}"] == "Stop" then 
+--             return " - "
+--         else 
+--            return args["{Artist}"]..' - '.. args["{Title}"]
+--         end
+--                  end, 10)
+
+-- Battery Status
+battwidget = widget({ type = "textbox" })
+vicious.register(battwidget, vicious.widgets.bat, 'pow $1$2%', 2, 'BAT1')
+
+--Create a weather widget
+
+weatherwidget = widget({ type = "textbox" })
+weatherwidget.text = awful.util.pread(
+   "weather --headers=temperature,sky_conditions --quiet -m cyul | cut -d ':' -f 2 | cut -c 2- | sed 's/ C/°C,/' |awk 'NR%2{printf $0\" \";next;}1'"
+)
+weathertimer = timer(
+   { timeout = 900 } -- Update every 15 minutes. 
+) 
+weathertimer:add_signal(
+   "timeout", function() 
+     weatherwidget.text = awful.util.pread(
+        "weather --headers=temperature,sky_conditions --quiet -m cyul | cut -d ':' -f 2 | cut -c 2- | sed 's/ C/°C,/' | sed 'N;s/\n/ /' &"
+     )
+end)
+
+weathertimer:start() -- Start the timer
+weatherwidget:add_signal(
+   "mouse::enter", function() 
+  weather = naughty.notify(
+     {title="Weather",text=awful.util.pread("weather -i METARID -m")})
+end) -- this creates the hover feature. replace METARID and remove -m if you want Fahrenheit
+weatherwidget:add_signal(
+   "mouse::leave", function() 
+      naughty.destroy(weather) 
+end)
+-- I added some spacing because on my computer it is right next to my clock.
+awful.widget.layout.margins[weatherwidget] = { right = 5 } 
+
+
+
 -- Create a wibox for each screen and add it
 mywibox = {}
 mypromptbox = {}
@@ -181,6 +245,15 @@ for s = 1, screen.count() do
         mylayoutbox[s],
         mytextclock,
         s == 1 and mysystray or nil,
+        --mpdwidget,
+        myseparator,
+        battwidget, 
+        myseparator,
+        memwidget,
+        myseparator,
+        cpuwidget,
+        myseparator,
+        weatherwidget,
         mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
     }
@@ -376,8 +449,11 @@ client.add_signal("focus", function(c) c.border_color = beautiful.border_focus e
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 
+
 awful.util.spawn_with_shell("run_once volti")
 awful.util.spawn_with_shell("run_once wicd-client --tray")
 awful.util.spawn_with_shell("run_once xscreensaver -no-splash")
 awful.util.spawn_with_shell("run_once pidgin")
 awful.util.spawn_with_shell("synclient TapButton1=1")
+awful.util.spawn_with_shell("synclient MinSpeed=2")
+awful.util.spawn_with_shell("synclient MaxSpeed=2")
