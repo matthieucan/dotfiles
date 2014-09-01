@@ -142,32 +142,32 @@ vicious.register(battwidget1, vicious.widgets.bat, '$1$2%', 2, 'BAT1')
 
 --Create a weather widget
 
-weatherwidget = widget({ type = "textbox" })
-weatherwidget.text = awful.util.pread(
-   "weather --headers=temperature,sky_conditions --quiet -m cyul | cut -d ':' -f 2 | cut -c 2- | sed 's/ C/°C,/' |awk 'NR%2{printf $0\" \";next;}1'"
-)
-weathertimer = timer(
-   { timeout = 900 } -- Update every 15 minutes. 
-) 
-weathertimer:add_signal(
-   "timeout", function() 
-     weatherwidget.text = awful.util.pread(
-        "weather --headers=temperature,sky_conditions --quiet -m cyul | cut -d ':' -f 2 | cut -c 2- | sed 's/ C/°C,/' | sed 'N;s/\n/ /' &"
-     )
-end)
+-- weatherwidget = widget({ type = "textbox" })
+-- weatherwidget.text = awful.util.pread(
+--    "weather --headers=temperature,sky_conditions --quiet -m cyul | cut -d ':' -f 2 | cut -c 2- | sed 's/ C/°C,/' |awk 'NR%2{printf $0\" \";next;}1'"
+-- )
+-- weathertimer = timer(
+--    { timeout = 900 } -- Update every 15 minutes. 
+-- ) 
+-- weathertimer:add_signal(
+--    "timeout", function() 
+--      weatherwidget.text = awful.util.pread(
+--         "weather --headers=temperature,sky_conditions --quiet -m cyul | cut -d ':' -f 2 | cut -c 2- | sed 's/ C/°C,/' | sed 'N;s/\n/ /' &"
+--      )
+-- end)
 
-weathertimer:start() -- Start the timer
-weatherwidget:add_signal(
-   "mouse::enter", function() 
-  weather = naughty.notify(
-     {title="Weather",text=awful.util.pread("weather -i METARID -m")})
-end) -- this creates the hover feature. replace METARID and remove -m if you want Fahrenheit
-weatherwidget:add_signal(
-   "mouse::leave", function() 
-      naughty.destroy(weather) 
-end)
--- I added some spacing because on my computer it is right next to my clock.
-awful.widget.layout.margins[weatherwidget] = { right = 5 } 
+-- weathertimer:start() -- Start the timer
+-- weatherwidget:add_signal(
+--    "mouse::enter", function() 
+--   weather = naughty.notify(
+--      {title="Weather",text=awful.util.pread("weather -i METARID -m")})
+-- end) -- this creates the hover feature. replace METARID and remove -m if you want Fahrenheit
+-- weatherwidget:add_signal(
+--    "mouse::leave", function() 
+--       naughty.destroy(weather) 
+-- end)
+-- -- I added some spacing because on my computer it is right next to my clock.
+-- awful.widget.layout.margins[weatherwidget] = { right = 5 } 
 
 
 
@@ -256,8 +256,8 @@ for s = 1, screen.count() do
         memwidget,
         myseparator,
         cpuwidget,
-        myseparator,
-        weatherwidget,
+--        myseparator,
+--        weatherwidget,
         mytasklist[s],
         layout = awful.widget.layout.horizontal.rightleft
     }
