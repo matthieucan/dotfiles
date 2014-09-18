@@ -1,2 +1,2 @@
 #!/bin/bash
-pgrep $@ > /dev/null || ($@ &)
+pgrep $1 > /dev/null || ($@ &)
