@@ -17,7 +17,7 @@
     scroll_on_output = False
     show_titlebar = False
     font = Monospace 24
-    palette = "#292929:#cf6a4c:#19cb00:#fad07a:#8197bf:#8787af:#668799:#888888:#525252:#fc7249:#1cc700:#ffefbf:#accaff:#c4c4ff:#80bfaf:#e8e8d3" 
+    palette = "#292929:#cf6a4c:#19cb00:#fad07a:#8197bf:#8787af:#668799:#888888:#525252:#fc7249:#63d350:#ffefbf:#accaff:#c4c4ff:#80bfaf:#e8e8d3"
     foreground_color = "#dcdcdc"
     background_color = "#262626"
     cursor_color = "#dcdcdc"
