@@ -108,7 +108,7 @@ _JAVA_AWT_WM_NONREPARENTING=1; export _JAVA_AWT_WM_NONREPARENTING
 
 alias e='emacs'
 alias enw='emacs -nw'
-#alias rgrep='grep -r --colour'
+alias rgrep='grep -r --colour'
 export GREP_OPTIONS="-n --color"
 alias psgrep='ps aux | grep'
 alias rgrepds='rgrep --exclude-dir=.git --exclude-dir=cache --exclude-dir=testdata --exclude=*.pyc'
