@@ -18,7 +18,10 @@
     who = shortlog -sne
     co = checkout
     cm = commit
-        lg = log --graph --abbrev-commit  --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar) %C(reset)%C(bold blue)%an %C(reset)%C(bold yellow)%d%C(reset)%n%C(white)%s%C(reset) %n %n%b'
+    lg = log --graph --abbrev-commit  --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar) %C(reset)%C(bold blue)%an %C(reset)%C(bold yellow)%d%C(reset)%n%C(white)%s%C(reset) %n %n%b'
+    logg = ! git log $1 --pretty=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar) %C(reset)%C(bold blue)%an %C(reset)%C(bold yellow)%d%C(reset)%n%C(white)%s%C(reset) %n %n%bIMG:%ae' | gitcaca-display | less -
+    showg = ! git show $1 --pretty=format:'commit %H%nAuthor: %an <%ae>%nDate: %ar%n%n%s%n%n%b%nIMG:%ae' | gitcaca-display -W 30 | less -
+    diapo = ! git log $1 --pretty=format:'IMG:%ae' | sort | uniq | gitcaca-display -W 40 | less -
 
 [push]
 	default = simple
