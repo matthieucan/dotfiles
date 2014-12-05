@@ -1,26 +1,26 @@
 [global_config]
   window_state = maximise
   handle_size = 1
-  tab_position = hidden
   title_transmit_fg_color = "#dcdcdc"
-  title_transmit_bg_color = "#292929"
   title_inactive_fg_color = "#dcdcdc"
+  title_transmit_bg_color = "#292929"
+  tab_position = hidden
   title_inactive_bg_color = "#525252"
 [keybindings]
 [profiles]
   [[default]]
-    background_image = /usr/share/plymouth/themes/details/details.plymouth
-    background_darkness = 0.93
+    scrollbar_position = hidden
+    palette = "#292929:#cf6a4c:#19cb00:#fad07a:#8197bf:#8787af:#668799:#888888:#525252:#fc7249:#63d350:#ffefbf:#accaff:#c4c4ff:#80bfaf:#e8e8d3"
+    background_darkness = 0.90
     scrollback_lines = 5000
     background_type = transparent
-    scrollbar_position = hidden
+    background_image = /usr/share/plymouth/themes/details/details.plymouth
+    cursor_color = "#dcdcdc"
+    foreground_color = "#ffffff"
     scroll_on_output = False
     show_titlebar = False
     font = Monospace 24
-    palette = "#292929:#cf6a4c:#19cb00:#fad07a:#8197bf:#8787af:#668799:#888888:#525252:#fc7249:#63d350:#ffefbf:#accaff:#c4c4ff:#80bfaf:#e8e8d3"
-    foreground_color = "#dcdcdc"
-    background_color = "#262626"
-    cursor_color = "#dcdcdc"
+    background_color = "#000000"
 [layouts]
   [[default]]
     [[[child1]]]
@@ -30,5 +30,3 @@
       type = Window
       parent = ""
 [plugins]
-
-# http://terminal.sexy/#a-tB6gZe_h4evZoeZiIiIUlJS_HJJY9NQ_--_rMr_xMT_gL-v6OjT
