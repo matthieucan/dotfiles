@@ -28,6 +28,9 @@
   )
  )
 
+;; region (highlighted selection)
+(set-face-attribute 'region nil :background "#666" :foreground "#ffffff")
+
 (fset 'λ 'lambda)
 
 (global-set-key (kbd "C-x C-b")
