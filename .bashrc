@@ -186,3 +186,6 @@ export EDITOR='emacs -nw'
 
 # mutt background fix
 COLORFGBG="default;default"
+
+export PATH=$PATH:~/bin
+
