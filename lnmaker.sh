@@ -66,3 +66,7 @@ ln ${dir}/.dir_colors ~/.dir_colors --symbolic
 # quilt
 rm ~/.quiltrc
 ln ${dir}/.quiltrc ~/.quiltrc --symbolic
+
+# gtk
+rm ~/.gtkrc-2.0
+ln ${dir}/.gtkrc-2.0 ~/.gtkrc-2.0 --symbolic
