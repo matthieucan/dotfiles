@@ -142,7 +142,7 @@ alias psgrep='ps aux | grep'
 alias rgrepds='rgrep --exclude-dir=.git --exclude-dir=cache --exclude-dir=testdata --exclude=*.pyc'
 alias lynx='lynx -lss ~/.lynx.lss'
 alias diff='colordiff'
-alias docker='sudo docker.io'
+alias docker='sudo docker'
 alias cleandocker='(sudo docker.io ps -a | tail -n +2 | awk "{print $1}" | xargs sudo docker.io rm) && (sudo docker.io images | tail -n +2 | awk "{print $3}" | xargs sudo docker.io rmi)'
 alias gitk='gitk --all'
 
