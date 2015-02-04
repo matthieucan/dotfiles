@@ -168,3 +168,7 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 
 ; javascript
 (setq js-indent-level 2)
+
+; scala
+(require 'ensime)
+(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
