@@ -42,7 +42,7 @@
 (set-face-attribute 'region nil :background "#666" :foreground "#ffffff")
 
 ;; highlighted isearch
-(set-face-attribute 'isearch nil :background "#fff" :foreground "#000")
+(set-face-attribute 'isearch nil :background "#00f" :foreground "#000")
 (set-face-attribute 'lazy-highlight nil :background "#fff" :foreground "#000")
 
 (fset 'λ 'lambda)
