@@ -29,10 +29,6 @@ ln ${dir}/emacs/.emacs.d ~/.emacs.d --symbolic
 rm -r ~/.config/openbox
 ln ${dir}/openbox ~/.config/openbox --symbolic
 
-# zsh
-rm ~/.zshrc
-ln ${dir}/.zshrc ~/.zshrc --symbolic
-
 # python
 rm ~/.pyrc
 ln ${dir}/.pyrc ~/.pyrc --symbolic
