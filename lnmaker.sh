@@ -66,3 +66,17 @@ ln ${dir}/.quiltrc ~/.quiltrc --symbolic
 # gtk
 rm ~/.gtkrc-2.0
 ln ${dir}/.gtkrc-2.0 ~/.gtkrc-2.0 --symbolic
+
+# zsh
+rm ~/.zlogin
+ln ${dir}/prezto/runcoms/zlogin
+rm ~/.zlogout
+ln ${dir}/prezto/runcoms/zlogout
+rm ~/.zpreztorc
+ln ${dir}/prezto/runcoms/zpreztorc
+rm ~/.zprofile
+ln ${dir}/prezto/runcoms/zprofile
+rm ~/.zshenv
+ln ${dir}/prezto/runcoms/zshenv
+rm ~/.zshrc
+ln ${dir}/prezto/runcoms/zshrc

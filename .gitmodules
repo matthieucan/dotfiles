@@ -1,0 +1,4 @@
+[submodule "prezto"]
+	path = prezto
+	url = git@github.com:matthieucan/prezto.git
+	branch = matthieucan
