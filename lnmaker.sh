@@ -80,6 +80,8 @@ rm ~/.zshenv
 ln ${dir}/prezto/runcoms/zshenv ~/.zshenv --symbolic
 rm ~/.zshrc
 ln ${dir}/prezto/runcoms/zshrc ~/.zshrc --symbolic
+rm ~/.zprezto -rf
+ln ${dir}/prezto ~/.zprezto --symbolic
 
 # tmux
 rm ~/.tmux.conf
