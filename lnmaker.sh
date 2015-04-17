@@ -69,14 +69,18 @@ ln ${dir}/.gtkrc-2.0 ~/.gtkrc-2.0 --symbolic
 
 # zsh
 rm ~/.zlogin
-ln ${dir}/prezto/runcoms/zlogin
+ln ${dir}/prezto/runcoms/zlogin ~/.zlogin --symbolic
 rm ~/.zlogout
-ln ${dir}/prezto/runcoms/zlogout
+ln ${dir}/prezto/runcoms/zlogout ~/.zlogout --symbolic
 rm ~/.zpreztorc
-ln ${dir}/prezto/runcoms/zpreztorc
+ln ${dir}/prezto/runcoms/zpreztorc ~/.zpreztorc --symbolic
 rm ~/.zprofile
-ln ${dir}/prezto/runcoms/zprofile
+ln ${dir}/prezto/runcoms/zprofile ~/.zprofile --symbolic
 rm ~/.zshenv
-ln ${dir}/prezto/runcoms/zshenv
+ln ${dir}/prezto/runcoms/zshenv ~/.zshenv --symbolic
 rm ~/.zshrc
-ln ${dir}/prezto/runcoms/zshrc
+ln ${dir}/prezto/runcoms/zshrc ~/.zshrc --symbolic
+
+# tmux
+rm ~/.tmux.conf
+ln ${dir}/.tmux.conf ~/.tmux.conf --symbolic
