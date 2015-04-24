@@ -191,3 +191,6 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
          (0 'font-lock-comment-face))
         ("^[ \t]*>[ \t]*>.*$"
          (0 'font-lock-constant-face))))))
+
+; color code blocks in org-mode
+(setq org-src-fontify-natively t)
