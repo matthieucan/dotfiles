@@ -86,3 +86,7 @@ ln ${dir}/prezto ~/.zprezto --symbolic
 # tmux
 rm ~/.tmux.conf
 ln ${dir}/.tmux.conf ~/.tmux.conf --symbolic
+
+# xscreensaver
+rm ~/.xscreensaver
+ln ${dir}/.xscreensaver ~/.xscreensaver --symbolic
