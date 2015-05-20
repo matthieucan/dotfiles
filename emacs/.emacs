@@ -195,3 +195,9 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 
 ; color code blocks in org-mode
 (setq org-src-fontify-natively t)
+
+; org-mode bindings
+(global-set-key "\C-cl" 'org-store-link)
+(global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-ca" 'org-agenda)
+(global-set-key "\C-cb" 'org-iswitchb)
