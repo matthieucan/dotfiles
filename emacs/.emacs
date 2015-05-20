@@ -201,3 +201,7 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
+
+; french holidays
+(require 'french-holidays)
+(setq calendar-holidays holiday-french-holidays)
