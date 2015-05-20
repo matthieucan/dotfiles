@@ -5,13 +5,14 @@
   title_inactive_fg_color = "#dcdcdc"
   title_transmit_bg_color = "#292929"
   tab_position = hidden
+  inactive_color_offset = 0.82
   title_inactive_bg_color = "#525252"
 [keybindings]
 [profiles]
   [[default]]
     scrollbar_position = hidden
     palette = "#292929:#cf6a4c:#19cb00:#fad07a:#8197bf:#8787af:#668799:#888888:#525252:#fc7249:#63d350:#ffefbf:#accaff:#c4c4ff:#80bfaf:#e8e8d3"
-    background_darkness = 0.90
+    background_darkness = 0.94
     scrollback_lines = 5000
     background_type = transparent
     background_image = /usr/share/plymouth/themes/details/details.plymouth
@@ -20,12 +21,6 @@
     scroll_on_output = False
     show_titlebar = False
     font = Monospace 24
-    background_color = "#000000"
-    # solarized-dark theme
-    #palette = "#073642:#dc322f:#859900:#b58900:#268bd2:#d33682:#2aa198:#eee8d5:#002b36:#cb4b16:#586e75:#657b83:#839496:#6c71c4:#93a1a1:#fdf6e3"
-    #foreground_color = "#eee8d5"
-    #background_color = "#002b36"
-    #cursor_color = "#eee8d5"
 [layouts]
   [[default]]
     [[[child1]]]
