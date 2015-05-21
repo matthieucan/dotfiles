@@ -202,6 +202,12 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
 
+; org-mode my agenda view
+(setq org-agenda-custom-commands
+      '(("h" "My agenda view"
+         ((agenda "")
+          (todo)))))
+
 ; french holidays
 (require 'french-holidays)
 (setq calendar-holidays holiday-french-holidays)
