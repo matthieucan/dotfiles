@@ -208,6 +208,16 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
          ((agenda "")
           (todo)))))
 
+; org-mode todo items
+(setq org-todo-keywords
+      '((sequence "TODO" "STARTED" "CANCELED" "|" "DONE")))
+
+(setq org-todo-keyword-faces
+      '(("TODO" . org-warning)
+        ("STARTED" . "yellow")
+        ("CANCELED" . "blue")
+        ("DONEFOO" . "green")))
+
 ; french holidays
 (require 'french-holidays)
 (setq calendar-holidays holiday-french-holidays)
