@@ -17,7 +17,7 @@
   ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(inhibit-startup-screen t)
- '(org-agenda-files (quote ("~/git/todo/TODO.org")))
+;; '(org-agenda-files (quote ("~/git/todo/TODO.org")))
  '(safe-local-variable-values (quote ((TeX-master . "main")))))
 
 (cond
@@ -217,6 +217,9 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
         ("STARTED" . "yellow")
         ("CANCELED" . "blue")
         ("DONEFOO" . "green")))
+
+;org-mode agenda files
+(org-agenda-files (quote ("~/org/")))
 
 ; french holidays
 (require 'french-holidays)
