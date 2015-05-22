@@ -226,6 +226,9 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 ;org-mode agenda files
 (setq org-agenda-files (quote ("~/org/")))
 
+; org-mode follow hyperlinks with Enter
+(setq org-return-follows-link 1)
+
 ; french holidays
 (require 'french-holidays)
 (setq calendar-holidays holiday-french-holidays)
