@@ -210,13 +210,17 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 
 ; org-mode todo items
 (setq org-todo-keywords
-      '((sequence "TODO" "STARTED" "CANCELED" "|" "DONE")))
+      '((sequence "TODO" "STARTED" "CANCELED" "|" "DONE")
+        (sequence "TO READ" "READING" "|" "READ")))
 
 (setq org-todo-keyword-faces
       '(("TODO" . org-warning)
+        ("TOREAD" . org-warning)
         ("STARTED" . "yellow")
+        ("READING" . "yellow")
         ("CANCELED" . "blue")
-        ("DONEFOO" . "green")))
+        ("DONE" . "green")
+        ("READ" . "green")))
 
 ;org-mode agenda files
 (org-agenda-files (quote ("~/org/")))
