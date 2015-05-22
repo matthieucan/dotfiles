@@ -220,8 +220,8 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
         ("READING" . "yellow")
         ("CANCELED" . "blue")
         ("BLOCKED" . "blue")
-        ("DONE" . "green")
-        ("READ" . "green")))
+        ("DONE" . (:foreground "green" :weight normal))
+        ("READ" . (:foreground "green" :weight normal))))
 
 ;org-mode agenda files
 (setq org-agenda-files (quote ("~/org/")))
