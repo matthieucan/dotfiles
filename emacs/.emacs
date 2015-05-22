@@ -229,6 +229,10 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 ; org-mode follow hyperlinks with Enter
 (setq org-return-follows-link 1)
 
+; orf-mode open file links in same frame
+(setq org-link-frame-setup (quote ((file . find-file))))
+      
+
 ; french holidays
 (require 'french-holidays)
 (setq calendar-holidays holiday-french-holidays)
