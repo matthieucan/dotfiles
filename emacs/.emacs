@@ -210,7 +210,7 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 
 ; org-mode todo items
 (setq org-todo-keywords
-      '((sequence "TODO" "STARTED" "CANCELED" "|" "DONE")
+      '((sequence "TODO" "STARTED" "BLOCKED" "CANCELED" "|" "DONE")
         (sequence "TO READ" "READING" "|" "READ")))
 
 (setq org-todo-keyword-faces
@@ -219,11 +219,12 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
         ("STARTED" . "yellow")
         ("READING" . "yellow")
         ("CANCELED" . "blue")
+        ("BLOCKED" . "blue")
         ("DONE" . "green")
         ("READ" . "green")))
 
 ;org-mode agenda files
-(org-agenda-files (quote ("~/org/")))
+(setq org-agenda-files (quote ("~/org/")))
 
 ; french holidays
 (require 'french-holidays)
