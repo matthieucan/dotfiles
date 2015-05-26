@@ -225,9 +225,11 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 ; org-mode follow hyperlinks with Enter
 (setq org-return-follows-link 1)
 
-; orf-mode open file links in same frame
+; org-mode open file links in same frame
 (setq org-link-frame-setup (quote ((file . find-file))))
-      
+
+; org-mode hide todo subitems in global list
+(setq org-agenda-todo-list-sublevels nil)
 
 ; french holidays
 (require 'french-holidays)
