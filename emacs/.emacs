@@ -215,7 +215,7 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (setq org-todo-keyword-faces
       '(("TODO" . org-warning)
         ("DOING" . "yellow")
-        ("BLOCKED" . "blue")
+        ("BLOCKED" . (:foreground "red" :weight normal))
         ("CANCELED" . "blue")
         ("DONE" . (:foreground "green" :weight normal))))
 
