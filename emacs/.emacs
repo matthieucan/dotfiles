@@ -231,6 +231,9 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 ; org-mode hide todo subitems in global list
 (setq org-agenda-todo-list-sublevels nil)
 
+; org-mode set deadline reminder to 3 days before
+(setq org-deadline-warning-days 3)
+
 ; french holidays
 (require 'french-holidays)
 (setq calendar-holidays holiday-french-holidays)
