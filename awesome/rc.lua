@@ -459,7 +459,6 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 awful.util.spawn_with_shell("run_once volti")
 awful.util.spawn_with_shell("run_once wicd-client --tray")
 awful.util.spawn_with_shell("run_once xscreensaver -no-splash")
-awful.util.spawn_with_shell("run_once pidgin")
 awful.util.spawn_with_shell("run_once blueman-applet")
 awful.util.spawn_with_shell("synclient TapButton1=1")
 awful.util.spawn_with_shell("synclient MinSpeed=2")
