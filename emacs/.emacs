@@ -178,8 +178,8 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (setq js-indent-level 2)
 
 ; scala
-(require 'ensime)
-(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
+;(require 'ensime)
+;(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 
 ; mail mode with mutt
 (add-to-list 'auto-mode-alist '("/mutt" . mail-mode))
@@ -210,7 +210,7 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 
 ; org-mode todo items
 (setq org-todo-keywords
-      '((sequence "TODO" "DOING" "BLOCKED" "CANCELED" "|" "DONE")))
+      '((sequence "TODO" "DOING" "BLOCKED" "|" "CANCELED" "DONE")))
 
 (setq org-todo-keyword-faces
       '(("TODO" . org-warning)
