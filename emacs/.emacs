@@ -237,3 +237,6 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 ; french holidays
 (require 'french-holidays)
 (setq calendar-holidays holiday-french-holidays)
+
+; reload org files automatically
+(add-hook 'org-mode-hook 'auto-revert-mode)
