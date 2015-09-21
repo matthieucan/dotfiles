@@ -240,3 +240,7 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 
 ; reload org files automatically
 (add-hook 'org-mode-hook 'auto-revert-mode)
+
+; agenda: don't display DONE items
+(setq org-agenda-skip-scheduled-if-done 1)
+(setq org-agenda-skip-deadline-if-done 1)
