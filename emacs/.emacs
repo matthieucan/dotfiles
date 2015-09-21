@@ -244,3 +244,6 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 ; agenda: don't display DONE items
 (setq org-agenda-skip-scheduled-if-done 1)
 (setq org-agenda-skip-deadline-if-done 1)
+
+; todo list: don't display scheduled/deadlined/timestamped items
+(setq org-agenda-todo-ignore-with-date 1)
