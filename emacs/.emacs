@@ -8,7 +8,7 @@
   )
 
 ; hide useless warnings
-(setq warning-minimum-level :error)
+;(setq warning-minimum-level :error)
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
@@ -235,8 +235,8 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (setq org-deadline-warning-days 3)
 
 ; french holidays
-(require 'french-holidays)
-(setq calendar-holidays holiday-french-holidays)
+;(require 'french-holidays)
+;(setq calendar-holidays holiday-french-holidays)
 
 ; reload org files automatically
 (add-hook 'org-mode-hook 'auto-revert-mode)
