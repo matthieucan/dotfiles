@@ -8,7 +8,7 @@
   )
 
 ; hide useless warnings
-(setq warning-minimum-level :error)
+;(setq warning-minimum-level :error)
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
@@ -235,8 +235,15 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (setq org-deadline-warning-days 3)
 
 ; french holidays
-(require 'french-holidays)
-(setq calendar-holidays holiday-french-holidays)
+;(require 'french-holidays)
+;(setq calendar-holidays holiday-french-holidays)
 
 ; reload org files automatically
 (add-hook 'org-mode-hook 'auto-revert-mode)
+
+; agenda: don't display DONE items
+(setq org-agenda-skip-scheduled-if-done 1)
+(setq org-agenda-skip-deadline-if-done 1)
+
+; todo list: don't display scheduled/deadlined/timestamped items
+(setq org-agenda-todo-ignore-with-date 1)
