@@ -221,7 +221,9 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 
 ;org-mode agenda files
 (load-library "find-lisp")
-(setq org-agenda-files (find-lisp-find-files "~/org" "\.org$"))
+(setq org-agenda-files
+      (append (find-lisp-find-files "~/org" "\.org$")
+            (find-lisp-find-files "~/git/phd-thesis/" "\.org$")))
 ;; (setq org-agenda-files (append
 ;;       '("~/org/"
 ;;         "~/git/phd-thesis/")))
