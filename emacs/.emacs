@@ -220,7 +220,9 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
         ("DONE" . (:foreground "green" :weight normal))))
 
 ;org-mode agenda files
-(setq org-agenda-files (quote ("~/org/")))
+(setq org-agenda-files (list
+      "~/org/"
+      "~/git/phd-thesis/"))
 
 ; org-mode follow hyperlinks with Enter
 (setq org-return-follows-link 1)
