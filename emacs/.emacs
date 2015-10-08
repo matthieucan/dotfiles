@@ -253,3 +253,12 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 
 ; todo list: don't display scheduled/deadlined/timestamped items
 (setq org-agenda-todo-ignore-with-date 1)
+
+;; active Babel languages
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((gnuplot . t)
+   (python . t)
+   (sh . t)
+   (scala . t)))
+;; add additional languages with '((language . t)))
