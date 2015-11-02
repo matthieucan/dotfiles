@@ -275,8 +275,10 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 ;; (global-hl-spotlight-mode)
 
 ; line numbers
-(setq linum-format "%4d\u2502")
+(setq linum-format "%3d\u2502")
 (global-linum-mode)
+; not for certain modes
+(setq linum-disabled-modes-list '(org-mode org-agenda-mode help-mode mail-mode)) (defun linum-on () (unless (or (minibufferp) (member major-mode linum-disabled-modes-list)) (linum-mode 1)))
 
 ; highlight current line number
 (load-file "~/.emacs.d/hlinum.el")
