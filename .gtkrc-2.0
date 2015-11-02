@@ -4,3 +4,9 @@ include "/usr/share/themes/Clearlooks/gtk-2.0/gtkrc"
 include "/home/matthieu/.gtkrc-2.0.mine"
 
 # -- THEME AUTO-WRITTEN BY gtk-theme-switch2 DO NOT EDIT
+
+style "notebook_bg" {
+  bg[NORMAL] = shade (1.02, #000000)
+  bg[ACTIVE] = shade (0.97, @bg_color)
+  fg[ACTIVE] = mix (0.8, @fg_color, shade (0.97, @bg_color))
+}
