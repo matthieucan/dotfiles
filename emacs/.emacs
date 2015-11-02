@@ -267,3 +267,9 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
    (sh . t)
    (scala . t)))
 ;; add additional languages with '((language . t)))
+
+; hightlight current line
+(load-file "~/.emacs.d/hl-spotlight.el")
+(setq hl-spotlight-height 0)
+(set-face-attribute 'hl-spotlight nil :background "#ccc" :foreground "#000")
+(global-hl-spotlight-mode)
