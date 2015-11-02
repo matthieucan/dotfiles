@@ -10,6 +10,11 @@
 ; hide useless warnings
 ;(setq warning-minimum-level :error)
 
+(require 'color-theme)
+(color-theme-initialize)
+(color-theme-robin-hood)
+
+
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
@@ -20,24 +25,24 @@
 ;; '(org-agenda-files (quote ("~/git/todo/TODO.org")))
  '(safe-local-variable-values (quote ((TeX-master . "main")))))
 
-(cond
- (window-system
-  (custom-set-faces
-   ;; custom-set-faces was added by Custom.
-   ;; If you edit it by hand, you could mess it up, so be careful.
-   ;; Your init file should contain only one such instance.
-   ;; If there is more than one, they won't work right.
-   '(default ((t (:inherit nil :stipple nil :background "black" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 123 :width normal :foundry "unknown" :family "monofur"))))
-   '(font-lock-comment-face ((((class color) (min-colors 88) (background dark)) (:foreground "#9F9FFF"))))
-   '(font-lock-constant-face ((((class color) (min-colors 88) (background dark)) (:foreground "#7F3F00"))))
-   '(font-lock-function-name-face ((((class color) (min-colors 88) (background dark)) (:foreground "#afff7f" :slant oblique))))
-   '(font-lock-keyword-face ((((class color) (min-colors 88) (background dark)) (:foreground "#00afaf" :weight bold))))
-   '(font-lock-type-face ((((class color) (min-colors 88) (background dark)) (:foreground "PaleGreen3"))))
-   '(font-lock-variable-name-face ((((class color) (min-colors 88) (background dark)) (:foreground "#ff9696"))))
-   '(font-lock-warning-face ((((class color) (min-colors 88) (background dark)) (:foreground "orange" :weight bold))))
-   '(my-lisp-fold-face ((default (:foreground "#7F7FFF" :slant italic)) (nil nil))))
-  )
- )
+;; (cond
+;;  (window-system
+;;   (custom-set-faces
+;;    ;; custom-set-faces was added by Custom.
+;;    ;; If you edit it by hand, you could mess it up, so be careful.
+;;    ;; Your init file should contain only one such instance.
+;;    ;; If there is more than one, they won't work right.
+;;    '(default ((t (:inherit nil :stipple nil :background "black" :foreground "white" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 123 :width normal :foundry "unknown" :family "monofur"))))
+;;    '(font-lock-comment-face ((((class color) (min-colors 88) (background dark)) (:foreground "#9F9FFF"))))
+;;    '(font-lock-constant-face ((((class color) (min-colors 88) (background dark)) (:foreground "#7F3F00"))))
+;;    '(font-lock-function-name-face ((((class color) (min-colors 88) (background dark)) (:foreground "#afff7f" :slant oblique))))
+;;    '(font-lock-keyword-face ((((class color) (min-colors 88) (background dark)) (:foreground "#00afaf" :weight bold))))
+;;    '(font-lock-type-face ((((class color) (min-colors 88) (background dark)) (:foreground "PaleGreen3"))))
+;;    '(font-lock-variable-name-face ((((class color) (min-colors 88) (background dark)) (:foreground "#ff9696"))))
+;;    '(font-lock-warning-face ((((class color) (min-colors 88) (background dark)) (:foreground "orange" :weight bold))))
+;;    '(my-lisp-fold-face ((default (:foreground "#7F7FFF" :slant italic)) (nil nil))))
+;;   )
+;;  )
 
 ;; region (highlighted selection)
 (set-face-attribute 'region nil :background "#666" :foreground "#ffffff")
@@ -119,13 +124,13 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (add-to-list 'load-path "~/.emacs.d/python-mode.el-6.1.3")
 (require 'python-mode)
 
-(add-hook 'python-mode-hook
-          (lambda ()
-            (pymacs-load "ropemacs" "rope-")))
+;(add-hook 'python-mode-hook
+;          (lambda ()
+;            (pymacs-load "ropemacs" "rope-")))
 
-(add-hook 'python-mode-hook 'flymake-mode)
-(add-hook 'python-mode-hook 'flymake-python-pyflakes-load)
-(setq flymake-python-pyflakes-executable "flake8")
+;(add-hook 'python-mode-hook 'flymake-mode)
+;(add-hook 'python-mode-hook 'flymake-python-pyflakes-load)
+;(setq flymake-python-pyflakes-executable "flake8")
 ;(require 'flymake-cursor)
 
 (setq-default indent-tabs-mode nil)
