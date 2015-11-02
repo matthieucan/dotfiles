@@ -8,6 +8,7 @@
   inactive_color_offset = 0.82
   title_inactive_bg_color = "#525252"
 [keybindings]
+  rotate_cw = <Primary><Shift>Right
   switch_to_tab_10 = <Alt>0
   switch_to_tab_6 = <Alt>6
   switch_to_tab_7 = <Alt>7
