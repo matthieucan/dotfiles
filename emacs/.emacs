@@ -269,7 +269,16 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 ;; add additional languages with '((language . t)))
 
 ; hightlight current line
-(load-file "~/.emacs.d/hl-spotlight.el")
-(setq hl-spotlight-height 0)
-(set-face-attribute 'hl-spotlight nil :background "#ccc" :foreground "#000")
-(global-hl-spotlight-mode)
+;; (load-file "~/.emacs.d/hl-spotlight.el")
+;; (setq hl-spotlight-height 0)
+;; (set-face-attribute 'hl-spotlight nil :background "#ccc" :foreground "#000")
+;; (global-hl-spotlight-mode)
+
+; line numbers
+(setq linum-format "%4d\u2502")
+(global-linum-mode)
+
+; highlight current line number
+(load-file "~/.emacs.d/hlinum.el")
+(require 'hlinum)
+(hlinum-activate)
