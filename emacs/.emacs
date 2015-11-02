@@ -14,6 +14,7 @@
 (color-theme-initialize)
 (color-theme-robin-hood)
 
+(set-face-background 'mode-line-inactive "black")
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
@@ -284,3 +285,5 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (load-file "~/.emacs.d/hlinum.el")
 (require 'hlinum)
 (hlinum-activate)
+
+
