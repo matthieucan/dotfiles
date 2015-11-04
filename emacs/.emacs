@@ -10,11 +10,13 @@
 ; hide useless warnings
 ;(setq warning-minimum-level :error)
 
-(require 'color-theme)
-(color-theme-initialize)
-(color-theme-robin-hood)
+;; colors
 
-(set-face-background 'mode-line-inactive "black")
+(load-file "~/.emacs.d/robin-hood-theme.el")
+(load-theme 'robin-hood t t)
+(enable-theme 'robin-hood)
+
+;(set-face-background 'mode-line-inactive "black")
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
