@@ -87,7 +87,7 @@
  '(menu ((t (:background "#304020" :foreground "navajo white"))))
  '(modeline ((t (:background "dark olive green" :foreground "wheat" :box (:line-width 1 :style released-button)))))
  '(mode-line-inactive ((t (:background "black" :foreground "khaki" :box (:line-width 1 :style released-button)))))
- '(modeline-buffer-id ((t (:background "dark olive green" :foreground "beige"))))
+ '(modeline-buffer-id ((t (:background "dark olive green" :foreground "black"))))
  '(modeline-mousable ((t (:background "dark olive green" :foreground "yellow green"))))
  '(modeline-mousable-minor-mode ((t (:background "dark olive green" :foreground "wheat"))))
  '(region ((t (:background "dark cyan" :foreground "cyan"))))
