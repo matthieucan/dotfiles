@@ -87,7 +87,7 @@
  '(menu ((t (:background "#304020" :foreground "navajo white"))))
  '(modeline ((t (:background "dark olive green" :foreground "wheat" :box (:line-width 1 :style released-button)))))
  '(mode-line-inactive ((t (:background "black" :foreground "khaki" :box (:line-width 1 :style released-button)))))
- '(modeline-buffer-id ((t (:background "dark olive green" :foreground "black"))))
+ '(modeline-buffer-id ((t (:background "black" :foreground "dark olive green"))))
  '(modeline-mousable ((t (:background "dark olive green" :foreground "yellow green"))))
  '(modeline-mousable-minor-mode ((t (:background "dark olive green" :foreground "wheat"))))
  '(region ((t (:background "dark cyan" :foreground "cyan"))))
@@ -137,7 +137,7 @@
  '(org-table ((t (:foreground "green"))))
  '(org-tag ((t (:bold t :weight bold))))
  '(org-time-grid ((t (:foreground "orange"))))
- '(org-todo ((t (:bold t :foreground "red" :weight bold))))
+ '(org-todo ((t (:bold t :foreground "red" :weight bold :underline t))))
  '(org-upcoming-deadline ((t (:inherit font-lock-keyword))))
  '(org-warning ((t (:bold t :foreground "red" :weight bold))))
 
