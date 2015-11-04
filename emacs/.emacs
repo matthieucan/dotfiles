@@ -287,4 +287,11 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (require 'hlinum)
 (hlinum-activate)
 
+; auto complete
+
+(require 'auto-complete)
+(add-to-list 'ac-dictionary-directories "/usr/share/auto-complete/dict/")
+(require 'auto-complete-config)
+(ac-config-default)
+
 
