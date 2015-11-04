@@ -16,8 +16,6 @@
 (load-theme 'robin-hood t t)
 (enable-theme 'robin-hood)
 
-;(set-face-background 'mode-line-inactive "black")
-
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
