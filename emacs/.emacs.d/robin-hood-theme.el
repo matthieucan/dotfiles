@@ -130,7 +130,7 @@
  '(org-level-7  ((t (:foreground "blue"))))
  '(org-level-8 ((t (:foreground "blue"))))
  '(org-link ((t (:foreground "yellow" :underline t))))
- '(org-scheduled ((t (:foreground "green"))))
+ '(org-scheduled ((t (:foreground "#94bff3"))))
  '(org-scheduled-previously ((t (:foreground "red"))))
  '(org-scheduled-today ((t (:foreground "#94bff3"))))
  '(org-special-keyword ((t (:foreground "yellow"))))
