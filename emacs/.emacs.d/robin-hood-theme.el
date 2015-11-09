@@ -109,7 +109,11 @@
 
 
  '(org-agenda-date-today
-   ((t (:foreground "white" :slant italic :weight bold))) t)
+   ((t (:foreground "yellow" :slant italic :weight bold))) t)
+ '(org-agenda-date
+   ((t (:foreground "yellow"))))
+ '(org-agenda-date-weekend
+   ((t (:foreground "yellow" :weight nil))))
  '(org-agenda-structure
    ((t (:inherit font-lock-comment))))
 ; '(org-archived ((t (:foreground ,zenburn-fg :weight bold))))
