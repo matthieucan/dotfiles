@@ -28,7 +28,7 @@
     urgent_bell = True
     background_type = transparent
     background_image = /usr/share/plymouth/themes/details/details.plymouth
-    cursor_color = "#dcdcdc"
+    cursor_color = "#880000"
     foreground_color = "#ffffff"
     scroll_on_output = False
     show_titlebar = False
