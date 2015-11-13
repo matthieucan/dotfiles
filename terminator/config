@@ -21,7 +21,7 @@
   switch_to_tab_9 = <Alt>9
 [profiles]
   [[default]]
-    scrollbar_position = hidden
+    foreground_color = "#ffffff"
     palette = "#292929:#cf6a4c:#19cb00:#fad07a:#8197bf:#8787af:#668799:#888888:#525252:#fc7249:#63d350:#ffefbf:#accaff:#c4c4ff:#80bfaf:#e8e8d3"
     visible_bell = True
     background_darkness = 0.94
@@ -29,10 +29,11 @@
     background_type = transparent
     background_image = /usr/share/plymouth/themes/details/details.plymouth
     cursor_color = "#880000"
-    foreground_color = "#ffffff"
+    cursor_blink = False
     scroll_on_output = False
     show_titlebar = False
     font = Monospace 24
+    scrollbar_position = hidden
     scrollback_lines = 5000
 [layouts]
   [[default]]
