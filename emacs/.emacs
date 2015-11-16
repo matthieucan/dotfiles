@@ -289,10 +289,12 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (hlinum-activate)
 
 ; auto complete
-
 (require 'auto-complete)
 (add-to-list 'ac-dictionary-directories "/usr/share/auto-complete/dict/")
 (require 'auto-complete-config)
 (ac-config-default)
 
-
+; column marker
+(load-file "~/.emacs.d/fill-column-indicator.el")
+(require 'fill-column-indicator)
+(add-hook 'after-change-major-mode-hook 'fci-mode)
