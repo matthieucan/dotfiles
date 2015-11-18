@@ -289,7 +289,6 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (hlinum-activate)
 
 ; auto complete
-
 (require 'auto-complete)
 (add-to-list 'ac-dictionary-directories "/usr/share/auto-complete/dict/")
 (require 'auto-complete-config)
@@ -299,3 +298,8 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 
 (global-set-key "\M-j" 'replace-regexp)
 (global-set-key "\M-k" 'query-replace)
+
+; column marker
+;; (load-file "~/.emacs.d/fill-column-indicator.el")
+;; (require 'fill-column-indicator)
+;; (add-hook 'after-change-major-mode-hook 'fci-mode)
