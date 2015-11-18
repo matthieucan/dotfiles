@@ -295,4 +295,7 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (require 'auto-complete-config)
 (ac-config-default)
 
+; seek & destroy
 
+(global-set-key "\M-j" 'replace-regexp)
+(global-set-key "\M-k" 'query-replace)
