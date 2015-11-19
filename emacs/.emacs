@@ -303,3 +303,7 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 ;; (load-file "~/.emacs.d/fill-column-indicator.el")
 ;; (require 'fill-column-indicator)
 ;; (add-hook 'after-change-major-mode-hook 'fci-mode)
+
+(load-file "~/.emacs.d/python-docstring/python-docstring.el")
+(require 'python-docstring)
+(add-hook 'python-mode-hook 'python-docstring-mode)
