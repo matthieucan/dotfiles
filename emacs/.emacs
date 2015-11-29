@@ -270,6 +270,10 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
    (scala . t)))
 ;; add additional languages with '((language . t)))
 
+; mobile-org
+
+(setq org-mobile-directory "~/ownCloud/MobileOrg/")
+
 ; hightlight current line
 ;; (load-file "~/.emacs.d/hl-spotlight.el")
 ;; (setq hl-spotlight-height 0)
