@@ -311,3 +311,7 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (load-file "~/.emacs.d/python-docstring/python-docstring.el")
 (require 'python-docstring)
 (add-hook 'python-mode-hook 'python-docstring-mode)
+
+; gnuplot
+(setq auto-mode-alist
+      (append '(("\\.\\(gp\\|plt\\|gnuplot\\)$" . gnuplot-mode)) auto-mode-alist))
