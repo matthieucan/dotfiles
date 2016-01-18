@@ -90,3 +90,7 @@ ln ${dir}/.tmux.conf ~/.tmux.conf --symbolic
 # xscreensaver
 rm ~/.xscreensaver
 ln ${dir}/.xscreensaver ~/.xscreensaver --symbolic
+
+# xmodmap
+rm ~/.xmodmaprc
+ln ${dir}/.xmodmaprc ~/.xmodmaprc --symbolic
