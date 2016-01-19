@@ -1,2 +1,5 @@
+clear lock
+clear shift
+add shift = Shift_L Shift_R
 remove Lock = Caps_Lock
 keysym Caps_Lock = Shift_L
