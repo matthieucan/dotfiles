@@ -315,3 +315,6 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 ; gnuplot
 (setq auto-mode-alist
       (append '(("\\.\\(gp\\|plt\\|gnuplot\\)$" . gnuplot-mode)) auto-mode-alist))
+
+; don't add extra spaces when pasting from outside
+(electric-indent-mode 0)
