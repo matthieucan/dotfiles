@@ -94,3 +94,7 @@ ln ${dir}/.xscreensaver ~/.xscreensaver --symbolic
 # xmodmap
 rm ~/.xmodmaprc
 ln ${dir}/.xmodmaprc ~/.xmodmaprc --symbolic
+
+# less
+rm ~/.lessfilter
+ln ${dir}/.lessfilter ~/.lessfilter --symbolic
