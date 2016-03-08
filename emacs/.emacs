@@ -187,6 +187,8 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 ;(require 'ensime)
 ;(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 
+(add-to-list 'auto-mode-alist '("\\.sbt\\'" . scala-mode))
+
 ; mail mode with mutt
 (add-to-list 'auto-mode-alist '("/mutt" . mail-mode))
 
