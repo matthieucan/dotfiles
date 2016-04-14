@@ -98,3 +98,7 @@ ln ${dir}/.xmodmaprc ~/.xmodmaprc --symbolic
 # less
 rm ~/.lessfilter
 ln ${dir}/.lessfilter ~/.lessfilter --symbolic
+
+# mime
+rm ~/.config/mimeapps.list
+ln ${dir}/mimeapps.list ~/.config/mimeapps.list --symbolic
