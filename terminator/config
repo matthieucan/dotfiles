@@ -5,36 +5,40 @@
   title_transmit_fg_color = "#dcdcdc"
   title_inactive_fg_color = "#dcdcdc"
   title_transmit_bg_color = "#292929"
-  inactive_color_offset = 0.82
+  inactive_color_offset = 0.43
   title_inactive_bg_color = "#525252"
 [keybindings]
-  rotate_cw = <Primary><Shift>Right
+  close_window = <Primary><Shift><Alt>o
   switch_to_tab_10 = <Alt>0
+  rotate_cw = <Primary><Shift>w
+  switch_to_tab_5 = <Alt>5
   switch_to_tab_6 = <Alt>6
   switch_to_tab_7 = <Alt>7
   switch_to_tab_4 = <Alt>4
-  switch_to_tab_5 = <Alt>5
+  close_term = <Primary><Shift><Alt>p
   switch_to_tab_2 = <Alt>2
-  switch_to_tab_3 = <Alt>3
+  rotate_ccw = <Primary><Shift>q
   switch_to_tab_1 = <Alt>1
-  switch_to_tab_8 = <Alt>8
   switch_to_tab_9 = <Alt>9
+  switch_to_tab_8 = <Alt>8
+  switch_to_tab_3 = <Alt>3
 [profiles]
   [[default]]
     foreground_color = "#ffffff"
     palette = "#292929:#cf6a4c:#19cb00:#fad07a:#8197bf:#8787af:#668799:#888888:#525252:#fc7249:#63d350:#ffefbf:#accaff:#c4c4ff:#80bfaf:#e8e8d3"
     visible_bell = True
-    background_darkness = 0.94
+    background_darkness = 0.77
     urgent_bell = True
     background_type = transparent
     background_image = /usr/share/plymouth/themes/details/details.plymouth
-    cursor_color = "#880000"
+    cursor_color = "#ff0000"
     cursor_blink = False
     scroll_on_output = False
     show_titlebar = False
     font = Monospace 24
     scrollbar_position = hidden
     scrollback_lines = 5000
+    scrollback_infinite = True
 [layouts]
   [[default]]
     [[[child1]]]
