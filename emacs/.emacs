@@ -276,6 +276,9 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 
 (setq org-mobile-directory "~/ownCloud/MobileOrg/")
 
+; org plot
+(global-set-key "\M-\C-g" 'org-plot/gnuplot)
+
 ; hightlight current line
 ;; (load-file "~/.emacs.d/hl-spotlight.el")
 ;; (setq hl-spotlight-height 0)
