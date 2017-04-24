@@ -12,9 +12,9 @@
 
 ;; colors
 
-(load-file "~/.emacs.d/robin-hood-theme.el")
-(load-theme 'robin-hood t t)
-(enable-theme 'robin-hood)
+(load-file "~/.emacs.d/rebecca-theme.el")
+(load-theme 'rebecca t t)
+(enable-theme 'rebecca)
 
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
