@@ -73,7 +73,12 @@
 ;;parenthèses correspondantes :
 (setq show-paren-mode t)
 ; surlignage du "matching" de parenthèses
+(setq show-paren-delay 0)
 (show-paren-mode 1)
+(require 'paren)
+(set-face-background 'show-paren-match "yellow")
+(set-face-foreground 'show-paren-match "black")
+(set-face-attribute 'show-paren-match nil :weight 'bold)
 
 ;;surlignage TODO FIXME BUG
 (add-hook 'c-mode-common-hook
