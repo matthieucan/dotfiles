@@ -291,6 +291,8 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 ; not for certain modes
 (setq linum-disabled-modes-list '(org-mode org-agenda-mode help-mode mail-mode lisp-interaction-mode completion-list-mode buffer-menu-mode eww-mode))
 (defun linum-on () (unless (or (minibufferp) (member major-mode linum-disabled-modes-list)) (linum-mode 1)))
+; color
+(set-face-foreground 'linum "white")
 
 ; highlight current line number
 (load-file "~/.emacs.d/hlinum.el")
