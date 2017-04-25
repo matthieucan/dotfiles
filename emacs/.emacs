@@ -330,3 +330,21 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 
 ; don't add extra spaces when pasting from outside
 (electric-indent-mode 0)
+
+; line duplication, with or without commenting the first one
+(defun djcb-duplicate-line (&optional commentfirst)
+  "comment line at point; if COMMENTFIRST is non-nil, comment the original" 
+  (interactive)
+  (beginning-of-line)
+  (push-mark)
+  (end-of-line)
+  (let ((str (buffer-substring (region-beginning) (region-end))))
+    (when commentfirst
+    (comment-region (region-beginning) (region-end)))
+    (insert-string
+      (concat (if (= 0 (forward-line 1)) "" "\n") str "\n"))
+    (forward-line -1)))
+;; duplicate a line
+(global-set-key (kbd "C-c y") 'djcb-duplicate-line)
+;; duplicate a line and comment the first
+(global-set-key (kbd "C-c c") (lambda()(interactive)(djcb-duplicate-line t)))
