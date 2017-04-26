@@ -353,3 +353,9 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (setq save-place-file "~/.emacs.d/saveplace")
 (setq-default save-place t)
 (require 'saveplace)
+
+; flycheck, lint error highlighting
+(add-hook 'after-init-hook #'global-flycheck-mode)
+; (defvaralias 'flycheck-python-pylint-executable 'pylint3)
+
+(setq flycheck-python-pylint-executable "pylint3")
