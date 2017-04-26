@@ -356,6 +356,5 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 
 ; flycheck, lint error highlighting
 (add-hook 'after-init-hook #'global-flycheck-mode)
-; (defvaralias 'flycheck-python-pylint-executable 'pylint3)
-
 (setq flycheck-python-pylint-executable "pylint3")
+(setq flycheck-display-errors-delay 0)
