@@ -363,5 +363,6 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (add-to-list 'auto-mode-alist '("components\\/.*\\.js\\'" . rjsx-mode))
 (eval-after-load 'flycheck
   '(flycheck-add-mode 'javascript-eslint 'rjsx-mode))
+(setq js2-strict-trailing-comma-warning nil)
 
 ;;
