@@ -358,3 +358,10 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (setq flycheck-python-pylint-executable "pylint3")
 (setq flycheck-display-errors-delay 0)
+
+; rjsx-mode installed from melpa
+(add-to-list 'auto-mode-alist '("components\\/.*\\.js\\'" . rjsx-mode))
+(eval-after-load 'flycheck
+  '(flycheck-add-mode 'javascript-eslint 'rjsx-mode))
+
+;;
