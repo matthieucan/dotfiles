@@ -331,7 +331,8 @@
    ;; `(org-warning ((,class (:weight bold :foreground ,rainbow-4))))
 
    `(org-agenda-date ((,class (:foreground "yellow" ,rainbow-2 :underline nil))))
-   `(org-agenda-date-today ((,class (:foreground "yellow", :weight bold, :slant roman ,rainbow-2 :underline nil))))
+   `(org-agenda-date-today ((,class (:foreground "yellow", :weight bold, rainbow-2 :underline nil))))
+   ;; `(org-agenda-date-today ((,class (:foreground "yellow", :weight bold, :slant roman ,rainbow-2 :underline nil))))
    `(org-agenda-date-weekend ((,class (:foreground "yellow", :weight medium))))
    `(org-agenda-dimmed-todo-face ((,class (:foreground ,comment))))
    `(org-agenda-done ((,class (:foreground "green",rainbow-6))))
