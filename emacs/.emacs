@@ -268,6 +268,8 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 ; todo list: don't display scheduled/deadlined/timestamped items
 (setq org-agenda-todo-ignore-with-date 1)
 
+;; commented out because it makes emacs slow as hell to start up, about 1/3 of the time
+;; FIXME
 ;; active Babel languages
 ;; (org-babel-do-load-languages
 ;;  'org-babel-load-languages
