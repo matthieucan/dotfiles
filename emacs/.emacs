@@ -1,5 +1,8 @@
 ; packages: python-rope, python-ropemacs, pymacs
 
+(add-to-list 'load-path "~/.emacs.d/elpa/org-20170821/")
+(require 'org)
+(require 'ox-latex)
 
 (when (>= emacs-major-version 24)
   (require 'package)
@@ -23,7 +26,6 @@
   ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(inhibit-startup-screen t)
-;; '(org-agenda-files (quote ("~/git/todo/TODO.org")))
  '(safe-local-variable-values (quote ((TeX-master . "main")))))
 
 ;; (cond
@@ -271,13 +273,19 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 ;; commented out because it makes emacs slow as hell to start up, about 1/3 of the time
 ;; FIXME
 ;; active Babel languages
-;; (org-babel-do-load-languages
-;;  'org-babel-load-languages
-;;  '((gnuplot . t)
-;;    (python . t)
-;;    (sh . t)
-;;    (scala . t)))
+(require 'ob-python)
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((gnuplot . t)
+   (python . t)
+   (sh . t)
+   (shell . t)
+   (scala . t)))
 ;; add additional languages with '((language . t)))
+
+(defun my-org-confirm-babel-evaluate (lang body)
+  (not (string= lang "python")))  ; don't ask for python
+(setq org-confirm-babel-evaluate 'my-org-confirm-babel-evaluate)
 
 ; mobile-org
 
