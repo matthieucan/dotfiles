@@ -1,4 +1,4 @@
-; packages: python-rope, python-ropemacs, pymacs
+; packages: python-rope, python-ropemacs, pymacs, solidity-mode
 
 (add-to-list 'load-path "~/.emacs.d/elpa/org-20170821/")
 (require 'org)
