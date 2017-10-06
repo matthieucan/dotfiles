@@ -1,5 +1,5 @@
-clear lock
-clear shift
-add shift = Shift_L Shift_R
-remove Lock = Caps_Lock
-keysym Caps_Lock = Shift_L
+! Right Alt -> Left Control
+remove Mod1 = Alt_R
+keysym Alt_R = Control_L
+add control = Control_L
+! Mod_switch
