@@ -370,9 +370,9 @@
    `(org-table ((,class (:foreground ,rainbow-3))))
    `(org-tag ((,class (:foreground ,rainbow-4 :bold t :background ,bg2))))
    `(org-todo ((,class (:foreground "red", :weight bold))))
-   `(org-upcoming-deadline ((,class (:foreground "red", :weight bold))))
-   `(org-deadline-announce ((,class (:foreground "red", :weight bold))))
-   `(org-warning ((,class (:weight bold :foreground "red"))))
+   `(org-upcoming-deadline ((,class (:foreground "darkred", :weight bold))))
+   `(org-deadline-announce ((,class (:foreground "darkred", :weight bold))))
+   `(org-warning ((,class (:weight bold :foreground "darkred"))))
 
 
 

@@ -220,20 +220,23 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 ; org-mode my agenda view
 (setq org-agenda-custom-commands
       '(("h" "My agenda view"
-         ((agenda "")
-          (todo)))))
+         (
+          (agenda "")
+          (todo)
+          (tags "goodidea")
+          (tags "future")
+          ))))
 
 ; org-mode todo items
 (setq org-todo-keywords
-      '((sequence "TODO" "DOING" "BLOCKED" "|" "CANCELED" "DONE")))
+      '((sequence "TODO" "STARTED" "|" "CANCELED" "DONE")))
 
 (setq org-todo-keyword-faces
       '(
-;        ("TODO" . org-warning)
-        ("DOING" . "yellow")
-        ("BLOCKED" . (:foreground "red" :weight normal))
-        ("CANCELED" . "blue")
-        ("DONE" . (:foreground "green" :weight normal))))
+       ("TODO" . (:background "darkred" :foreground "white" :weight bold))
+       ("STARTED" . (:foreground "black" :background "yellow" :weight bold))
+       ("CANCELED" . (:foreground "black" :background "blue" :weight normal))
+       ("DONE" . (:foreground "darkgreen" :weight bold))))
 
 ;org-mode agenda files
 (load-library "find-lisp")
@@ -250,8 +253,9 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 ; org-mode open file links in same frame
 (setq org-link-frame-setup (quote ((file . find-file))))
 
-; org-mode hide todo subitems in global list
+; org-mode hide todo and tags subitems in global list
 (setq org-agenda-todo-list-sublevels nil)
+(setq  org-tags-match-list-sublevels nil)
 
 ; org-mode set deadline reminder to 3 days before
 (setq org-deadline-warning-days 3)
