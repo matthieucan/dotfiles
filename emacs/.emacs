@@ -380,4 +380,7 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (setq js2-strict-trailing-comma-warning nil)
 (setq js2-basic-offset 2)
 
+; use latex mode for .tikz files
+(add-to-list 'auto-mode-alist '("\\.tikz" . latex-mode))
+
 ;;
