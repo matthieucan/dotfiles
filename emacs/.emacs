@@ -222,7 +222,7 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
       '(("h" "My agenda view"
          (
           (agenda "")
-          (todo)
+          (tags-todo "-future" ((org-agenda-skip-function '(org-agenda-skip-entry-if 'scheduled 'deadline)) (org-agenda-todo-list-sublevels nil)))
           (tags "goodidea")
           (tags "future")
           ))))
@@ -255,7 +255,7 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 
 ; org-mode hide todo and tags subitems in global list
 (setq org-agenda-todo-list-sublevels nil)
-(setq  org-tags-match-list-sublevels nil)
+(setq org-tags-match-list-sublevels nil)
 
 ; org-mode set deadline reminder to 3 days before
 (setq org-deadline-warning-days 3)
