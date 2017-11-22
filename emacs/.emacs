@@ -1,6 +1,6 @@
 ; packages: python-rope, python-ropemacs, pymacs, solidity-mode
 
-(add-to-list 'load-path "~/.emacs.d/elpa/org-20170821/")
+(add-to-list 'load-path "~/.emacs.d/elpa/org-20171002/")
 (require 'org)
 (require 'ox-latex)
 
@@ -382,5 +382,11 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 
 ; use latex mode for .tikz files
 (add-to-list 'auto-mode-alist '("\\.tikz" . latex-mode))
+
+;; set up ido mode
+(require `ido)
+(setq ido-enable-flex-matching t)
+(setq ido-everywhere t)
+(ido-mode 1)
 
 ;;
