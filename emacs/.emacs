@@ -298,6 +298,23 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 ; org plot
 (global-set-key "\M-\C-g" 'org-plot/gnuplot)
 
+; org capture
+(setq org-default-notes-file "~/org/log.org")
+(define-key global-map "\C-cp" 'org-capture)
+;; (setq org-capture-templates
+;;       (quote (("t" "todo" entry (file (concat org-directory "/gtd.org"))
+;;                "* TODO %?\n%U\n%a\n" :clock-in t :clock-resume t)
+;;               ("n" "note" entry (file (concat org-directory "/gtd.org"))
+;;                "* %? :NOTE:\n%U\n%a\n" :clock-in t :clock-resume t)
+;;               ("j" "Journal" entry (file+datetree (concat org-directory "/diary.org"))
+;;                "* %?\n%U\n" :clock-in t :clock-resume t)
+;;               )))
+(setq org-capture-templates
+      '(("t" "Todo" entry (file+headline "~/org/gtd.org" "Tasks")
+         "* TODO %?\n  %i\n  %a")
+        ("j" "Journal" entry (file+olp+datetree "~/org/journal.org")
+         "* %?\nEntered on %U\n  %i\n  %a")))
+
 ; hightlight current line
 ;; (load-file "~/.emacs.d/hl-spotlight.el")
 ;; (setq hl-spotlight-height 0)
