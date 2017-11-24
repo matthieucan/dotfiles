@@ -307,9 +307,9 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
       '(("t" "TODO" entry (file+headline "~/org/gtd.org" "Tasks")
          "* TODO %?\n  %i\n  Added on %U\n  %a")
         ("j" "Journal" entry (file+olp+datetree "~/org/log.org")
-         "* %?\nEntered on %U\n%i\n%a")
+         "* %?\n  Entered on %U\n%i\n  %a")
         ("J" "Journal (displayed in agenda)" entry (file+olp+datetree "~/org/log.org")
-         "* %?\nEntered on %T\n%i\n%a")
+         "* %?\n  Entered on %T\n%i\n  %a")
         ))
 
 ; log time when task is done
