@@ -221,10 +221,13 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
       '(("h" "My agenda view"
          (
           (agenda "")
-          (tags-todo "-future" ((org-agenda-skip-function '(org-agenda-skip-entry-if 'scheduled 'deadline)) (org-agenda-todo-list-sublevels nil)))
-          (tags "goodidea")
-          (tags "future")
+          (tags-todo "-goodidea" ((org-agenda-skip-function '(org-agenda-skip-entry-if 'scheduled 'deadline)) (org-agenda-todo-list-sublevels nil) (org-agenda-overriding-header "General TODO list")))
+          (tags "goodidea" ((org-agenda-overriding-header "Ideas worth thinking about")))
           ))))
+
+(setq org-priority-faces '((?A . (:foreground "darkred" :background "white" :weight bold))
+                           (?B . (:foreground "yellow"))
+                           (?C . (:foreground "green"))))
 
 ; org-mode todo items
 (setq org-todo-keywords
