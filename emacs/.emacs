@@ -231,12 +231,12 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 
 ; org-mode todo items
 (setq org-todo-keywords
-      '((sequence "TODO" "STARTED" "|" "CANCELED" "DONE")))
+      '((sequence "TODO" "NEXT" "|" "CANCELED" "DONE")))
 
 (setq org-todo-keyword-faces
       '(
        ("TODO" . (:background "darkred" :foreground "white" :weight bold))
-       ("STARTED" . (:foreground "black" :background "yellow" :weight bold))
+       ("NEXT" . (:foreground "black" :background "yellow" :weight bold))
        ("CANCELED" . (:foreground "black" :background "blue" :weight normal))
        ("DONE" . (:foreground "darkgreen" :weight bold))))
 
