@@ -213,7 +213,6 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 
 ; org-mode bindings
 (global-set-key "\C-cl" 'org-store-link)
-(global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
 
@@ -301,19 +300,11 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 ; org capture
 (setq org-default-notes-file "~/org/log.org")
 (define-key global-map "\C-cp" 'org-capture)
-;; (setq org-capture-templates
-;;       (quote (("t" "todo" entry (file (concat org-directory "/gtd.org"))
-;;                "* TODO %?\n%U\n%a\n" :clock-in t :clock-resume t)
-;;               ("n" "note" entry (file (concat org-directory "/gtd.org"))
-;;                "* %? :NOTE:\n%U\n%a\n" :clock-in t :clock-resume t)
-;;               ("j" "Journal" entry (file+datetree (concat org-directory "/diary.org"))
-;;                "* %?\n%U\n" :clock-in t :clock-resume t)
-;;               )))
 (setq org-capture-templates
-      '(("t" "Todo" entry (file+headline "~/org/gtd.org" "Tasks")
-         "* TODO %?\n  %i\n  %a")
-        ("j" "Journal" entry (file+olp+datetree "~/org/journal.org")
-         "* %?\nEntered on %U\n  %i\n  %a")))
+      '(("t" "TODO" entry (file+headline "~/org/gtd.org" "Tasks")
+         "* TODO %?\n  %i\n  Added on %U\n  %a")
+        ("j" "Journal" entry (file+olp+datetree "~/org/log.org")
+         "* %?\nEntered on %U\n%i\n%a")))
 
 ; hightlight current line
 ;; (load-file "~/.emacs.d/hl-spotlight.el")
