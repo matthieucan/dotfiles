@@ -407,4 +407,7 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (setq ido-everywhere t)
 (ido-mode 1)
 
+; when a file changes on disk, use the disk version (only if the buffer is not modified)
+(global-auto-revert-mode t)
+
 ;;
