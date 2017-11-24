@@ -312,6 +312,10 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
          "* %?\nEntered on %T\n%i\n%a")
         ))
 
+; log time when task is done
+(setq org-log-done (quote time))
+(setq org-log-into-drawer t)
+
 ; hightlight current line
 ;; (load-file "~/.emacs.d/hl-spotlight.el")
 ;; (setq hl-spotlight-height 0)
