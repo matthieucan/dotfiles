@@ -524,7 +524,12 @@
    `(icicle-complete-input                     ((,class (:foreground ,builtin))))
    `(icicle-common-match-highlight-Completions ((,class (:foreground ,type))))
    `(icicle-candidate-part                     ((,class (:foreground ,var))))
-   `(icicle-annotation                         ((,class (:foreground ,fg4)))))
+   `(icicle-annotation                         ((,class (:foreground ,fg4))))
+
+   ;; rst-mode
+   `(rst-level-1 ((t (:background "grey85" :foreground "black"))))
+   `(rst-level-2 ((t (:background "grey78" :foreground "black"))))
+   `(rst-level-3 ((t (:background "grey71" :foreground "black"))))
 
 ;;  `(org-agenda-date-today
 ;;    ((t (:foreground "yellow" :slant italic :weight bold))) t)
@@ -563,6 +568,7 @@
 ;;  `(org-upcoming-deadline ((t (:inherit font-lock-keyword))))
 ;;  `(org-warning ((t (:bold t :foreground "red" :weight bold))))
 
+)
 
   (custom-theme-set-variables
    'rebecca
