@@ -235,13 +235,13 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 
 ; org-mode todo items
 (setq org-todo-keywords
-      '((sequence "TODO" "NEXT" "|" "CANCELED" "DONE")))
+      '((sequence "TODO" "NEXT" "|" "NOPE" "DONE")))
 
 (setq org-todo-keyword-faces
       '(
        ("TODO" . (:background "darkred" :foreground "white" :weight bold))
        ("NEXT" . (:foreground "black" :background "yellow" :weight bold))
-       ("CANCELED" . (:foreground "black" :background "blue" :weight normal))
+       ("NOPE" . (:foreground "black" :background "blue" :weight bold))
        ("DONE" . (:foreground "darkgreen" :weight bold))))
 
 ;org-mode agenda files
