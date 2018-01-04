@@ -1,4 +1,4 @@
-; packages: python-rope, python-ropemacs, pymacs, solidity-mode
+; packages: python-rope, python-ropemacs, pymacs, solidity-mode, vue-mode
 
 (add-to-list 'load-path "~/.emacs.d/elpa/org-20171002/")
 (require 'org)
@@ -415,4 +415,6 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 ; when a file changes on disk, use the disk version (only if the buffer is not modified)
 (global-auto-revert-mode t)
 
-;;
+; vue-mode
+(custom-set-faces
+ '(mmm-default-submode-face ((t (:background nil)))))
