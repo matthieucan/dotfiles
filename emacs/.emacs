@@ -1,4 +1,4 @@
-; packages: python-rope, python-ropemacs, pymacs, solidity-mode, vue-mode
+; packages: python-rope, python-ropemacs, pymacs, solidity-mode, vue-mode, dumb-jump
 
 (add-to-list 'load-path "~/.emacs.d/elpa/org-20171002/")
 (require 'org)
@@ -418,3 +418,8 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 ; vue-mode
 (custom-set-faces
  '(mmm-default-submode-face ((t (:background nil)))))
+
+; activates dumb-jump
+(dumb-jump-mode)
+(global-set-key "\C-\M-j" 'dumb-jump-go)
+(global-set-key "\C-\M-k" 'dumb-jump-back)
