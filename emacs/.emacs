@@ -424,3 +424,13 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (dumb-jump-mode)
 (global-set-key "\C-\M-j" 'dumb-jump-go)
 (global-set-key "\C-\M-k" 'dumb-jump-back)
+
+; highlight indent lines
+; https://github.com/DarthFennec/highlight-indent-guides
+(load-file "~/.emacs.d/highlight-indent-guides.el")
+(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
+(setq highlight-indent-guides-method 'character)
+(setq highlight-indent-guides-auto-enabled nil)
+(set-face-background 'highlight-indent-guides-odd-face "color-234")
+(set-face-background 'highlight-indent-guides-even-face "color-234")
+(set-face-foreground 'highlight-indent-guides-character-face "color-234")
