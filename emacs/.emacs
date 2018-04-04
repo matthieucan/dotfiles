@@ -223,6 +223,7 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
           (agenda "")
           (tags-todo "-goodidea"
                      ((org-agenda-skip-function '(org-agenda-skip-entry-if 'scheduled 'deadline))
+                      (org-tags-match-list-sublevels nil)
                       (org-agenda-todo-list-sublevels nil)
                       (org-agenda-overriding-header "General TODO list")
                       (org-agenda-sorting-strategy '(priority-down todo-state-down))))
