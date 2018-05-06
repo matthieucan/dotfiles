@@ -1,4 +1,4 @@
-; packages: python-rope, python-ropemacs, pymacs, solidity-mode, vue-mode, dumb-jump
+; packages: python-mode, python-rope, python-ropemacs, pymacs, solidity-mode, vue-mode, dumb-jump
 
 (add-to-list 'load-path "~/.emacs.d/elpa/org-20171002/")
 (require 'org)
@@ -26,6 +26,9 @@
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(inhibit-startup-screen t)
+ '(package-selected-packages
+   (quote
+    (python-mode org magit lua-mode htmlize flycheck dash-functional auto-complete ag vue-mode solidity-mode rjsx-mode dumb-jump)))
  '(safe-local-variable-values (quote ((TeX-master . "main")))))
 
 ;; (cond
@@ -128,8 +131,8 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (setq mode-require-final-newline nil)
 
 ; Python-mode
-(setq py-install-directory "~/.emacs.d/python-mode.el-6.1.3")
-(add-to-list 'load-path "~/.emacs.d/python-mode.el-6.1.3")
+(setq py-install-directory "~/.emacs.d/elpa/python-mode-20180319.344")
+(add-to-list 'load-path "~/.emacs.d/elpa/python-mode-20180319.344")
 (require 'python-mode)
 
 ;(add-hook 'python-mode-hook
