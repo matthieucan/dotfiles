@@ -1,4 +1,4 @@
-; packages: python-mode, python-rope, python-ropemacs, pymacs, solidity-mode, vue-mode, dumb-jump
+; packages: python-mode, python-rope, python-ropemacs, pymacs, solidity-mode, vue-mode, dumb-jump, python-docstring
 
 (add-to-list 'load-path "~/.emacs.d/elpa/org-20171002/")
 (require 'org)
@@ -28,7 +28,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (python-mode org magit lua-mode htmlize flycheck dash-functional auto-complete ag vue-mode solidity-mode rjsx-mode dumb-jump)))
+    (python-docstring python-mode org magit lua-mode htmlize flycheck dash-functional auto-complete ag vue-mode solidity-mode rjsx-mode dumb-jump)))
  '(safe-local-variable-values (quote ((TeX-master . "main")))))
 
 ;; (cond
