@@ -1,4 +1,5 @@
 ; packages: python-mode, python-rope, python-ropemacs, pymacs, solidity-mode, vue-mode, dumb-jump, python-docstring
+; debian packages: elpa-s elpa-flycheck
 
 (add-to-list 'load-path "~/.emacs.d/elpa/org-20171002/")
 (require 'org)
@@ -361,7 +362,7 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 ;; (require 'fill-column-indicator)
 ;; (add-hook 'after-change-major-mode-hook 'fci-mode)
 
-(load-file "~/.emacs.d/python-docstring/python-docstring.el")
+(load-file "~/.emacs.d/elpa/python-docstring-20170508.156/python-docstring.el")
 (require 'python-docstring)
 (add-hook 'python-mode-hook 'python-docstring-mode)
 
