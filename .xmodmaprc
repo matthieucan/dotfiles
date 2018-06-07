@@ -1,5 +1,13 @@
 ! Right Alt -> Left Control
+
+!Run this once, sometimes xmodmap forgets about it:
+!keycode 108 = Alt_R
+
+!And run this for every session:
 remove Mod1 = Alt_R
 keysym Alt_R = Control_L
 add control = Control_L
+
+!Note: works with session "Gnome on Xorg" while logging in in GDM
+
 ! Mod_switch
