@@ -1,5 +1,5 @@
 ; packages: python-mode, python-rope, python-ropemacs, pymacs, solidity-mode, vue-mode, dumb-jump, python-docstring
-; debian packages: elpa-s elpa-flycheck
+; debian packages: elpa-s elpa-flycheck flake8 pylint3 elpa-auto-complete
 
 (add-to-list 'load-path "~/.emacs.d/elpa/org-20171002/")
 (require 'org)
