@@ -220,13 +220,26 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
 
+; https://lists.gnu.org/archive/html/emacs-orgmode/2018-04/msg00455.html
+(defun my-skip-entries-below-scheduled-entry ()
+  "Exclude sub-items from todo list in agenda if their parent is scheduled."
+  (when (save-excursion
+          (org-up-heading-safe)
+          (org-get-scheduled-time (point)))
+    (org-end-of-subtree t t)))
+
+(defun my-skip-entries ()
+  "Skip todo entries."
+  (or (org-agenda-skip-entry-if 'scheduled 'deadline) (my-skip-entries-below-scheduled-entry)))
+
 ; org-mode my agenda view
 (setq org-agenda-custom-commands
       '(("h" "My agenda view"
          (
           (agenda "")
           (tags-todo "-goodidea"
-                     ((org-agenda-skip-function '(org-agenda-skip-entry-if 'scheduled 'deadline))
+                     (
+                      (org-agenda-skip-function '(my-skip-entries))
                       (org-tags-match-list-sublevels nil)
                       (org-agenda-todo-list-sublevels nil)
                       (org-agenda-overriding-header "General TODO list")
@@ -422,6 +435,10 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 
 ; vue-mode
 (custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(mmm-default-submode-face ((t (:background nil)))))
 
 ; activates dumb-jump
