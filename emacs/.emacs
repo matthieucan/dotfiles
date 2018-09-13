@@ -455,3 +455,6 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (set-face-background 'highlight-indent-guides-odd-face "color-234")
 (set-face-background 'highlight-indent-guides-even-face "color-234")
 (set-face-foreground 'highlight-indent-guides-character-face "color-234")
+
+; always follow symlinks when opening a file
+(setq vc-follow-symlinks t)
