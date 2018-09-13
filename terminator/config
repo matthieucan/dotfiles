@@ -1,51 +1,54 @@
 [global_config]
-  window_state = maximise
-  handle_size = 1
   enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
-  title_transmit_fg_color = "#dcdcdc"
+  handle_size = 1
+  inactive_color_offset = 0.43
+  title_font = Sans Bold 7
+  title_inactive_bg_color = "#525252"
   title_inactive_fg_color = "#dcdcdc"
   title_transmit_bg_color = "#292929"
-  inactive_color_offset = 0.43
-  title_inactive_bg_color = "#525252"
+  title_transmit_fg_color = "#dcdcdc"
+  title_use_system_font = False
+  window_state = maximise
 [keybindings]
+  broadcast_all = <Primary><Shift><Alt>a
+  broadcast_group = <Primary><Shift><Alt>g
+  close_term = <Primary><Shift><Alt>p
   close_window = <Primary><Shift><Alt>o
-  switch_to_tab_10 = <Alt>0
+  layout_launcher = <Primary><Shift><Alt>l
+  rotate_ccw = <Primary><Shift>q
   rotate_cw = <Primary><Shift>w
+  switch_to_tab_1 = <Alt>1
+  switch_to_tab_10 = <Alt>0
+  switch_to_tab_2 = <Alt>2
+  switch_to_tab_3 = <Alt>3
+  switch_to_tab_4 = <Alt>4
   switch_to_tab_5 = <Alt>5
   switch_to_tab_6 = <Alt>6
   switch_to_tab_7 = <Alt>7
-  switch_to_tab_4 = <Alt>4
-  close_term = <Primary><Shift><Alt>p
-  switch_to_tab_2 = <Alt>2
-  rotate_ccw = <Primary><Shift>q
-  switch_to_tab_1 = <Alt>1
-  switch_to_tab_9 = <Alt>9
   switch_to_tab_8 = <Alt>8
-  switch_to_tab_3 = <Alt>3
-[profiles]
-  [[default]]
-    foreground_color = "#ffffff"
-    palette = "#292929:#cf6a4c:#19cb00:#fad07a:#8197bf:#8787af:#668799:#888888:#525252:#fc7249:#63d350:#ffefbf:#accaff:#c4c4ff:#80bfaf:#e8e8d3"
-    visible_bell = True
-    background_darkness = 0.77
-    urgent_bell = True
-    background_type = transparent
-    background_image = /usr/share/plymouth/themes/details/details.plymouth
-    cursor_color = "#ff0000"
-    cursor_blink = False
-    scroll_on_output = False
-    show_titlebar = False
-    font = Monospace 24
-    scrollbar_position = hidden
-    scrollback_lines = 5000
-    scrollback_infinite = True
+  switch_to_tab_9 = <Alt>9
 [layouts]
   [[default]]
     [[[child1]]]
-      type = Terminal
       parent = window0
       profile = default
+      type = Terminal
     [[[window0]]]
-      type = Window
       parent = ""
+      type = Window
 [plugins]
+[profiles]
+  [[default]]
+    background_darkness = 0.77
+    cursor_blink = False
+    cursor_color = "#ff0000"
+    cursor_color_fg = False
+    font = Monospace 10
+    foreground_color = "#ffffff"
+    palette = "#000000:#cf6a4c:#19cb00:#fad07a:#8197bf:#8787af:#668799:#888888:#525252:#fc7249:#63d350:#ffefbf:#accaff:#c4c4ff:#80bfaf:#e8e8d3"
+    scroll_background = False
+    scrollback_infinite = True
+    scrollback_lines = 5000
+    scrollbar_position = hidden
+    show_titlebar = False
+    use_system_font = False
