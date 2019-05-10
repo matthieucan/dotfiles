@@ -43,7 +43,7 @@
     cursor_blink = False
     cursor_color = "#ff0000"
     cursor_color_fg = False
-    font = Monospace 10
+    font = Monospace 9
     foreground_color = "#ffffff"
     palette = "#000000:#cf6a4c:#19cb00:#fad07a:#8197bf:#8787af:#668799:#888888:#525252:#fc7249:#63d350:#ffefbf:#accaff:#c4c4ff:#80bfaf:#e8e8d3"
     scroll_background = False
