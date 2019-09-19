@@ -13,6 +13,11 @@
 	added = yellow
 	changed = green
 	untracked = cyan
+[color "grep"]
+        filename = blue
+        lineNumber = green
+        match = red
+
 [alias]
 	st = status
         who = shortlog -sne
@@ -35,3 +40,6 @@
 
 [help]
 	autocorrect = 20
+
+[grep]
+        lineNumber = true
