@@ -307,7 +307,7 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
  '((gnuplot . t)
    (python . t)
    (sh . t)
-   (shell . t)
+   ;; (shell . t)
    (scala . t)))
 ;; add additional languages with '((language . t)))
 
