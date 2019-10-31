@@ -33,7 +33,7 @@
        (base00 (if (display-graphic-p) "#292a44" nil)) ;; default background
        (base01 (if (display-graphic-p) "#663399" "#8700d7")) ;; lighter background (status bar)
        (base02 (if (display-graphic-p) "#383a62" "#303030")) ;; selection background
-       (base03 (if (display-graphic-p) "#666699" "#5f5f87")) ;; comments, invisibles
+       (base03 (if (display-graphic-p) "#666699" "#ffb800")) ;; comments, invisibles
        (base04 (if (display-graphic-p) "#a0a0c5" "#8787af")) ;; dark foreground (status bar)
        (base05 (if (display-graphic-p) "#f1eff8" "#e4e4e4")) ;; default foreground
        (base06 (if (display-graphic-p) "#ccccff" "#afafff")) ;; light foreground
