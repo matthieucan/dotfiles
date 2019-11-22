@@ -295,6 +295,9 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (setq org-agenda-skip-deadline-if-done 1)
 (setq org-agenda-skip-timestamp-if-done 1)
 
+; agenda: right-align tags on column 95
+(setq org-agenda-tags-column -95)
+
 ; todo list: don't display scheduled/deadlined/timestamped items
 (setq org-agenda-todo-ignore-with-date 1)
 
