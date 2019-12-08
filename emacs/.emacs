@@ -314,6 +314,10 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
    (scala . t)))
 ;; add additional languages with '((language . t)))
 
+;; use python3
+(setq org-babel-python-command "python3")
+
+
 (defun my-org-confirm-babel-evaluate (lang body)
   (not (string= lang "python")))  ; don't ask for python
 (setq org-confirm-babel-evaluate 'my-org-confirm-babel-evaluate)
