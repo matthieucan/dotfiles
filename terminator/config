@@ -14,6 +14,10 @@
   broadcast_group = <Primary><Shift><Alt>g
   close_term = <Primary><Shift><Alt>p
   close_window = <Primary><Shift><Alt>o
+  go_down = <Shift><Alt>Down
+  go_left = <Shift><Alt>Left
+  go_right = <Shift><Alt>Right
+  go_up = <Shift><Alt>Up
   layout_launcher = <Primary><Shift><Alt>l
   rotate_ccw = <Primary><Shift>q
   rotate_cw = <Primary><Shift>w
