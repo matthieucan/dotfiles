@@ -147,6 +147,10 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 
 (setq-default indent-tabs-mode nil)
 
+; black
+(load "~/.emacs.d/blacken.el")
+(add-hook 'python-mode-hook 'blacken-mode)
+
 ; disable scroll bar
 (scroll-bar-mode -1)
 
