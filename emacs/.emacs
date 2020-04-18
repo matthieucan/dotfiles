@@ -419,6 +419,7 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (setq flycheck-python-pylint-executable "pylint3")
 (setq flycheck-display-errors-delay 0)
+(setq flycheck-flake8-maximum-line-length 88)
 
 ; rjsx-mode installed from melpa
 (add-to-list 'auto-mode-alist '("components\\/.*\\.js\\'" . rjsx-mode))
