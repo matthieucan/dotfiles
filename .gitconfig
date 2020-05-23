@@ -18,6 +18,11 @@
         lineNumber = green
         match = red bold
 
+[pager]
+        log = colordiff | ~/bin/diff-highlight | less
+        show = colordiff | ~/bin/diff-highlight | less
+        diff = colordiff | ~/bin/diff-highlight | less
+
 [alias]
 	st = status
         who = shortlog -sne
