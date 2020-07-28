@@ -120,6 +120,9 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 	(setq auto-mode-alist 
 		(cons '("\\.md" . markdown-mode) auto-mode-alist)
 	)
+(add-hook 'markdown-mode-hook
+          (lambda ()
+            (set-fill-column 80)))
 
 ; won't automagickally add newline at the end of saved files
 ;(setq-default require-final-newline nil)
