@@ -241,7 +241,8 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 
 ; org-mode my agenda view
 (setq org-agenda-custom-commands
-      '(("h" "My agenda view"
+      '(
+        ("h" "My agenda view"
          (
           (agenda "")
           (tags-todo "-goodidea"
@@ -252,7 +253,20 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
                       (org-agenda-overriding-header "General TODO list")
                       (org-agenda-sorting-strategy '(priority-down todo-state-down))))
           (tags "goodidea" ((org-agenda-overriding-header "Ideas worth thinking about")))
-          ))))
+          ))
+        ("p" "Picnic"
+         (
+          (agenda "" ((org-agenda-files '("~/org/picnic.org"))))
+          (todo "TODO"
+                (
+                 (org-agenda-files '("~/org/picnic.org"))
+                 (org-agenda-overriding-header "Picnic TODO list")
+                 )
+                )
+          )
+         )
+        )
+      )
 
 (setq org-priority-faces '((?A . (:foreground "darkred" :background "white" :weight bold))
                            (?B . (:foreground "yellow"))
