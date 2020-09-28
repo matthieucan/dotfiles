@@ -253,7 +253,9 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
                       (org-agenda-overriding-header "General TODO list")
                       (org-agenda-sorting-strategy '(priority-down todo-state-down))))
           (tags "goodidea" ((org-agenda-overriding-header "Ideas worth thinking about")))
-          ))
+          )
+         ((org-agenda-tag-filter-preset '("-picnic")))
+         )
         ("p" "Picnic"
          (
           (agenda "" ((org-agenda-files '("~/org/picnic.org"))))
