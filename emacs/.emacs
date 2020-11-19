@@ -1,4 +1,4 @@
-; packages: python-mode, python-rope, python-ropemacs, pymacs, solidity-mode, vue-mode, dumb-jump, python-docstring
+; packages: python-mode, python-rope, python-ropemacs, pymacs, solidity-mode, vue-mode, dumb-jump, python-docstring, org-jira
 ; debian packages: elpa-s elpa-flycheck flake8 pylint3 elpa-auto-complete
 
 (add-to-list 'load-path "~/.emacs.d/elpa/org-20171002/")
@@ -8,7 +8,7 @@
 (when (>= emacs-major-version 24)
   (require 'package)
   (package-initialize)
-  (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+  (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
   )
 
 ; hide useless warnings
@@ -29,7 +29,7 @@
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (python-docstring python-mode org magit lua-mode htmlize flycheck dash-functional auto-complete ag vue-mode solidity-mode rjsx-mode dumb-jump)))
+    (org-jira python-docstring python-mode org magit lua-mode htmlize flycheck dash-functional auto-complete ag vue-mode solidity-mode rjsx-mode dumb-jump)))
  '(safe-local-variable-values (quote ((TeX-master . "main")))))
 
 ;; (cond
@@ -266,6 +266,20 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
                  )
                 )
           (tags "ongoing" ((org-agenda-overriding-header "Ongoing projects")))
+          (todo "TODO|CURR"
+                (
+                 (org-agenda-files '("~/org/jira/PY.org"))
+                 (org-agenda-overriding-header "JIRA/PY")
+                 (org-agenda-sorting-strategy '(priority-down todo-state-down))
+                 )
+                )
+          (todo "TODO|CURR"
+                (
+                 (org-agenda-files '("~/org/jira/DATA.org"))
+                 (org-agenda-overriding-header "JIRA/DATA")
+                 (org-agenda-sorting-strategy '(priority-down todo-state-down))
+                 )
+                )
           )
          )
         )
@@ -277,19 +291,21 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 
 ; org-mode todo items
 (setq org-todo-keywords
-      '((sequence "TODO" "NEXT" "|" "NOPE" "DONE")))
+      '((sequence "TODO" "NEXT" "CURR" "|" "NOPE" "DONE")))
 
 (setq org-todo-keyword-faces
       '(
        ("TODO" . (:background "darkred" :foreground "white" :weight bold))
        ("NEXT" . (:foreground "black" :background "yellow" :weight bold))
+       ("CURR" . (:foreground "black" :background "yellow" :weight bold))
        ("NOPE" . (:foreground "black" :background "blue" :weight bold))
        ("DONE" . (:foreground "darkgreen" :weight bold))))
 
 ;org-mode agenda files
-(load-library "find-lisp")
-(setq org-agenda-files
-      (append (find-lisp-find-files "~/org" "\.org$")))
+;; (load-library "find-lisp")
+;; (setq org-agenda-files
+;;       (append (find-lisp-find-files "~/org" "\.org$")))
+(setq org-agenda-files (file-expand-wildcards "~/org/*.org"))
 ;; (setq org-agenda-files (append
 ;;       '("~/org/"
 ;;         "~/git/phd-thesis/")))
@@ -321,6 +337,13 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 
 ; agenda: right-align tags on column 95
 (setq org-agenda-tags-column -95)
+
+; agenda: tag placement
+;; Place tags close to the right-hand side of the window
+(add-hook 'org-agenda-mode-hook '(lambda ()
+                                  (setq org-agenda-tags-column (- (window-width) 22))))
+;(setq org-tags-column -120)
+
 
 ; todo list: don't display scheduled/deadlined/timestamped items
 (setq org-agenda-todo-ignore-with-date 1)
@@ -368,6 +391,13 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 ; log time when task is done
 (setq org-log-done (quote time))
 (setq org-log-into-drawer t)
+
+; org-jira
+(setq org-jira-working-dir "~/org/jira")
+(setq jiralib-url "https://picnic.atlassian.net")
+(setq org-jira-jira-status-to-org-keyword-alist
+      '(("In Progress" . "CURR")
+        ("In Review" . "CURR")))
 
 ; hightlight current line
 ;; (load-file "~/.emacs.d/hl-spotlight.el")
