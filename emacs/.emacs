@@ -397,7 +397,8 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (setq jiralib-url "https://picnic.atlassian.net")
 (setq org-jira-jira-status-to-org-keyword-alist
       '(("In Progress" . "CURR")
-        ("In Review" . "CURR")))
+        ("In Review" . "CURR")
+        ("To Deploy" . "DONE")))
 
 ; hightlight current line
 ;; (load-file "~/.emacs.d/hl-spotlight.el")
