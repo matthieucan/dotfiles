@@ -259,10 +259,11 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
         ("p" "Picnic"
          (
           (agenda "" ((org-agenda-files '("~/org/picnic.org"))))
-          (todo "TODO"
+          (todo "TODO|NEXT|CURR"
                 (
                  (org-agenda-files '("~/org/picnic.org"))
                  (org-agenda-overriding-header "TODO list")
+                 (org-agenda-sorting-strategy '(priority-down todo-state-down))
                  )
                 )
           (tags "ongoing" ((org-agenda-overriding-header "Ongoing projects")))
