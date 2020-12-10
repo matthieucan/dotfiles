@@ -328,6 +328,10 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 ;(require 'french-holidays)
 ;(setq calendar-holidays holiday-french-holidays)
 
+; geographical location, for sunset & sunrise times
+(setq calendar-latitude 52.4)
+(setq calendar-longitude 4.9)
+
 ; reload org files automatically
 (add-hook 'org-mode-hook 'auto-revert-mode)
 
