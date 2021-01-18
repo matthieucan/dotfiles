@@ -267,14 +267,14 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
                  )
                 )
           (tags "ongoing" ((org-agenda-overriding-header "Ongoing projects")))
-          (todo "TODO|CURR"
+          (todo "OPEN|BLOC|CURR|REVW|TØDØ"
                 (
                  (org-agenda-files '("~/org/jira/PY.org"))
                  (org-agenda-overriding-header "JIRA/PY")
                  (org-agenda-sorting-strategy '(priority-down todo-state-down))
                  )
                 )
-          (todo "TODO|CURR"
+          (todo "OPEN|BLOC|CURR|REVW|TØDØ"
                 (
                  (org-agenda-files '("~/org/jira/DATA.org"))
                  (org-agenda-overriding-header "JIRA/DATA")
@@ -291,14 +291,21 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
                            (?C . (:foreground "green"))))
 
 ; org-mode todo items
+; in order not to duplicate keywords in different sequences (which
+; breaks the agenda sorting), use a funny version of TODO: TØDØ
 (setq org-todo-keywords
-      '((sequence "TODO" "NEXT" "CURR" "|" "NOPE" "DONE")))
+      '((sequence "TODO" "NEXT" "|" "NOPE" "DONE")
+        (sequence "BLOC" "OPEN" "TØDØ" "REVW" "CURR" "|" "DONE")))
 
 (setq org-todo-keyword-faces
       '(
-       ("TODO" . (:background "darkred" :foreground "white" :weight bold))
+       ("TODO" . (:foreground "white" :background "darkred" :weight bold))
+       ("TØDØ" . (:foreground "white" :background "darkred" :weight bold))
        ("NEXT" . (:foreground "black" :background "yellow" :weight bold))
        ("CURR" . (:foreground "black" :background "yellow" :weight bold))
+       ("REVW" . (:foreground "black" :background "green" :weight bold))
+       ("OPEN" . (:foreground "black" :background "white" :weight bold))
+       ("BLOC" . (:foreground "black" :background "white" :weight bold))
        ("NOPE" . (:foreground "black" :background "blue" :weight bold))
        ("DONE" . (:foreground "darkgreen" :weight bold))))
 
@@ -361,9 +368,10 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
  'org-babel-load-languages
  '((gnuplot . t)
    (python . t)
-   (sh . t)
+   ;; (sh . t)
    ;; (shell . t)
-   (scala . t)))
+   ;; (scala . t)
+   ))
 ;; add additional languages with '((language . t)))
 
 ;; use python3
@@ -402,7 +410,10 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (setq jiralib-url "https://picnic.atlassian.net")
 (setq org-jira-jira-status-to-org-keyword-alist
       '(("In Progress" . "CURR")
-        ("In Review" . "CURR")
+        ("In Review" . "REVW")
+        ("To Do" . "TØDØ")
+        ("Blocked" . "BLOC")
+        ("Open" . "OPEN")
         ("To Deploy" . "DONE")))
 
 ; hightlight current line
