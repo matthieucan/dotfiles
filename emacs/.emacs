@@ -258,8 +258,13 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
          )
         ("p" "Picnic"
          (
-          (agenda "" ((org-agenda-files '("~/org/picnic.org"))))
-          (todo "TODO|NEXT|CURR"
+          (agenda ""
+                  (
+                   (org-agenda-files '("~/org/picnic.org"))
+                   (org-agenda-sorting-strategy '(priority-down todo-state-down))
+                   )
+                  )
+          (todo "TODO|NEXT|CURR|BLOC"
                 (
                  (org-agenda-files '("~/org/picnic.org"))
                  (org-agenda-overriding-header "TODO list")
@@ -291,10 +296,8 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
                            (?C . (:foreground "green"))))
 
 ; org-mode todo items
-; in order not to duplicate keywords in different sequences (which
-; breaks the agenda sorting), use a funny version of TODO: TØDØ
 (setq org-todo-keywords
-      '((sequence "TODO" "NEXT" "CURR" "|" "NOPE" "DONE")))
+      '((sequence "TODO" "BLOC" "NEXT" "CURR" "|" "NOPE" "DONE")))
 
 (setq org-todo-keyword-faces
       '(
