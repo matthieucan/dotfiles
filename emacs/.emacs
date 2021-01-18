@@ -267,14 +267,14 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
                  )
                 )
           (tags "ongoing" ((org-agenda-overriding-header "Ongoing projects")))
-          (todo "OPEN|BLOC|CURR|REVW|TØDØ"
+          (todo "OPEN|BLOC|CURR|REVW|TODO"
                 (
                  (org-agenda-files '("~/org/jira/PY.org"))
                  (org-agenda-overriding-header "JIRA/PY")
                  (org-agenda-sorting-strategy '(priority-down todo-state-down))
                  )
                 )
-          (todo "OPEN|BLOC|CURR|REVW|TØDØ"
+          (todo "OPEN|BLOC|CURR|REVW|TODO"
                 (
                  (org-agenda-files '("~/org/jira/DATA.org"))
                  (org-agenda-overriding-header "JIRA/DATA")
@@ -294,18 +294,16 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 ; in order not to duplicate keywords in different sequences (which
 ; breaks the agenda sorting), use a funny version of TODO: TØDØ
 (setq org-todo-keywords
-      '((sequence "TODO" "NEXT" "|" "NOPE" "DONE")
-        (sequence "BLOC" "OPEN" "TØDØ" "REVW" "CURR" "|" "DONE")))
+      '((sequence "TODO" "NEXT" "CURR" "|" "NOPE" "DONE")))
 
 (setq org-todo-keyword-faces
       '(
        ("TODO" . (:foreground "white" :background "darkred" :weight bold))
-       ("TØDØ" . (:foreground "white" :background "darkred" :weight bold))
        ("NEXT" . (:foreground "black" :background "yellow" :weight bold))
        ("CURR" . (:foreground "black" :background "yellow" :weight bold))
-       ("REVW" . (:foreground "black" :background "green" :weight bold))
+       ("REVW" . (:foreground "black" :background "darkgreen" :weight bold))
        ("OPEN" . (:foreground "black" :background "white" :weight bold))
-       ("BLOC" . (:foreground "black" :background "white" :weight bold))
+       ("BLOC" . (:foreground "darkred" :background "white" :weight bold))
        ("NOPE" . (:foreground "black" :background "blue" :weight bold))
        ("DONE" . (:foreground "darkgreen" :weight bold))))
 
@@ -411,7 +409,7 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (setq org-jira-jira-status-to-org-keyword-alist
       '(("In Progress" . "CURR")
         ("In Review" . "REVW")
-        ("To Do" . "TØDØ")
+        ("To Do" . "TODO")
         ("Blocked" . "BLOC")
         ("Open" . "OPEN")
         ("To Deploy" . "DONE")))
