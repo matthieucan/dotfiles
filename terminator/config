@@ -1,28 +1,24 @@
 [global_config]
-  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
   handle_size = 1
-  inactive_color_offset = 0.43
-  title_font = Sans Bold 7
-  title_inactive_bg_color = "#525252"
-  title_inactive_fg_color = "#dcdcdc"
-  title_transmit_bg_color = "#292929"
-  title_transmit_fg_color = "#dcdcdc"
-  title_use_system_font = False
   window_state = maximise
+  title_transmit_fg_color = "#dcdcdc"
+  title_transmit_bg_color = "#292929"
+  title_inactive_fg_color = "#dcdcdc"
+  title_inactive_bg_color = "#525252"
+  inactive_color_offset = 0.43
+  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  title_use_system_font = False
+  title_font = Sans Bold 7
 [keybindings]
-  broadcast_all = <Primary><Shift><Alt>a
-  broadcast_group = <Primary><Shift><Alt>g
+  go_up = <Shift><Alt>Up
+  go_down = <Shift><Alt>Down
+  go_left = <Primary><Shift><Alt>Left
+  go_right = <Primary><Shift><Alt>Right
+  rotate_cw = <Primary><Shift>w
+  rotate_ccw = <Primary><Shift>q
   close_term = <Primary><Shift><Alt>p
   close_window = <Primary><Shift><Alt>o
-  go_down = <Shift><Alt>Down
-  go_left = <Shift><Alt>Left
-  go_right = <Shift><Alt>Right
-  go_up = <Shift><Alt>Up
-  layout_launcher = <Primary><Shift><Alt>l
-  rotate_ccw = <Primary><Shift>q
-  rotate_cw = <Primary><Shift>w
   switch_to_tab_1 = <Alt>1
-  switch_to_tab_10 = <Alt>0
   switch_to_tab_2 = <Alt>2
   switch_to_tab_3 = <Alt>3
   switch_to_tab_4 = <Alt>4
@@ -31,6 +27,25 @@
   switch_to_tab_7 = <Alt>7
   switch_to_tab_8 = <Alt>8
   switch_to_tab_9 = <Alt>9
+  switch_to_tab_10 = <Alt>0
+  broadcast_group = <Primary><Shift><Alt>g
+  broadcast_all = <Primary><Shift><Alt>a
+  layout_launcher = <Primary><Shift><Alt>l
+[profiles]
+  [[default]]
+    background_darkness = 0.77
+    cursor_blink = False
+    cursor_color = "#ff0000"
+    cursor_color_fg = False
+    font = Monospace 9
+    foreground_color = "#ffffff"
+    show_titlebar = False
+    scrollbar_position = hidden
+    scroll_background = False
+    scrollback_lines = 5000
+    scrollback_infinite = True
+    palette = "#000000:#cf6a4c:#19cb00:#fad07a:#8197bf:#8787af:#668799:#888888:#525252:#fc7249:#63d350:#ffefbf:#accaff:#c4c4ff:#80bfaf:#e8e8d3"
+    use_system_font = False
 [layouts]
   [[default]]
     [[[child1]]]
@@ -41,18 +56,3 @@
       parent = ""
       type = Window
 [plugins]
-[profiles]
-  [[default]]
-    background_darkness = 0.77
-    cursor_blink = False
-    cursor_color = "#ff0000"
-    cursor_color_fg = False
-    font = Monospace 9
-    foreground_color = "#ffffff"
-    palette = "#000000:#cf6a4c:#19cb00:#fad07a:#8197bf:#8787af:#668799:#888888:#525252:#fc7249:#63d350:#ffefbf:#accaff:#c4c4ff:#80bfaf:#e8e8d3"
-    scroll_background = False
-    scrollback_infinite = True
-    scrollback_lines = 5000
-    scrollbar_position = hidden
-    show_titlebar = False
-    use_system_font = False
