@@ -417,6 +417,10 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
         ("Open" . "OPEN")
         ("To Deploy" . "DONE")))
 
+; bind sortcut to refresh JRIA issues
+(global-set-key "\C-cj" 'org-jira-get-issues)
+
+
 ; hightlight current line
 ;; (load-file "~/.emacs.d/hl-spotlight.el")
 ;; (setq hl-spotlight-height 0)
