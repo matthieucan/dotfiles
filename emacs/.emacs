@@ -313,6 +313,11 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
        ("NOPE" . (:foreground "black" :background "blue" :weight bold))
        ("DONE" . (:foreground "darkgreen" :weight bold))))
 
+; org-mode agenda, when jumping to entry, narrow buffer
+(advice-add 'org-agenda-goto :after
+            (lambda (&rest args)
+              (org-narrow-to-subtree)))
+
 ;org-mode agenda files
 ;; (load-library "find-lisp")
 ;; (setq org-agenda-files
