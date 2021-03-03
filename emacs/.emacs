@@ -219,6 +219,9 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
         ("^[ \t]*>[ \t]*>.*$"
          (0 'font-lock-constant-face))))))
 
+; org modules
+(add-to-list 'org-modules 'org-habit t)
+
 ; color code blocks in org-mode
 (setq org-src-fontify-natively t)
 
