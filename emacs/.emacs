@@ -264,7 +264,7 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
           (agenda ""
                   (
                    (org-agenda-files '("~/org/picnic.org"))
-                   (org-agenda-sorting-strategy '(priority-down todo-state-down))
+                   ;; (org-agenda-sorting-strategy '(priority-down todo-state-down))
                    )
                   )
           (todo "TODO|NEXT|CURR|BLOC"
@@ -294,6 +294,15 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
         )
       )
 
+; org-agenda time grid settings
+(setq org-agenda-time-grid
+      (quote
+       ((today require-timed remove-match)
+        (800 1000 1200 1400 1600 1800 2000)
+        "....."
+        "----------------")))
+
+; org-mode priorities
 (setq org-priority-faces '((?A . (:foreground "darkred" :background "white" :weight bold))
                            (?B . (:foreground "yellow"))
                            (?C . (:foreground "green"))))
