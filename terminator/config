@@ -5,7 +5,7 @@
   title_transmit_bg_color = "#292929"
   title_inactive_fg_color = "#dcdcdc"
   title_inactive_bg_color = "#525252"
-  inactive_color_offset = 0.43
+  inactive_color_offset = 0.8309859154929577
   enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
   title_use_system_font = False
   title_font = Sans Bold 7
@@ -44,7 +44,7 @@
     scroll_background = False
     scrollback_lines = 5000
     scrollback_infinite = True
-    palette = "#000000:#cf6a4c:#19cb00:#fad07a:#8197bf:#8787af:#668799:#888888:#525252:#fc7249:#63d350:#ffefbf:#accaff:#c4c4ff:#80bfaf:#e8e8d3"
+    palette = "#000000:#cf6a4c:#19cb00:#fad07a:#8197bf:#8787af:#668799:#888888:#555753:#fc7249:#63d350:#ffefbf:#accaff:#c4c4ff:#80bfaf:#e8e8d3"
     use_system_font = False
 [layouts]
   [[default]]
