@@ -243,7 +243,7 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
   (or (org-agenda-skip-entry-if 'scheduled 'deadline) (my-skip-entries-below-scheduled-entry)))
 
 ; hide some tags in agenda views
-(setq org-agenda-hide-tags-regexp "picnic\\|anothertag\\|anotheranothertag")
+(setq org-agenda-hide-tags-regexp "picnic\\|ongoing\\|anothertag")
 
 ; org-mode my agenda view
 (setq org-agenda-custom-commands
