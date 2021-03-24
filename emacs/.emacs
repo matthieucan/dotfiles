@@ -374,7 +374,7 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 ; agenda: tag placement
 ;; Place tags close to the right-hand side of the window
 (add-hook 'org-agenda-mode-hook '(lambda ()
-                                  (setq org-agenda-tags-column (- (window-width) 22))))
+                                  (setq org-agenda-tags-column (- (window-width) 24))))
 ;(setq org-tags-column -120)
 
 
