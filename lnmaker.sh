@@ -39,7 +39,7 @@ ln ${dir}/.pyrc ~/.pyrc --symbolic
 #cp ~/.gitconfig ~/.gitconfig.bak
 #cat .gitconfig >> ~/.gitconfig
 
-mkdir ~/bin
+mkdir -p ~/bin
 cp /usr/share/doc/git/contrib/diff-highlight/diff-highlight ~/bin
 chmod +x ~/bin/diff-highlight
 
@@ -106,3 +106,7 @@ ln ${dir}/.lessfilter ~/.lessfilter --symbolic
 # mime
 rm ~/.config/mimeapps.list
 ln ${dir}/mimeapps.list ~/.config/mimeapps.list --symbolic
+
+# docker
+rm -r ~/.docker
+ln ${dir}/.docker ~/.docker --symbolic
