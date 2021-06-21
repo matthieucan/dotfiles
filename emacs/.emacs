@@ -270,6 +270,7 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
                    ;; (org-agenda-sorting-strategy '(priority-down todo-state-down))
                    )
                   )
+          (tags "ongoing" ((org-agenda-overriding-header "Ongoing projects")))
           (todo "TODO|NEXT|CURR|BLOC"
                 (
                  (org-agenda-files '("~/org/picnic.org"))
@@ -277,7 +278,6 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
                  (org-agenda-sorting-strategy '(priority-down todo-state-down))
                  )
                 )
-          (tags "ongoing" ((org-agenda-overriding-header "Ongoing projects")))
           (todo "OPEN|BLOC|CURR|REVW|TODO"
                 (
                  (org-agenda-files '("~/org/jira/PY.org"))
