@@ -568,6 +568,9 @@
 ;;  `(org-upcoming-deadline ((t (:inherit font-lock-keyword))))
 ;;  `(org-warning ((t (:bold t :foreground "red" :weight bold))))
 
+   ;; customized by Matthieu
+   `(secondary-selection ((t (:background "yellow" :foreground "black"))))
+
 )
 
   (custom-theme-set-variables
