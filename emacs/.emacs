@@ -562,3 +562,6 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 
 ; always follow symlinks when opening a file
 (setq vc-follow-symlinks t)
+
+; save backup files (foo~) in separate directory
+(setq backup-directory-alist `(("." . "~/.saves")))
