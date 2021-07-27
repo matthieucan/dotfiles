@@ -438,8 +438,20 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
         ("Open" . "OPEN")
         ("To Deploy" . "DONE")))
 
-; bind sortcut to refresh JRIA issues
+; bind sortcut to refresh JIRA issues
 (global-set-key "\C-cj" 'org-jira-get-issues)
+
+; org-mode: move narrowed view 1 level up
+(defun my/org-narrow-parent ()
+  "Select parent of current subtree and narrow to it."
+  (interactive)
+  (widen)
+ (outline-up-heading 1 t)
+ (org-reveal)
+ (org-narrow-to-subtree)
+ (outline-hide-subtree) ; hide and cycle renders better wrt empty lines between subtrees
+ (org-cycle))
+(global-set-key "\C-cu" 'my/org-narrow-parent)
 
 
 ; hightlight current line
