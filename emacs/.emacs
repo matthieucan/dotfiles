@@ -272,6 +272,13 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
                   )
           (tags "ongoing" ((org-agenda-overriding-header "Ongoing projects")))
           (tags "task" ((org-agenda-overriding-header "Clockable tasks")))
+          (todo "DELG"
+                (
+                 (org-agenda-files '("~/org/picnic.org"))
+                 (org-agenda-overriding-header "Delegated")
+                 (org-agenda-sorting-strategy '(priority-down todo-state-down))
+                 )
+                )
           (todo "TODO|NEXT|CURR|BLOC"
                 (
                  (org-agenda-files '("~/org/picnic.org"))
