@@ -295,6 +295,13 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
                 )
           (todo "OPEN|BLOC|CURR|REVW|TODO"
                 (
+                 (org-agenda-files '("~/org/jira/MUR.org"))
+                 (org-agenda-overriding-header "JIRA/MUR")
+                 (org-agenda-sorting-strategy '(priority-down todo-state-down))
+                 )
+                )
+          (todo "OPEN|BLOC|CURR|REVW|TODO"
+                (
                  (org-agenda-files '("~/org/jira/DATA.org"))
                  (org-agenda-overriding-header "JIRA/DATA")
                  (org-agenda-sorting-strategy '(priority-down todo-state-down))
@@ -443,10 +450,29 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
         ("To Do" . "TODO")
         ("Blocked" . "BLOC")
         ("Open" . "OPEN")
+        ("Draft" . "OPEN")
+        ("Backlog" . "OPEN")
         ("To Deploy" . "DONE")))
 
+; set custom JQL
+(setq org-jira-custom-jqls
+  '(
+    (:jql " project = 'DATA' AND assignee = currentUser() AND status IN ('Blocked','In Progress','In Review','Open','To Do','To Deploy') ORDER BY created DESC "
+          :limit 100
+          :filename "DATA")
+    (:jql " project = 'PY' AND assignee = currentUser() AND status IN ('Blocked','Draft','In Progress','In Review','Open','To Do') ORDER BY created DESC "
+          :limit 100
+          :filename "PY")
+    (:jql " project = 'MUR' AND assignee = currentUser() AND status IN ('Backlog','Blocked','In Progress','In Review','To Do') ORDER BY created DESC "
+          :limit 100
+          :filename "MUR")
+   ))
+
+; do not create deadline entries, I don't use them and it makes issues disappear from agenda
+(setq org-jira-deadline-duedate-sync-p nil)
+
 ; bind sortcut to refresh JIRA issues
-(global-set-key "\C-cj" 'org-jira-get-issues)
+(global-set-key "\C-cj" 'org-jira-get-issues-from-custom-jql)
 
 ; org-mode: move narrowed view 1 level up
 (defun my/org-narrow-parent ()
