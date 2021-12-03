@@ -441,6 +441,9 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (setq org-log-done (quote time))
 (setq org-log-into-drawer t)
 
+; Set org duration format. Only show hours:minutes in clock tables
+(setq org-duration-format 'h:mm)
+
 ; org-jira
 (setq org-jira-working-dir "~/org/jira")
 (setq jiralib-url "https://picnic.atlassian.net")
