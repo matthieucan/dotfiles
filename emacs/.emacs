@@ -288,13 +288,6 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
                 )
           (todo "OPEN|BLOC|CURR|REVW|TODO"
                 (
-                 (org-agenda-files '("~/org/jira/PY.org"))
-                 (org-agenda-overriding-header "JIRA/PY")
-                 (org-agenda-sorting-strategy '(priority-down todo-state-down))
-                 )
-                )
-          (todo "OPEN|BLOC|CURR|REVW|TODO"
-                (
                  (org-agenda-files '("~/org/jira/MUR.org"))
                  (org-agenda-overriding-header "JIRA/MUR")
                  (org-agenda-sorting-strategy '(priority-down todo-state-down))
