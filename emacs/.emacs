@@ -1,5 +1,5 @@
 ; packages: python-mode, python-rope, python-ropemacs, pymacs, solidity-mode, vue-mode, dumb-jump, python-docstring, org-jira
-; debian packages: elpa-s elpa-flycheck flake8 pylint3 elpa-auto-complete
+; debian packages: elpa-s elpa-flycheck flake8 pylint3 elpa-auto-complete, elpa-pkg-info
 
 (add-to-list 'load-path "~/.emacs.d/elpa/org-20171002/")
 (require 'org)
@@ -151,8 +151,8 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (setq-default indent-tabs-mode nil)
 
 ; black
-(load "~/.emacs.d/blacken.el")
-(add-hook 'python-mode-hook 'blacken-mode)
+;; (load "~/.emacs.d/blacken.el")
+;; (add-hook 'python-mode-hook 'blacken-mode)
 
 ; disable scroll bar
 (scroll-bar-mode -1)
@@ -220,6 +220,7 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
          (0 'font-lock-constant-face))))))
 
 ; org modules
+(load-file "~/.emacs.d/org-clock-csv.el")
 (add-to-list 'org-modules 'org-habit t)
 
 ; color code blocks in org-mode
