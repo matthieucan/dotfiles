@@ -550,9 +550,7 @@ auto-mode-alist (append (list '("\\.c$" . c-mode)
 (global-set-key (kbd "C-c c") (lambda()(interactive)(djcb-duplicate-line t)))
 
 ; remember when I were in files
-(setq save-place-file "~/.emacs.d/saveplace")
-(setq-default save-place t)
-(require 'saveplace)
+(save-place-mode 1)
 
 ; flycheck, lint error highlighting
 (add-hook 'after-init-hook #'global-flycheck-mode)
