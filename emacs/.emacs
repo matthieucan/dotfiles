@@ -1,7 +1,7 @@
 ; packages: python-mode, python-rope, python-ropemacs, pymacs, solidity-mode, vue-mode, dumb-jump, python-docstring, org-jira
 ; debian packages: elpa-s elpa-flycheck flake8 pylint3 elpa-auto-complete, elpa-pkg-info
 
-(load-file "~/.emacs.d/org.el")
+(load-file "~/.emacs.d/config/org.el")
 
 (when (>= emacs-major-version 24)
   (require 'package)
