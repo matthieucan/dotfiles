@@ -1,7 +1,13 @@
 ; packages: python-mode, python-rope, python-ropemacs, pymacs, solidity-mode, vue-mode, dumb-jump, python-docstring, org-jira
 ; debian packages: elpa-s elpa-flycheck flake8 pylint3 elpa-auto-complete, elpa-pkg-info
 
+; org-mode
 (load-file "~/.emacs.d/config/org.el")
+
+; theme
+(load-file "~/.emacs.d/config/rebecca-theme.el")
+(load-theme 'rebecca t t)
+(enable-theme 'rebecca)
 
 (when (>= emacs-major-version 24)
   (require 'package)
@@ -14,9 +20,6 @@
 
 ;; colors
 
-(load-file "~/.emacs.d/rebecca-theme.el")
-(load-theme 'rebecca t t)
-(enable-theme 'rebecca)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
