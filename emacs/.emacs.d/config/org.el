@@ -60,9 +60,15 @@
                    ;; (org-agenda-sorting-strategy '(priority-down todo-state-down))
                    )
                   )
-          (tags "ongoing"
+          (tags "ongoing-upcoming"
 		(
 		 (org-agenda-overriding-header "Ongoing projects")
+		 (org-agenda-sorting-strategy '(priority-down todo-state-up))
+		 )
+		)
+          (tags "upcoming"
+		(
+		 (org-agenda-overriding-header "Upcoming projects")
 		 (org-agenda-sorting-strategy '(priority-down todo-state-up))
 		 )
 		)
