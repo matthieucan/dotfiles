@@ -60,9 +60,14 @@
                    ;; (org-agenda-sorting-strategy '(priority-down todo-state-down))
                    )
                   )
-          (tags "ongoing" ((org-agenda-overriding-header "Ongoing projects")))
+          (tags "ongoing"
+		(
+		 (org-agenda-overriding-header "Ongoing projects")
+		 (org-agenda-sorting-strategy '(priority-down todo-state-up))
+		 )
+		)
           (tags "task" ((org-agenda-overriding-header "Clockable tasks")))
-          (todo "DELG"
+          (tags-todo "TODO=\"DELG\"-ongoing"
                 (
                  (org-agenda-files '("~/org/picnic.org"))
                  (org-agenda-overriding-header "Delegated")
