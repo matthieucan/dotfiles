@@ -47,6 +47,10 @@ chmod +x ~/bin/diff-highlight
 rm ~/.lynx.lss
 ln ${dir}/.lynx.lss ~/.lynx.lss --symbolic
 
+# tig
+rm -r ~/.tigrc
+ln ${dir}/.tigrc ~/.tigrc --symbolic
+
 # tint2
 rm -r ~/.config/tint2
 ln ${dir}/tint2 ~/.config/tint2 --symbolic
