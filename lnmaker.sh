@@ -29,10 +29,6 @@ mkdir -p ~/bin
 cp /usr/share/doc/git/contrib/diff-highlight/diff-highlight ~/bin
 chmod +x ~/bin/diff-highlight
 
-# lynx
-rm ~/.lynx.lss
-ln ${dir}/.lynx.lss ~/.lynx.lss --symbolic
-
 # tig
 rm -r ~/.tigrc
 ln ${dir}/.tigrc ~/.tigrc --symbolic
