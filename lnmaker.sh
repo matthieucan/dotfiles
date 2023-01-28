@@ -12,10 +12,8 @@ rm ~/.bashrc
 ln ${dir}/.bashrc ~/.bashrc --symbolic
 
 # emacs
-rm ~/.emacs
 rm ~/.emacs.d
-ln ${dir}/emacs/.emacs ~/.emacs --symbolic
-ln ${dir}/emacs/.emacs.d ~/.emacs.d --symbolic
+ln ${dir}/.emacs.d ~/.emacs.d --symbolic
 
 # python
 rm ~/.pyrc
