@@ -52,9 +52,9 @@
   :hook
   (prog-mode . display-line-numbers-mode) ; line numbers on the left margin
   (prog-mode . display-fill-column-indicator-mode) ; fill column on the right
+  (prog-mode . hl-line-mode) ; highlight current line
 
   :init
-  ;; (global-hl-line-mode t) ; highlight current line
   (column-number-mode t) ; show line & column numbers in mode line
   (setq inhibit-startup-screen t) ; start emacs with scratch
   (tool-bar-mode -1) ; disable tool bar
