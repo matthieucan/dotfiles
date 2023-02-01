@@ -75,6 +75,7 @@
   (conf-mode . display-line-numbers-mode)
   (prog-mode . display-fill-column-indicator-mode) ; fill column on the right
   (prog-mode . hl-line-mode) ; highlight current line
+  (visual-line-mode . visual-fill-column-mode) ; use visual-fill-column to have logical lines wrap at fill-column
 
   :init
   (column-number-mode t) ; show line & column numbers in mode line
@@ -492,6 +493,15 @@
   :hook
   (markdown-mode . (lambda () (set-fill-column 80)))
   (markdown-mode . display-fill-column-indicator-mode)
+  )
+
+;; ====================
+;; visual-fill-column
+;; ====================
+
+;; like visual-line-column, but wraps at fill-column instead of buffer width
+
+(use-package visual-fill-column
   )
 
 ;; ====================
