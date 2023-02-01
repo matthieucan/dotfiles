@@ -1,4 +1,5 @@
 [global_config]
+  dbus = False
   handle_size = 1
   window_state = maximise
   title_transmit_fg_color = "#dcdcdc"
@@ -33,18 +34,17 @@
   layout_launcher = <Primary><Shift><Alt>l
 [profiles]
   [[default]]
-    background_darkness = 0.77
     cursor_blink = False
-    cursor_color = "#ff0000"
+    icon_bell = False
+    background_color = "#2E3440"
+    cursor_color = "#D8DEE9"
     cursor_color_fg = False
     font = Monospace 9
-    foreground_color = "#ffffff"
+    foreground_color = "#D8DEE9"
     show_titlebar = False
     scrollbar_position = hidden
-    scroll_background = False
-    scrollback_lines = 5000
     scrollback_infinite = True
-    palette = "#000000:#cf6a4c:#19cb00:#fad07a:#8197bf:#8787af:#668799:#888888:#555753:#fc7249:#63d350:#ffefbf:#accaff:#c4c4ff:#80bfaf:#e8e8d3"
+    palette = "#3B4252:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#88C0D0:#E5E9F0:#4C566A:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#8FBCBB:#ECEFF4"
     use_system_font = False
 [layouts]
   [[default]]
