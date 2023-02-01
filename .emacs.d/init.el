@@ -777,6 +777,13 @@
   (setq hs-set-up-overlay #'display-folded-overlay)
   )
 
+;; ====================
+;; Writeroom mode
+;; ====================
+
+(use-package writeroom-mode
+  )
+
 ;; TODO
 ;; tramp-mode, editing remote files
 ;; helm https://github.com/emacs-helm/helm
