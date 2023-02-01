@@ -72,6 +72,7 @@
 
   :hook
   (prog-mode . display-line-numbers-mode) ; line numbers on the left margin
+  (conf-mode . display-line-numbers-mode)
   (prog-mode . display-fill-column-indicator-mode) ; fill column on the right
   (prog-mode . hl-line-mode) ; highlight current line
 
@@ -640,6 +641,7 @@
 (use-package git-gutter
   :hook
   (prog-mode . git-gutter-mode)
+  (conf-mode . git-gutter-mode)
 
   :diminish git-gutter-mode
 
