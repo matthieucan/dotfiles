@@ -52,6 +52,7 @@
   :custom-face
   ;; reproduce terminal colors for graphical emacs
   (default ((((type graphic) (min-colors 256)) (:foreground "#d8dee9" :background "#2e3440"))))
+  (completion-common-part ((t (:foreground "blue"))))
   (diff-added ((t (:background "green" :foreground "black"))))
   (diff-removed ((t (:background "red" :foreground "black"))))
   (font-lock-comment-face ((t (:foreground "blue"))))
