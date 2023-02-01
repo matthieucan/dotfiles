@@ -49,6 +49,27 @@
          ;; ("C-M-p" . backward-list)  ; go to start of sexp
 	 )
 
+  :custom-face
+  ;; reproduce terminal colors for graphical emacs
+  (default ((((type graphic) (min-colors 256)) (:foreground "#d8dee9" :background "#2e3440"))))
+  (diff-added ((t (:background "green" :foreground "black"))))
+  (diff-removed ((t (:background "red" :foreground "black"))))
+  (font-lock-comment-face ((t (:foreground "blue"))))
+  (font-lock-function-name-face ((t (:foreground "cyan"))))
+  (font-lock-keyword-face ((t (:foreground "yellow"))))
+  (font-lock-string-face ((t (:foreground "brightmagenta"))))
+  (font-lock-variable-name-face ((t (:foreground "cyan"))))
+  (minibuffer-prompt ((t (:foreground "yellow"))))
+  (region ((t (:background "yellow" :foreground "black")))) ; region (selection)
+  (hl-line ((t (:background "color-233")))) ; highlighted line around cursor
+  (isearch ((t (:foreground "black" :background "yellow"))))
+  (isearch-fail ((t (:foreground "black" :background "brightred"))))
+  (lazy-highlight ((t (:foreground "black" :background "blue"))))
+  (show-paren-match ((t (:background "cyan" :foreground "black")))) ; matching parentheses
+  (line-number ((t (:foreground "grey50")))) ; line numbers in fringe
+  (line-number-current-line ((t (:foreground "white"))))
+  ;; (fill-column-indicator ((t (:foreground "color-233")))) ; column indicator
+
   :hook
   (prog-mode . display-line-numbers-mode) ; line numbers on the left margin
   (prog-mode . display-fill-column-indicator-mode) ; fill column on the right
@@ -131,53 +152,6 @@
   )
 
 ;; ====================
-;; theme
-;; ====================
-
-;; M-x list-faces, M-x list-color-displays
-;; M-x describe-face, M-x customize-themes
-;; M-x describe-text-properties
-
-(use-package solarized-theme
-  :init
-  (load-theme 'solarized-wombat-dark t)
-  (custom-theme-set-faces
-   'solarized-wombat-dark
-
-   `(default ((t (:background nil))))
-
-   `(font-lock-comment-face ((t (:foreground "blue"))))
-
-   ;; region (selection)
-   `(region ((t (:background "yellow" :foreground "black"))))
-
-   ;; highlighted line around cursor
-   `(hl-line ((t (:background "color-233"))))
-
-   ;; matching parenthese
-   `(show-paren-match ((t (:background "yellow" :foreground "black"))))
-
-   ;; line numbers
-   `(line-number-current-line ((t (:foreground "yellow"))))
-
-   ;; column indicator
-   `(fill-column-indicator ((t (:foreground "color-233"))))
-   )
-  )
-
-;; (use-package nord-theme
-;;   :init
-;;   (load-theme 'nord t)
-;;   )
-
-;; (use-package rebecca-theme
-;;   :init
-;;   (load-theme 'rebecca t)
-;;   (custom-theme-set-faces
-;;    'rebecca
-;;   (enable-theme 'rebecca)))
-
-;; ====================
 ;; org
 ;; ====================
 
@@ -198,18 +172,15 @@
 	 ("C-c u" . my/org-narrow-parent))
 
   :custom-face
-  ;; some faces need to be inverted with :inverse-video
-  ;; something somewhere is messing up with faces
-  ;; and this is not reflected in describe-face
-
-   (org-agenda-calendar-event ((t (:foreground "brightwhite"))))
+   (org-agenda-calendar-event ((t (:foreground "brightwhite" :background nil))))
+   (org-agenda-calendar-sexp ((t (:foreground "brightwhite" :background nil :slant normal))))
    (org-agenda-date ((t (:foreground "yellow" :background nil :underline nil))))
-   (org-agenda-date-today ((t (:foreground "yellow" :background nil :weight bold :underline nil))))
+   (org-agenda-date-today ((t (:foreground "black" :background "yellow" :weight bold :underline nil :inverse-video nil))))
    (org-agenda-date-weekend ((t (:foreground "yellow" :weight medium :underline nil))))
-   (org-agenda-date-weekend-today ((t (:foreground "yellow" :background nil :weight bold :underline nil :inverse-video nil))))
+   (org-agenda-date-weekend-today ((t (:foreground "yellow" :background nil :weight bold :underline nil))))
    ;; (org-agenda-dimmed-todo-face ((t (:foreground))))
-   (org-agenda-done ((t (:foreground "green" :background "black" :inverse-video t))))
-   (org-agenda-structure ((t (:foreground "blue"))))
+   (org-agenda-done ((t (:foreground "green"))))
+   (org-agenda-structure ((t (:foreground "blue" :background nil))))
    (org-time-grid ((t (:foreground "yellow"))))
    (org-block ((t (:foreground "brightcyan"))))
    (org-code ((t (:foreground "white"))))
@@ -220,6 +191,7 @@
    (org-document-info-keyword ((t (:foreground "white"))))
    (org-document-title ((t (:weight bold :foreground "yellow"))))
    (org-done ((t (:foreground "green"))))
+   (org-drawer ((t (:foreground "blue"))))
    (org-ellipsis ((t (:foreground "blue"))))
    (org-footnote ((t (:foreground "white"))))
    (org-formula ((t (:foreground "yellow"))))
@@ -229,24 +201,24 @@
    (org-level-2 ((t (:weight bold :foreground "magenta"))))
    (org-level-3 ((t (:weight bold :foreground "cyan"))))
    (org-level-4 ((t (:weight bold :foreground "brightgreen"))))
-   (org-level-5 ((t (:weight bold :foreground "brightyellow"))))
+   (org-level-5 ((t (:weight bold :foreground "yellow"))))
    (org-level-6 ((t (:weight bold :foreground "brightblue"))))
    (org-level-7 ((t (:weight bold :foreground "brightmagenta"))))
    (org-level-8 ((t (:weight bold :foreground "brightcyan"))))
    (org-link ((t (:foreground "yellow" :underline t))))
-   (org-meta-line ((t (:foreground "orange" :background "black" :inverse-video t))))
-   (org-priority ((t (:foreground "red"))))
+   (org-meta-line ((t (:foreground "yellow" :background))))
+   (org-priority ((t (:foreground "red" :weight normal))))
    (org-scheduled ((t (:foreground "blue"))))
    (org-scheduled-previously ((t (:foreground "blue"))))
    (org-scheduled-today ((t (:foreground "blue"))))
    ;; (org-sexp-date ((t (:foreground ))))
    ;; (org-special-keyword ((t (:foreground ))))
-   ;; (org-table ((t (:foreground ))))
+   (org-table ((t (:foreground "blue"))))
    (org-tag ((t (:foreground "yellow" :background "color-234" :weight bold))))
    (org-todo ((t (:foreground "red" :weight bold))))
-   ;; (org-upcoming-deadline ((t (:foreground "red" :weight bold))))
-   ;; (org-deadline-announce ((t (:foreground "red" :weight bold))))
-   (org-warning ((t (:weight bold :foreground "darkred"))))
+   (org-upcoming-deadline ((t (:foreground "red" :weight bold))))
+   (org-deadline-announce ((t (:foreground "red" :weight bold))))
+   (org-warning ((t (:foreground "red" :weight bold))))
 
   :config
   ;; ;; color code blocks in org-mode
@@ -374,7 +346,7 @@
 
   ;; priorities
   (setq org-priority-faces
-        '((?A . (:foreground "darkred" :background "white" :weight bold))
+        '((?A . (:foreground "darkred" :background "color-246" :weight bold))
           (?B . (:foreground "yellow"))
           (?C . (:foreground "green"))))
 
@@ -391,7 +363,7 @@
          ("OPEN" . (:foreground "black" :background "white" :weight bold))
          ("BLOC" . (:foreground "darkred" :background "white" :weight bold))
          ("NOPE" . (:foreground "black" :background "blue" :weight bold))
-         ("DONE" . (:foreground "darkgreen" :weight bold))))
+         ("DONE" . (:foreground "white" :background "green" :weight bold))))
 
   ;; org-agenda, when jumping to entry, narrow buffer
   (advice-add 'org-agenda-goto :after
@@ -567,8 +539,8 @@
   (setq sml/modified-char "*")
 
   :custom-face
-  (mode-line ((t (:foreground "black" :background "color-236"))))
-  (mode-line-inactive ((t (:background nil))))
+  (mode-line ((t (:foreground "black" :background "color-233" :underline nil))))
+  (mode-line-inactive ((t (:foreground "white":background nil :underline nil))))
   (sml/col-number ((t (:foreground "yellow"))))
   (sml/line-number ((t (:inherit 'sml/col-number))))
   (sml/modified ((t (:background "darkred" :foreground "white" :weight bold))))
@@ -588,8 +560,8 @@
   :diminish anzu-mode
 
   :custom-face
-   (anzu-mode-line ((t (:foreground "brightyellow" :background "black"))))
-   (anzu-mode-line-no-match ((t (:foreground "red" :background "black"))))
+   (anzu-mode-line ((t (:foreground "yellow"))))
+   (anzu-mode-line-no-match ((t (:foreground "red"))))
 
   :config
   (global-anzu-mode 1)
