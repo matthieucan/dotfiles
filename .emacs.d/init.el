@@ -796,3 +796,7 @@
 
 ;; C-h v emacs-kill-hook
 ;; ido is a good candidate
+
+(use-package face-explorer
+  :defer t
+  )
