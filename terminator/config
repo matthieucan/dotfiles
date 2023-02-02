@@ -34,17 +34,16 @@
   layout_launcher = <Primary><Shift><Alt>l
 [profiles]
   [[default]]
-    cursor_blink = False
     icon_bell = False
-    background_color = "#2E3440"
+    background_color = "#2e3440"
+    cursor_blink = False
     cursor_color = "#D8DEE9"
-    cursor_color_fg = False
     font = Monospace 9
-    foreground_color = "#D8DEE9"
+    foreground_color = "#d8dee9"
     show_titlebar = False
     scrollbar_position = hidden
     scrollback_infinite = True
-    palette = "#3B4252:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#88C0D0:#E5E9F0:#4C566A:#BF616A:#A3BE8C:#EBCB8B:#81A1C1:#B48EAD:#8FBCBB:#ECEFF4"
+    palette = "#3b4252:#bf616a:#a3be8c:#ebcb8b:#81a1c1:#b48ead:#88c0d0:#e5e9f0:#4c566a:#bf616a:#a3be8c:#ebcb8b:#81a1c1:#b48ead:#8fbcbb:#eceff4"
     use_system_font = False
 [layouts]
   [[default]]
