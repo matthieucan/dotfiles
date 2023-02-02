@@ -37,17 +37,18 @@
 
 ;; See https://github.com/nasseralkmim/.emacs.d/blob/master/init.el
 (use-package emacs
-  :bind (("C-x C-b" . ibuffer)
-	 ("M-n" . "\C-u1\C-v\C-n")  ; scroll one line down
-	 ("M-p" . "\C-u1\M-v\C-p")  ; scroll one line up
-	 ("M-j" . replace-regexp)   ; search&replace (regex)
-	 ("M-k" . query-replace)    ; search&replace (string)
-	 ("C-c y" . duplicate-line)
-	 ("C-c c" . duplicate-line-and-comment)
-         ("M-;" . my/comment-uncomment)
-         ;; ("C-M-n" . forward-list)   ; go to end of sexp
-         ;; ("C-M-p" . backward-list)  ; go to start of sexp
-	 )
+  :bind
+  (("C-x C-b" . ibuffer)
+   ("M-n" . "\C-u1\C-v\C-n")  ; scroll one line down
+   ("M-p" . "\C-u1\M-v\C-p")  ; scroll one line up
+   ("M-j" . replace-regexp)   ; search&replace (regex)
+   ("M-k" . query-replace)    ; search&replace (string)
+   ("C-c y" . duplicate-line)
+   ("C-c c" . duplicate-line-and-comment)
+   ("M-;" . my/comment-uncomment)
+   ;; ("C-M-n" . forward-list)   ; go to end of sexp
+   ;; ("C-M-p" . backward-list)  ; go to start of sexp
+   )
 
   :custom-face
   ;; reproduce terminal colors for graphical emacs
@@ -108,7 +109,7 @@
     (end-of-line)
     (let ((str (buffer-substring (region-beginning) (region-end))))
       (when commentfirst
-	(comment-region (region-beginning) (region-end)))
+        (comment-region (region-beginning) (region-end)))
       (insert
        (concat (if (= 0 (forward-line 1)) "" "\n") str "\n"))
       (forward-line -1)))
