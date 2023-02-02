@@ -71,6 +71,7 @@
   (line-number ((t (:foreground "grey50")))) ; line numbers in fringe
   (line-number-current-line ((t (:foreground "white"))))
   ;; (fill-column-indicator ((t (:foreground "color-233")))) ; column indicator
+  (secondary-selection ((t (:foreground "black" :background "yellow"))))
 
   :hook
   (prog-mode . display-line-numbers-mode) ; line numbers on the left margin
@@ -360,12 +361,12 @@
 
   (setq org-todo-keyword-faces
         '(
-         ("TODO" . (:foreground "white" :background "darkred" :weight bold))
+         ("TODO" . (:foreground "white" :background "red" :weight bold))
          ("NEXT" . (:foreground "black" :background "yellow" :weight bold))
          ("CURR" . (:foreground "black" :background "yellow" :weight bold))
          ("REVW" . (:foreground "black" :background "darkgreen" :weight bold))
          ("OPEN" . (:foreground "black" :background "white" :weight bold))
-         ("BLOC" . (:foreground "darkred" :background "white" :weight bold))
+         ("BLOC" . (:foreground "red" :background "brightblack" :weight bold))
          ("NOPE" . (:foreground "black" :background "blue" :weight bold))
          ("DONE" . (:foreground "white" :background "green" :weight bold))))
 
