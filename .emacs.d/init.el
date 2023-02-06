@@ -161,7 +161,6 @@
 ;; ====================
 
 (use-package org
-  :load-path "~/git/org-mode/lisp"
   :mode (("\\.org$" . org-mode))
 
   :hook
