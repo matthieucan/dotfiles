@@ -6,6 +6,7 @@
 
 ;; https://jeffkreeftmeijer.com/emacs-straight-use-package/
 ;; https://jeffkreeftmeijer.com/emacs-straight-use-package/
+;; https://systemcrafters.net/advanced-package-management/using-straight-el/
 
 ;; Install straight.el
 (defvar bootstrap-version)

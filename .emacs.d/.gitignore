@@ -7,3 +7,5 @@ url/
 saveplace
 ido.last
 ido.last~
+straight
+!straight/versions/default.el
