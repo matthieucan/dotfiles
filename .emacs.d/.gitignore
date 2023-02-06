@@ -3,9 +3,12 @@ ac-comphist.dat
 auto-save-list
 elpa/
 games/
-url/
-saveplace
 ido.last
 ido.last~
+org-persist/
+places
+projectile-bookmarks.eld
+saveplace
 straight
 !straight/versions/default.el
+url/
