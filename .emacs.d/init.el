@@ -77,7 +77,7 @@
   (prog-mode . display-line-numbers-mode) ; line numbers on the left margin
   (conf-mode . display-line-numbers-mode)
   (prog-mode . display-fill-column-indicator-mode) ; fill column on the right
-  (prog-mode . hl-line-mode) ; highlight current line
+  ;; (prog-mode . hl-line-mode) ; highlight current line
   (visual-line-mode . visual-fill-column-mode) ; use visual-fill-column to have logical lines wrap at fill-column
 
   :init
