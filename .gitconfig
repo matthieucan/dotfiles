@@ -44,6 +44,9 @@
 [push]
 	default = simple
 
+[pull]
+        rebase = true
+
 [help]
 	autocorrect = 20
 
