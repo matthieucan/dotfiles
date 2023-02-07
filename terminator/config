@@ -38,7 +38,8 @@
     icon_bell = False
     background_color = "#2e3440"
     cursor_blink = False
-    cursor_color = "#D8DEE9"
+    cursor_color = "#cc0000"
+    cursor_color_fg = False
     font = Monospace 9
     foreground_color = "#d8dee9"
     show_titlebar = False
