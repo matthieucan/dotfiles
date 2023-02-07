@@ -165,6 +165,8 @@
 
   :hook
   (org-mode . visual-line-mode)
+  (org-mode . (lambda () (set-fill-column 90)))
+
 
   ;; agenda: tag placement
   ;; place tags close to the right-hand side of the window
@@ -493,7 +495,7 @@
   :mode (("\\.md$" . markdown-mode))
 
   :hook
-  (markdown-mode . (lambda () (set-fill-column 80)))
+  (markdown-mode . (lambda () (set-fill-column 88)))
   (markdown-mode . display-fill-column-indicator-mode)
 
   :config
