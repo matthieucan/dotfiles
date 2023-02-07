@@ -2,6 +2,7 @@
   dbus = False
   handle_size = 1
   window_state = maximise
+  borderless = True
   title_transmit_fg_color = "#dcdcdc"
   title_transmit_bg_color = "#292929"
   title_inactive_fg_color = "#dcdcdc"
