@@ -8,7 +8,7 @@
   title_inactive_fg_color = "#dcdcdc"
   title_inactive_bg_color = "#525252"
   inactive_color_offset = 0.8309859154929577
-  enabled_plugins = LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  enabled_plugins = ActivityWatch, InactivityWatch, LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler
   title_use_system_font = False
   title_font = Sans Bold 7
 [keybindings]
