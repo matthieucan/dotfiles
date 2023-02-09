@@ -8,6 +8,7 @@ ido.last~
 org-persist/
 places
 projectile-bookmarks.eld
+recentf
 saveplace
 straight
 !straight/versions/default.el
