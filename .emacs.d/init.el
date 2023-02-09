@@ -65,6 +65,7 @@
   (font-lock-keyword-face ((t (:foreground "yellow"))))
   (font-lock-string-face ((t (:foreground "brightmagenta"))))
   (font-lock-variable-name-face ((t (:foreground "cyan"))))
+  (match ((t (:foreground "black" :background "yellow" :weight bold))))
   (minibuffer-prompt ((t (:foreground "yellow"))))
   (region ((t (:background "yellow" :foreground "black")))) ; region (selection)
   (hl-line ((t (:background "color-233")))) ; highlighted line around cursor
