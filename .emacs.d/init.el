@@ -143,10 +143,6 @@
   (save-place-mode 1) ; remember cursor position in files
   (setq save-place-forget-unreadable-files nil) ; speed-up exit
 
-  (ido-mode 1) ; interactively do things
-  (setq ido-enable-flex-matching t)
-  (setq ido-everywhere t)
-
   (global-auto-revert-mode 1) ; always reload files from disk when changed
 
   (setq vc-follow-symlinks t) ; always follow symlinks when opening a file
@@ -525,16 +521,6 @@
 )
 
 ;; ====================
-;; ido-vertical-mode
-;; ====================
-
-(use-package ido-vertical-mode
-  :config
-  (setq ido-vertical-define-keys 'C-n-and-C-p-only)
-  (ido-vertical-mode 1)
-)
-
-;; ====================
 ;; dumb-jump
 ;; ====================
 
@@ -598,6 +584,46 @@
   :config
   (global-company-mode 1)
   )
+
+;; ====================
+;; ivy/swiper/counsel
+;; ====================
+
+(use-package ivy
+  :diminish
+  :bind
+  (("M-x" . counsel-M-x)
+   ("M-y" . counsel-yank-pop)
+   ("C-h f" . counsel-describe-function)
+   ("C-x C-f" . counsel-find-file)
+   ("C-h v" . counsel-describe-variable)
+   ("C-c j" . counsel-git-grep)
+   ("C-s" . swiper)
+   ("C-r" . swiper-backward)
+   (:map ivy-minibuffer-map
+         ("<tab>" . ivy-alt-done)
+         ("<return>" . ivy-done)
+         ("C-o" . ivy-immediate-done)))
+
+  :custom
+  (setq
+   ivy-use-virtual-buffers t
+   ivy-count-format "%d/%d "
+   ivy-wrap t)
+
+  :init
+  (use-package counsel
+    :diminish
+    :config
+    (counsel-mode))
+
+  (use-package swiper
+    :diminish
+    )
+
+  :config
+  (ivy-mode)
+)
 
 ;; TODO https://codeberg.org/akib/emacs-corfu-terminal
 
@@ -720,6 +746,7 @@
 ;; (use-package projectile
 ;;   :config
 ;;   (projectile-mode 1)
+;;   (setq projectile-completion-system 'ivy)
 ;;   )
 
 ;; ====================
