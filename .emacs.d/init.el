@@ -595,8 +595,10 @@
   (("M-x" . counsel-M-x)
    ("M-y" . counsel-yank-pop)
    ("C-h f" . counsel-describe-function)
+   ("C-x b" . ivy-switch-buffer)
    ("C-x C-f" . counsel-find-file)
    ("C-h v" . counsel-describe-variable)
+   ("C-c i" . ivy-resume)
    ("C-c j" . counsel-git-grep)
    ("C-s" . swiper)
    ("C-r" . swiper-backward)
@@ -604,12 +606,6 @@
          ("<tab>" . ivy-alt-done)
          ("<return>" . ivy-done)
          ("C-o" . ivy-immediate-done)))
-
-  :custom
-  (setq
-   ivy-use-virtual-buffers t
-   ivy-count-format "%d/%d "
-   ivy-wrap t)
 
   :init
   (use-package counsel
@@ -621,7 +617,25 @@
     :diminish
     )
 
+  ;; columns in ivy-switch-buffer
+  (use-package ivy-rich
+    :config
+    (ivy-rich-mode)
+    (setcdr (assq t ivy-format-functions-alist) #'ivy-format-function-line)
+    )
+
+  :custom-face
+   (ivy-minibuffer-match-face-1 ((t (:foreground "black" :background "yellow"))))
+   (ivy-minibuffer-match-face-2 ((t (:inherit 'ivy-minibuffer-match-face-1))))
+   (ivy-minibuffer-match-face-3 ((t (:inherit 'ivy-minibuffer-match-face-1))))
+   (ivy-minibuffer-match-face-4 ((t (:inherit 'ivy-minibuffer-match-face-1))))
+
   :config
+  (setq
+   ivy-use-virtual-buffers t
+   ivy-count-format "%d/%d "
+   ivy-wrap t)
+
   (ivy-mode)
 )
 
