@@ -626,10 +626,11 @@
     )
 
   :custom-face
-   (ivy-minibuffer-match-face-1 ((t (:foreground "black" :background "yellow"))))
-   (ivy-minibuffer-match-face-2 ((t (:inherit 'ivy-minibuffer-match-face-1))))
-   (ivy-minibuffer-match-face-3 ((t (:inherit 'ivy-minibuffer-match-face-1))))
-   (ivy-minibuffer-match-face-4 ((t (:inherit 'ivy-minibuffer-match-face-1))))
+   (ivy-highlight-face ((t (:foreground "black" :background "yellow"))))
+   (ivy-minibuffer-match-face-1 ((t (:inherit 'ivy-highlight-face))))
+   (ivy-minibuffer-match-face-2 ((t (:inherit 'ivy-highlight-face))))
+   (ivy-minibuffer-match-face-3 ((t (:inherit 'ivy-highlight-face))))
+   (ivy-minibuffer-match-face-4 ((t (:inherit 'ivy-highlight-face))))
 
   :config
   (setq
