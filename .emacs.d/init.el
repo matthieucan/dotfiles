@@ -68,6 +68,7 @@
   (match ((t (:foreground "black" :background "yellow" :weight bold))))
   (minibuffer-prompt ((t (:foreground "yellow"))))
   (region ((t (:background "yellow" :foreground "black")))) ; region (selection)
+  (highlight ((t (:background "red" :foreground "black" :weight bold))))
   (hl-line ((t (:background "color-233")))) ; highlighted line around cursor
   (isearch ((t (:foreground "black" :background "yellow"))))
   (isearch-fail ((t (:foreground "black" :background "brightred"))))
@@ -631,6 +632,7 @@
    (ivy-minibuffer-match-face-2 ((t (:inherit 'ivy-highlight-face))))
    (ivy-minibuffer-match-face-3 ((t (:inherit 'ivy-highlight-face))))
    (ivy-minibuffer-match-face-4 ((t (:inherit 'ivy-highlight-face))))
+   (ivy-minibuffer-match-highlight ((t (:inherit 'ivy-highlight-face))))
 
   :config
   (setq
