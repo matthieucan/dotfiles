@@ -712,15 +712,18 @@
   :diminish git-gutter-mode
 
   :custom-face
-  (git-gutter:modified ((t (:foreground "blue" :background "black" :weight bold))))
-  (git-gutter:added ((t (:foreground "green" :background "black" :weight bold))))
-  (git-gutter:deleted ((t (:foreground "red" :background "black" :weight bold))))
+  (git-gutter:modified ((t (:foreground "black" :background "blue" :weight bold))))
+  (git-gutter:added ((t (:foreground "black" :background "green" :weight bold))))
+  (git-gutter:deleted ((t (:foreground "black" :background "red" :weight bold))))
+  (git-gutter:unchanged ((t (:background nil))))
 
   :config
   (setq git-gutter:update-interval 1)
   (setq git-gutter:modified-sign "~")
   (setq git-gutter:added-sign "+")
   (setq git-gutter:deleted-sign "-")
+  ;; prevents fringe from appearing and disappearing when file status changes
+  (setq git-gutter:unchanged-sign " ")
   (setq git-gutter:ask-p nil) ; don't ask confirmation to stage hunk
   (setq git-gutter:hide-gutter t) ; hide gutter when there are no changes
   )
