@@ -767,6 +767,9 @@
   :config
   (projectile-mode 1)
   (setq projectile-completion-system 'ivy)
+  ;; customize mode line
+  (setq projectile-mode-line-function
+        '(lambda () (format " Proj[%s]" (projectile-project-name))))
   )
 
 (use-package counsel-projectile
