@@ -499,9 +499,6 @@
   :hook
   (markdown-mode . (lambda () (set-fill-column 88)))
   (markdown-mode . display-fill-column-indicator-mode)
-
-  :config
-  (setq fill-column 88)
   )
 
 ;; ====================
