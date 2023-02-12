@@ -504,17 +504,6 @@
   )
 
 ;; ====================
-;; visual-fill-column
-;; ====================
-
-;; like visual-line-column, but wraps at fill-column instead of buffer width
-
-(use-package visual-fill-column
-  :hook
-  (visual-line-mode . visual-fill-column-mode) ; use visual-fill-column to have logical lines wrap at fill-column
-  )
-
-;; ====================
 ;; Dockerfile
 ;; ====================
 
