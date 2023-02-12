@@ -64,6 +64,7 @@
   (font-lock-function-name-face ((t (:foreground "cyan"))))
   (font-lock-keyword-face ((t (:foreground "yellow"))))
   (font-lock-string-face ((t (:foreground "brightmagenta"))))
+  (font-lock-type-face ((t (:foreground "green"))))
   (font-lock-variable-name-face ((t (:foreground "cyan"))))
   (match ((t (:foreground "black" :background "yellow" :weight bold))))
   (minibuffer-prompt ((t (:foreground "yellow"))))
