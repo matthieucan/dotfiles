@@ -647,32 +647,23 @@
 
 
 ;; ====================
-;; python
+;; eglot
 ;; ====================
 
-;; TODO configure LSP
-;; https://ddavis.io/posts/emacs-python-lsp/
+(use-package eglot
+  :hook
+  ;; python3 -m pip install 'python-lsp-server[all]'
+  (python-mode . eglot-ensure)
 
-;; M-x elpy-config
-
-(use-package elpy
-  :mode (("\\.py$" . elpy))
-
-  :init
-  (elpy-enable)
-
-  :config
-  (setq elpy-rpc-python-command "python3")
-  ;; disable indent guides
-  (setq elpy-modules (remove 'elpy-module-highlight-indentation elpy-modules))
-)
-
-(use-package company-jedi
-  :after company
-
-  :config
-  (add-to-list 'company-backends 'company-jedi)
-)
+  :bind
+  (:map eglot-mode-map
+	("C-M-j" . xref-find-definitions)
+	("C-M-k" . xref-go-back)
+	("M-r" . eglot-rename)
+        ("M-t" . xref-find-references)
+	("M-i" . flymake-goto-next-error)
+	("M-I" . flymake-goto-prev-error))
+  )
 
 ;; ====================
 ;; yaml
