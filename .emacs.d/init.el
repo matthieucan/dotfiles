@@ -93,6 +93,9 @@
   (menu-bar-mode -1) ; disable menu bar
   (scroll-bar-mode -1) ; disable scroll bar
 
+  (setq use-short-answers t) ; answer quesions with y/n
+  (setq confirm-kill-processes nil)
+
   ;; TODO smart parens https://github.com/Fuco1/smartparens
   (show-paren-mode 1) ; matching parentheses
   (setq show-paren-delay 0)
