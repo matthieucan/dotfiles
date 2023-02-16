@@ -650,13 +650,49 @@
 
 
 ;; ====================
+;; python
+;; ====================
+
+(use-package python
+  :straight (:type built-in)
+
+  :hook
+  (python-mode . (lambda () (set-fill-column 88)))
+
+  :bind
+  (("M-q" . python-fill-paragraph)
+   )
+
+  :config
+  (setq python-fill-docstring-style 'pep-257-nn)
+  ;; Remove guess indent python message
+  (setq python-indent-guess-indent-offset-verbose nil)
+
+  (setq eglot-workspace-configuration
+        '(:pylsp
+          (:plugins
+           (:pycodestyle
+            (:enabled :json-false)
+            :mccabe
+            (:enabled :json-false)
+            :pyflakes
+            (:enabled :json-false)
+            :flake8
+            (:enabled t)
+            )
+           :configurationSources ["flake8"])))
+
+  )
+
+;; ====================
 ;; eglot
 ;; ====================
 
 (use-package eglot
   :hook
-  ;; python3 -m pip install 'python-lsp-server[all]'
+  ;; python3 -m pip install 'python-lsp-server[all]' python-lsp-black
   (python-mode . eglot-ensure)
+  (after-save . eglot-format)
 
   :bind
   (:map eglot-mode-map
