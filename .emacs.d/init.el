@@ -573,6 +573,10 @@
 ;; ====================
 
 (use-package company
+  :diminish
+  :bind
+  (("M-s" . company-complete)
+   )
   :config
   (global-company-mode 1)
   )
