@@ -663,6 +663,11 @@
   :hook
   (python-mode . (lambda () (set-fill-column 88)))
 
+  ;; LSP for Python, through eglot
+  ;; https://github.com/python-lsp/python-lsp-server
+  ;; python3 -m pip install 'python-lsp-server[all]' python-lsp-black
+  (python-mode . eglot-ensure)
+
   :bind
   (("M-q" . python-fill-paragraph)
    )
@@ -685,8 +690,20 @@
             (:enabled t)
             )
            :configurationSources ["flake8"])))
-
   )
+
+;; activate virtual environment with pyvenv-activate
+(use-package pyvenv
+  :config
+  (pyvenv-mode t)
+  )
+
+(use-package pipenv
+  :hook (python-mode . pipenv-mode)
+  :init
+  (setq
+   pipenv-projectile-after-switch-function
+   #'pipenv-projectile-after-switch-extended))
 
 ;; ====================
 ;; eglot
@@ -694,8 +711,6 @@
 
 (use-package eglot
   :hook
-  ;; python3 -m pip install 'python-lsp-server[all]' python-lsp-black
-  (python-mode . eglot-ensure)
   (after-save . eglot-format)
 
   :bind
