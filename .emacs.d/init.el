@@ -665,7 +665,7 @@
 
   ;; LSP for Python, through eglot
   ;; https://github.com/python-lsp/python-lsp-server
-  ;; python3 -m pip install 'python-lsp-server[all]' python-lsp-black
+  ;; python3 -m pip install 'python-lsp-server[all]' python-lsp-black pylsp-mypy
   (python-mode . eglot-ensure)
 
   :bind
