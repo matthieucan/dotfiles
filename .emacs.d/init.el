@@ -652,6 +652,20 @@
 ;; (use-package company-box
 ;;   :hook (company-mode . company-box-mode))
 
+(use-package popup
+  :custom-face
+  (popup-tip-face ((t (:foreground "black" :background "yellow"))))
+
+  )
+
+(use-package eldoc
+  :config
+  ;; (defun my-eldoc-display-message (format-string &rest args)
+  ;;   "Display eldoc message near point."
+  ;;   (when format-string
+  ;;     (popup-tip (apply 'format format-string args))))
+  ;; (setq eldoc-message-function #'my-eldoc-display-message)
+  )
 
 ;; ====================
 ;; python
