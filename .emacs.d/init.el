@@ -230,7 +230,7 @@
    (org-scheduled ((t (:foreground "blue"))))
    (org-scheduled-previously ((t (:foreground "blue"))))
    (org-scheduled-today ((t (:foreground "blue"))))
-   ;; (org-sexp-date ((t (:foreground ))))
+   (org-sexp-date ((t (:foreground "white" ))))
    ;; (org-special-keyword ((t (:foreground ))))
    (org-table ((t (:foreground "blue"))))
    (org-tag ((t (:foreground "yellow" :background "color-234" :weight bold))))
