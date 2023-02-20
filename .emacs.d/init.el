@@ -454,6 +454,9 @@
    (outline-hide-subtree) ; hide and cycle renders better wrt empty lines between subtrees
    (org-cycle))
 
+   ;; org agenda block separator
+   (setq org-agenda-block-separator ?─)
+
   ;; other org modules
   ;; (load-file "~/.emacs.d/org-clock-csv.el")
   ;; (add-to-list 'org-modules 'org-habit t)
