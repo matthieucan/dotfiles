@@ -79,6 +79,7 @@
   (line-number-current-line ((t (:foreground "white"))))
   ;; (fill-column-indicator ((t (:foreground "color-233")))) ; column indicator
   (secondary-selection ((t (:foreground "black" :background "yellow"))))
+  (vertical-border ((t (:foreground "blue"))))
 
   :hook
   (prog-mode . display-line-numbers-mode) ; line numbers on the left margin
@@ -158,6 +159,13 @@
 
   ;; arrange completion list sorting vertically
   (setq completions-format 'vertical)
+
+  ;; prettier vertical window divider, without space between |s
+  (defun my-change-window-divider ()
+    (let ((display-table (or buffer-display-table standard-display-table)))
+      (set-display-table-slot display-table 5 ?│)
+      (set-window-display-table (selected-window) display-table)))
+  (add-hook 'window-configuration-change-hook 'my-change-window-divider)
 
   )
 
