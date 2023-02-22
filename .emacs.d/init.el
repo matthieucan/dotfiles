@@ -161,6 +161,8 @@
   (setq completions-format 'vertical)
 
   ;; prettier vertical window divider, without space between |s
+  (unless standard-display-table
+    (setq standard-display-table (make-display-table))) ; ensure display-table is set
   (defun my-change-window-divider ()
     (let ((display-table (or buffer-display-table standard-display-table)))
       (set-display-table-slot display-table 5 ?│)
