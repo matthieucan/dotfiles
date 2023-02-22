@@ -736,7 +736,8 @@
 
 (use-package eglot
   :hook
-  (after-save . eglot-format)
+  (after-save . (lambda () (when (and (boundp 'eglot--managed-mode) eglot--managed-mode)
+                             (eglot-format))))
 
   :bind
   (:map eglot-mode-map
