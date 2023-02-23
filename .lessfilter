@@ -3,7 +3,7 @@ case "$1" in
     *.awk|*.groff|*.java|*.js|*.m4|*.php|*.pl|*.pm|*.pod|*.sh|\
     *.ad[asb]|*.asm|*.inc|*.[ch]|*.[ch]pp|*.[ch]xx|*.cc|*.hh|\
     *.lsp|*.l|*.pas|*.p|*.xml|*.xps|*.xsl|*.axp|*.ppd|*.pov|\
-    *.diff|*.patch|*.py|*.rb|*.sql|*.ebuild|*.eclass|Dockerfile)
+    *.diff|*.patch|*.py|*.rb|*.sql|*.ebuild|*.eclass|Dockerfile|*.md)
         pygmentize -O style=monokai "$1";;
     .bashrc|.bash_aliases|.bash_environment)
         pygmentize -O style=monokai -l sh "$1"
