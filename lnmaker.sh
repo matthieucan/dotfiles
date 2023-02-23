@@ -18,6 +18,7 @@ ln ${dir}/.emacs.d ~/.emacs.d --symbolic
 # python
 rm ~/.pyrc
 ln ${dir}/.pyrc ~/.pyrc --symbolic
+rm ~/.config/flake8
 ln ${dir}/.flake8 ~/.config/flake8 --symbolic
 
 # git
