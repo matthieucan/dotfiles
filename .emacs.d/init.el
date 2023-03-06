@@ -733,6 +733,16 @@
    #'pipenv-projectile-after-switch-extended))
 
 ;; ====================
+;; flymake
+;; ====================
+
+(use-package flymake
+  :straight (:type built-in)
+  :custom-face
+  (flymake-error ((t (:inherit 'flymake-warning))))
+  )
+
+;; ====================
 ;; eglot
 ;; ====================
 
