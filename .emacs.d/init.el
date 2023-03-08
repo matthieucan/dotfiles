@@ -515,6 +515,7 @@
   :hook
   (markdown-mode . (lambda () (set-fill-column 88)))
   (markdown-mode . display-fill-column-indicator-mode)
+  (markdown-mode . auto-fill-mode)
   )
 
 ;; ====================
