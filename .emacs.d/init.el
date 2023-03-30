@@ -697,7 +697,8 @@
   (python-mode . eglot-ensure)
 
   :bind
-  (("M-q" . python-fill-paragraph)
+  (:map python-mode-map
+        ("M-q" . python-fill-paragraph)
    )
 
   :config
