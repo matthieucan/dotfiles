@@ -322,14 +322,7 @@
 		   )
 		  )
 	    (tags "task" ((org-agenda-overriding-header "Clockable tasks")))
-	    (tags-todo "TODO=\"DELG\"-ongoing"
-		  (
-		   (org-agenda-files '("~/org/picnic.org"))
-		   (org-agenda-overriding-header "Delegated")
-		   (org-agenda-sorting-strategy '(priority-down todo-state-down))
-		   )
-		  )
-	    (todo "TODO|NEXT|CURR|BLOC"
+	    (todo "TODO|NEXT|CURR|BLOC|DELG"
 		  (
 		   (org-agenda-files '("~/org/picnic.org"))
 		   (org-agenda-overriding-header "TODO list")
