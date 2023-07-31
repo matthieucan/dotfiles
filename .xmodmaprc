@@ -11,3 +11,7 @@ add control = Control_L
 !Note: works with session "Gnome on Xorg" while logging in in GDM
 
 ! Mod_switch
+
+! Alternatively, edit /usr/share/X11/xkb/symbols/pc to add near the bottom:
+! key <Alt_R> {       [  Ctrl_L               ]       };
+! https://unix.stackexchange.com/questions/623818/xmodmap-resets-when-keyboard-mode-changes
