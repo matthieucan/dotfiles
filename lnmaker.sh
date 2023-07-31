@@ -9,17 +9,17 @@ dir=$(readlink -f $1)
 
 # .bashrc
 rm ~/.bashrc
-ln ${dir}/.bashrc ~/.bashrc --symbolic
+ln -s ${dir}/.bashrc ~/.bashrc
 
 # emacs
-rm ~/.emacs.d
-ln ${dir}/.emacs.d ~/.emacs.d --symbolic
+rm -r ~/.emacs.d
+ln -s ${dir}/.emacs.d ~/.emacs.d
 
 # python
 rm ~/.pyrc
-ln ${dir}/.pyrc ~/.pyrc --symbolic
+ln -s ${dir}/.pyrc ~/.pyrc
 rm ~/.config/flake8
-ln ${dir}/.flake8 ~/.config/flake8 --symbolic
+ln -s ${dir}/.flake8 ~/.config/flake8
 
 # git
 # needed to handle different user.email's
@@ -33,48 +33,50 @@ chmod +x ~/bin/diff-highlight
 
 # tig
 rm -r ~/.tigrc
-ln ${dir}/.tigrc ~/.tigrc --symbolic
+ln -s ${dir}/.tigrc ~/.tigrc
 
 # terminator
 rm -r ~/.config/terminator
-ln ${dir}/terminator ~/.config/terminator --symbolic
+ln -s ${dir}/terminator ~/.config/terminator
 
 # .dir_colors
 rm ~/.dir_colors
-ln ${dir}/.dir_colors ~/.dir_colors --symbolic
+ln -s ${dir}/.dir_colors ~/.dir_colors
 
 # gtk
 rm ~/.gtkrc-2.0
-ln ${dir}/.gtkrc-2.0 ~/.gtkrc-2.0 --symbolic
+ln -s ${dir}/.gtkrc-2.0 ~/.gtkrc-2.0
 
 # zsh
 rm ~/.zlogin
-ln ${dir}/prezto/runcoms/zlogin ~/.zlogin --symbolic
+ln -s ${dir}/prezto/runcoms/zlogin ~/.zlogin
 rm ~/.zlogout
-ln ${dir}/prezto/runcoms/zlogout ~/.zlogout --symbolic
+ln -s ${dir}/prezto/runcoms/zlogout ~/.zlogout
 rm ~/.zpreztorc
-ln ${dir}/prezto/runcoms/zpreztorc ~/.zpreztorc --symbolic
+ln -s ${dir}/prezto/runcoms/zpreztorc ~/.zpreztorc
 rm ~/.zprofile
-ln ${dir}/prezto/runcoms/zprofile ~/.zprofile --symbolic
+ln -s ${dir}/prezto/runcoms/zprofile ~/.zprofile
 rm ~/.zshenv
-ln ${dir}/prezto/runcoms/zshenv ~/.zshenv --symbolic
+ln -s ${dir}/prezto/runcoms/zshenv ~/.zshenv
 rm ~/.zshrc
-ln ${dir}/prezto/runcoms/zshrc ~/.zshrc --symbolic
+ln -s ${dir}/prezto/runcoms/zshrc ~/.zshrc
+rm ~/.zshrc.picnic
+ln -s ${dir}/prezto/runcoms/zshrc.picnic ~/.zshrc.picnic
 rm ~/.zprezto -rf
-ln ${dir}/prezto ~/.zprezto --symbolic
+ln -s ${dir}/prezto ~/.zprezto
 
 # tmux
 rm ~/.tmux.conf
-ln ${dir}/.tmux.conf ~/.tmux.conf --symbolic
+ln -s ${dir}/.tmux.conf ~/.tmux.conf
 
 # xmodmap
 rm ~/.xmodmaprc
-ln ${dir}/.xmodmaprc ~/.xmodmaprc --symbolic
+ln -s ${dir}/.xmodmaprc ~/.xmodmaprc
 
 # less
 rm ~/.lessfilter
-ln ${dir}/.lessfilter ~/.lessfilter --symbolic
+ln -s ${dir}/.lessfilter ~/.lessfilter
 
 # docker
 rm -r ~/.docker
-ln ${dir}/.docker ~/.docker --symbolic
+ln -s ${dir}/.docker ~/.docker
