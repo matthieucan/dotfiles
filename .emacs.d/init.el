@@ -895,6 +895,16 @@
 (use-package writeroom-mode
   )
 
+;; ====================
+;; prettier minor mode
+;; ====================
+
+(use-package prettier-js
+  :hook
+  (markdown-mode . prettier-js-mode)
+  (js-mode . prettier-js-mode)
+  )
+
 ;; TODO
 ;; tramp-mode, editing remote files
 ;; helm https://github.com/emacs-helm/helm
