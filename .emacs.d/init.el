@@ -903,6 +903,12 @@
   :hook
   (markdown-mode . prettier-js-mode)
   (js-mode . prettier-js-mode)
+
+  :init
+  (setq prettier-js-args '(
+  "--print-width" "88"
+  "--prose-wrap" "always"
+  ))
   )
 
 ;; TODO
