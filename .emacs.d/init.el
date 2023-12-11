@@ -185,7 +185,7 @@
 
   ;; agenda: tag placement
   ;; place tags close to the right-hand side of the window
-  (org-agenda-mode . (lambda () (setq org-agenda-tags-column (- (window-width) 12))))
+  (org-agenda-mode . (lambda () (setq org-agenda-tags-column (- (window-width) 13))))
 
   :bind (("C-c l" . org-store-link)
 	 ("C-c a" . org-agenda)
