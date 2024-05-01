@@ -92,7 +92,8 @@
   (setq inhibit-startup-screen t) ; start emacs with scratch
   (tool-bar-mode -1) ; disable tool bar
   (menu-bar-mode -1) ; disable menu bar
-  (scroll-bar-mode -1) ; disable scroll bar
+  (when (display-graphic-p)
+    (scroll-bar-mode -1)) ; disable scroll bar
 
   (setq use-short-answers t) ; answer quesions with y/n
   (setq confirm-kill-processes nil)
