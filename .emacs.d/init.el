@@ -413,6 +413,9 @@
            "* %?\n  Entered on %U\n%i\n  %a")
           ("J" "Journal (displayed in agenda)" entry (file+datetree "~/org/log.org")
            "* %?\n  Entered on %T\n%i\n  %a")
+          ("p" "Note (picnic)" entry (file+olp+datetree "~/org/picnic.org" "Notes" "Captured")
+           "* Note: %? %^G\n%T\n"
+           :empty-lines 1 :empty-lines-after 2 :clock-keep t :tree-type month)
           ))
 
   ;; log time when task is done
