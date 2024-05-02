@@ -77,14 +77,12 @@
   (show-paren-match ((t (:background "cyan" :foreground "black")))) ; matching parentheses
   (line-number ((t (:foreground "grey50")))) ; line numbers in fringe
   (line-number-current-line ((t (:foreground "white"))))
-  ;; (fill-column-indicator ((t (:foreground "color-233")))) ; column indicator
   (secondary-selection ((t (:foreground "black" :background "yellow"))))
   (vertical-border ((t (:foreground "blue"))))
 
   :hook
   (prog-mode . display-line-numbers-mode) ; line numbers on the left margin
   (conf-mode . display-line-numbers-mode)
-  (prog-mode . display-fill-column-indicator-mode) ; fill column on the right
   ;; (prog-mode . hl-line-mode) ; highlight current line
 
   :init
@@ -464,7 +462,6 @@
 
   :hook
   (markdown-mode . (lambda () (set-fill-column 88)))
-  (markdown-mode . display-fill-column-indicator-mode)
   (markdown-mode . auto-fill-mode)
   )
 
