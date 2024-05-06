@@ -305,7 +305,8 @@
 	    (agenda ""
 		    (
 		     (org-agenda-files '("~/org/picnic.org" "~/org/contacts.org"))
-		     (org-agenda-sorting-strategy '(todo-state-up priority-down))
+		     ;; (org-agenda-sorting-strategy '(todo-state-up priority-down))
+                     (org-agenda-use-time-grid nil)
 		     )
 		    )
 	    (tags "ongoing-upcoming"
