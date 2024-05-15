@@ -271,7 +271,12 @@
           ("h" "Home"
            (
             ;; Main agenda
-            (agenda "")
+            (agenda
+             ""
+             (
+              (org-agenda-use-time-grid nil)
+              )
+             )
             ;; Other TODOs
             (
              tags-todo
@@ -295,9 +300,7 @@
              )
 	    )
 	   (
-            ;; (org-agenda-tag-filter-preset '("-picnic"))
             (org-agenda-files (remove "~/org/picnic.org" org-agenda-files))
-            ;; (org-agenda-files '("~/org/test.org"))
             )
 	   )
 	  ("p" "Picnic"
