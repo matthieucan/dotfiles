@@ -688,6 +688,10 @@
   (flymake-error ((t (:inherit 'flymake-warning))))
   )
 
+(use-package flymake-cursor
+  ; display flymake messages in minibuffer
+  )
+
 ;; ====================
 ;; eglot
 ;; ====================
