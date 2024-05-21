@@ -630,6 +630,9 @@
   ;;   (when format-string
   ;;     (popup-tip (apply 'format format-string args))))
   ;; (setq eldoc-message-function #'my-eldoc-display-message)
+
+  ;; Limit eldoc output to 1 line in minibuffer
+  (setq eldoc-echo-area-use-multiline-p nil)
   )
 
 ;; ====================
