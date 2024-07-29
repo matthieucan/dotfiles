@@ -237,6 +237,7 @@
    (org-tag ((t (:foreground "yellow" :background "color-234" :weight bold))))
    (org-todo ((t (:foreground "red" :weight bold))))
    (org-upcoming-deadline ((t (:foreground "red" :weight bold))))
+   (org-upcoming-distant-deadline ((t (:foreground "red" :weight bold))))
    (org-deadline-announce ((t (:foreground "red" :weight bold))))
    (org-warning ((t (:foreground "red" :weight bold))))
 
