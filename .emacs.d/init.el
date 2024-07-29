@@ -318,13 +318,19 @@
 		   (org-agenda-sorting-strategy '(priority-down todo-state-up))
 		   )
 		  )
+	    (tags "people"
+		  (
+		   (org-agenda-overriding-header "People")
+		   (org-agenda-sorting-strategy '(priority-down todo-state-up))
+		   )
+		  )
+	    (tags "task" ((org-agenda-overriding-header "Clockable tasks")))
 	    (tags "upcoming"
 		  (
 		   (org-agenda-overriding-header "Upcoming projects")
 		   (org-agenda-sorting-strategy '(priority-down todo-state-up))
 		   )
 		  )
-	    (tags "task" ((org-agenda-overriding-header "Clockable tasks")))
 	    (todo "TODO|NEXT|CURR|BLOC|DELG"
 		  (
 		   (org-agenda-files '("~/org/picnic.org"))
