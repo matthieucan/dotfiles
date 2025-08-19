@@ -188,7 +188,7 @@
 
   :bind (("C-c l" . org-store-link)
 	 ("C-c a" . org-agenda)
-	 ("C-c p" . org-capture)
+	 ("C-c k" . org-capture)
 	 ("C-c u" . my/org-narrow-parent))
 
   :custom-face
