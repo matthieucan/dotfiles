@@ -907,17 +907,17 @@
 ;; prettier minor mode
 ;; ====================
 
-(use-package prettier-js
-  :hook
-  (markdown-mode . prettier-js-mode)
-  (js-mode . prettier-js-mode)
+;; (use-package prettier-js
+;;   :hook
+;;   (markdown-mode . prettier-js-mode)
+;;   (js-mode . prettier-js-mode)
 
-  :init
-  (setq prettier-js-args '(
-  "--print-width" "88"
-  "--prose-wrap" "always"
-  ))
-  )
+;;   :init
+;;   (setq prettier-js-args '(
+;;   "--print-width" "88"
+;;   "--prose-wrap" "always"
+;;   ))
+;;   )
 
 ;; TODO
 ;; tramp-mode, editing remote files
