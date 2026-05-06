@@ -59,6 +59,13 @@
   (custom-state ((t (:foreground "green"))))
   (custom-variable-tag ((t (:foreground "blue"))))
   (diff-added ((t (:background "green" :foreground "black"))))
+  (diff-changed-unspecified ((t (:foreground "black"))))
+  (diff-file-header ((t (:foreground "black"))))
+  (diff-function ((t (:foreground "black"))))
+  (diff-header ((t (:foreground "black"))))
+  (diff-hunk-header ((t (:foreground "black"))))
+  (diff-refine-added ((t (:foreground "black"))))
+  (diff-refine-removed ((t (:foreground "black"))))
   (diff-removed ((t (:background "red" :foreground "black"))))
   (font-lock-comment-face ((t (:foreground "blue"))))
   (font-lock-function-name-face ((t (:foreground "cyan"))))
@@ -66,6 +73,8 @@
   (font-lock-string-face ((t (:foreground "brightmagenta"))))
   (font-lock-type-face ((t (:foreground "green"))))
   (font-lock-variable-name-face ((t (:foreground "cyan"))))
+  (magit-section-heading ((t (:background "yellow" :foreground "black" :weight bold))))  
+  (magit-section-highlight ((t (:background "red" :foreground "black" :weight bold))))  
   (match ((t (:foreground "black" :background "yellow" :weight bold))))
   (minibuffer-prompt ((t (:foreground "yellow"))))
   (region ((t (:background "yellow" :foreground "black")))) ; region (selection)
@@ -78,6 +87,7 @@
   (line-number ((t (:foreground "grey50")))) ; line numbers in fringe
   (line-number-current-line ((t (:foreground "white"))))
   (secondary-selection ((t (:foreground "black" :background "yellow"))))
+  (transient-key-exit ((t (:foreground "red" :underline t :weight bold)))) ; magit transient menu
   (vertical-border ((t (:foreground "blue"))))
 
   :hook
@@ -731,7 +741,9 @@
 ;; git
 ;; ====================
 
-;; TODO magit
+(use-package magit
+  :ensure t
+  )
 
 ;; https://github.com/emacsorphanage/git-gutter
 (use-package git-gutter
