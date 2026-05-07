@@ -73,23 +73,23 @@
   (font-lock-string-face ((t (:foreground "brightmagenta"))))
   (font-lock-type-face ((t (:foreground "green"))))
   (font-lock-variable-name-face ((t (:foreground "cyan"))))
-  (magit-section-heading ((t (:background "yellow" :foreground "black" :weight bold))))  
-  (magit-section-highlight ((t (:background "red" :foreground "black" :weight bold))))  
-  (match ((t (:foreground "black" :background "yellow" :weight bold))))
-  (minibuffer-prompt ((t (:foreground "yellow"))))
-  (region ((t (:background "yellow" :foreground "black")))) ; region (selection)
   (highlight ((t (:background "red" :foreground "black" :weight bold))))
   (hl-line ((t (:background "color-233")))) ; highlighted line around cursor
   (isearch ((t (:foreground "black" :background "yellow"))))
   (isearch-fail ((t (:foreground "black" :background "brightred"))))
   (lazy-highlight ((t (:foreground "black" :background "blue"))))
+  (line-number ((t (:foreground "grey50")))) ; line numbers in fringe
+  (line-number-current-line ((t (:foreground "white"))))
+  (magit-section-heading ((t (:background "yellow" :foreground "black" :weight bold))))
+  (magit-section-highlight ((t (:background "red" :foreground "black" :weight bold))))
+  (match ((t (:foreground "black" :background "yellow" :weight bold))))
+  (minibuffer-prompt ((t (:foreground "yellow"))))
+  (region ((t (:background "yellow" :foreground "black")))) ; region (selection)
+  (secondary-selection ((t (:foreground "black" :background "yellow"))))
   (show-paren-match ((t (:background "cyan" :foreground "black")))) ; matching parentheses
   (smerge-lower ((t (:foreground "black"))))
   (smerge-markers ((t (:foreground "black"))))
   (smerge-upper ((t (:foreground "black"))))
-  (line-number ((t (:foreground "grey50")))) ; line numbers in fringe
-  (line-number-current-line ((t (:foreground "white"))))
-  (secondary-selection ((t (:foreground "black" :background "yellow"))))
   (transient-key-exit ((t (:foreground "red" :underline t :weight bold)))) ; magit transient menu
   (vertical-border ((t (:foreground "blue"))))
 
