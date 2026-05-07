@@ -81,6 +81,9 @@
   (line-number ((t (:foreground "grey50")))) ; line numbers in fringe
   (line-number-current-line ((t (:foreground "white"))))
   (magit-diff-context ((t (:foreground "white" :background nil))))
+  (magit-log-author ((t (:foreground "red"))))
+  (magit-log-date ((t (:foreground "white"))))
+  (magit-log-graph ((t (:foreground "white"))))
   (magit-section-heading ((t (:background "yellow" :foreground "black" :weight bold))))
   (magit-section-highlight ((t (:background "color-240" :foreground "white" :weight bold))))
   (match ((t (:foreground "black" :background "yellow" :weight bold))))
