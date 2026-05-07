@@ -747,6 +747,9 @@
 
 (use-package magit
   :ensure t
+
+  :hook
+  (after-save . magit-after-save-refresh-status)
   )
 
 ;; https://github.com/emacsorphanage/git-gutter
