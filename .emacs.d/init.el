@@ -84,6 +84,9 @@
   (isearch-fail ((t (:foreground "black" :background "brightred"))))
   (lazy-highlight ((t (:foreground "black" :background "blue"))))
   (show-paren-match ((t (:background "cyan" :foreground "black")))) ; matching parentheses
+  (smerge-lower ((t (:foreground "black"))))
+  (smerge-markers ((t (:foreground "black"))))
+  (smerge-upper ((t (:foreground "black"))))
   (line-number ((t (:foreground "grey50")))) ; line numbers in fringe
   (line-number-current-line ((t (:foreground "white"))))
   (secondary-selection ((t (:foreground "black" :background "yellow"))))
