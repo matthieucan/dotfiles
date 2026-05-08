@@ -80,7 +80,7 @@
   (lazy-highlight ((t (:foreground "black" :background "blue"))))
   (line-number ((t (:foreground "grey50")))) ; line numbers in fringe
   (line-number-current-line ((t (:foreground "white"))))
-  (magit-diff-context ((t (:foreground "white" :background nil))))
+  (magit-diff-context ((t (:foreground "white" :background unspecified))))
   (magit-log-author ((t (:foreground "red"))))
   (magit-log-date ((t (:foreground "white"))))
   (magit-log-graph ((t (:foreground "white"))))
@@ -209,15 +209,15 @@
 	 ("C-c u" . my/org-narrow-parent))
 
   :custom-face
-   (org-agenda-calendar-event ((t (:foreground "brightwhite" :background nil))))
-   (org-agenda-calendar-sexp ((t (:foreground "brightwhite" :background nil :slant normal))))
-   (org-agenda-date ((t (:foreground "yellow" :background nil :underline nil))))
-   (org-agenda-date-today ((t (:foreground "yellow" :background nil :weight bold :slant normal))))
+   (org-agenda-calendar-event ((t (:foreground "brightwhite" :background unspecified))))
+   (org-agenda-calendar-sexp ((t (:foreground "brightwhite" :background unspecified :slant normal))))
+   (org-agenda-date ((t (:foreground "yellow" :background unspecified :underline unspecified))))
+   (org-agenda-date-today ((t (:foreground "yellow" :background unspecified :weight bold :slant normal))))
    (org-agenda-date-weekend ((t (:inherit 'org-agenda-date))))
    (org-agenda-date-weekend-today ((t (:inherit 'org-agenda-date-today))))
    ;; (org-agenda-dimmed-todo-face ((t (:foreground))))
    (org-agenda-done ((t (:foreground "green"))))
-   (org-agenda-structure ((t (:foreground "blue" :background nil))))
+   (org-agenda-structure ((t (:foreground "blue" :background unspecified))))
    (org-time-grid ((t (:foreground "yellow"))))
    (org-block ((t (:foreground "brightcyan"))))
    (org-code ((t (:foreground "white"))))
@@ -232,7 +232,7 @@
    (org-ellipsis ((t (:foreground "blue"))))
    (org-footnote ((t (:foreground "white"))))
    (org-formula ((t (:foreground "yellow"))))
-   (org-headline-done ((t (:foreground "green" :bold nil :strike-through t))))
+   (org-headline-done ((t (:foreground "green" :bold unspecified :strike-through t))))
    ;; (org-hide ((t (:foreground  :background ))))
    (org-level-1 ((t (:weight bold :foreground "blue"))))
    (org-level-2 ((t (:weight bold :foreground "magenta"))))
@@ -243,7 +243,7 @@
    (org-level-7 ((t (:weight bold :foreground "brightmagenta"))))
    (org-level-8 ((t (:weight bold :foreground "brightcyan"))))
    (org-link ((t (:foreground "yellow" :underline t))))
-   (org-meta-line ((t (:foreground "yellow" :background))))
+   (org-meta-line ((t (:foreground "yellow" :background unspecified))))
    (org-priority ((t (:foreground "red" :weight normal))))
    (org-scheduled ((t (:foreground "blue"))))
    (org-scheduled-previously ((t (:foreground "blue"))))
@@ -529,8 +529,8 @@
   (setq sml/modified-char "*")
 
   :custom-face
-  (mode-line ((t (:foreground "black" :background "color-233" :underline nil))))
-  (mode-line-inactive ((t (:foreground "white":background nil :underline nil))))
+  (mode-line ((t (:foreground "black" :background "color-233" :underline unspecified))))
+  (mode-line-inactive ((t (:foreground "white" :background unspecified :underline unspecified))))
   (sml/col-number ((t (:foreground "yellow"))))
   (sml/line-number ((t (:inherit 'sml/col-number))))
   (sml/modified ((t (:background "darkred" :foreground "white" :weight bold))))
@@ -767,7 +767,7 @@
   (git-gutter:modified ((t (:foreground "black" :background "blue" :weight bold))))
   (git-gutter:added ((t (:foreground "black" :background "green" :weight bold))))
   (git-gutter:deleted ((t (:foreground "black" :background "red" :weight bold))))
-  (git-gutter:unchanged ((t (:background nil))))
+  (git-gutter:unchanged ((t (:background unspecified))))
 
   :config
   (setq git-gutter:update-interval 1)
