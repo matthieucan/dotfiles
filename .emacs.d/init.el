@@ -80,12 +80,6 @@
   (lazy-highlight ((t (:foreground "black" :background "blue"))))
   (line-number ((t (:foreground "grey50")))) ; line numbers in fringe
   (line-number-current-line ((t (:foreground "white"))))
-  (magit-diff-context ((t (:foreground "white" :background unspecified))))
-  (magit-log-author ((t (:foreground "red"))))
-  (magit-log-date ((t (:foreground "white"))))
-  (magit-log-graph ((t (:foreground "white"))))
-  (magit-section-heading ((t (:background "yellow" :foreground "black" :weight bold))))
-  (magit-section-highlight ((t (:background "color-240" :foreground "white" :weight bold))))
   (match ((t (:foreground "black" :background "yellow" :weight bold))))
   (minibuffer-prompt ((t (:foreground "yellow"))))
   (region ((t (:background "yellow" :foreground "black")))) ; region (selection)
@@ -753,7 +747,15 @@
 
   :hook
   (after-save . magit-after-save-refresh-status)
-  )
+
+  :custom-face
+  (magit-diff-context ((t (:foreground "white" :background unspecified))))
+  (magit-log-author ((t (:foreground "red"))))
+  (magit-log-date ((t (:foreground "white"))))
+  (magit-log-graph ((t (:foreground "white"))))
+  (magit-section-heading ((t (:background "yellow" :foreground "black" :weight bold))))
+  (magit-section-highlight ((t (:background "color-240" :foreground "white" :weight bold))))
+   )
 
 ;; https://github.com/emacsorphanage/git-gutter
 (use-package git-gutter
