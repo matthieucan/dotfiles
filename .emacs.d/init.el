@@ -729,6 +729,13 @@
 ;; eglot
 ;; ====================
 
+; Prevent conflict between built-in `project` and elpa `project`
+; https://www.reddit.com/r/emacs/comments/1e5mtfs/comment/lu1isg9
+; https://github.com/joaotavora/eglot/discussions/1436
+(use-package project
+  :straight (:type built-in)
+  )
+
 (use-package eglot
   :hook
   (after-save . (lambda () (when (and (boundp 'eglot--managed-mode) eglot--managed-mode)
