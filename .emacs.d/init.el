@@ -750,6 +750,10 @@
         ("M-t" . xref-find-references)
 	("M-i" . flymake-goto-next-error)
 	("M-I" . flymake-goto-prev-error))
+
+  :config
+  ; Disable highlight symbol at point and its references
+  (setq eglot-ignored-server-capabilites '(:documentHighlightProvider))
   )
 
 ;; ====================
