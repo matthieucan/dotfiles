@@ -98,7 +98,7 @@
   (line-number-current-line ((t (:foreground "white"))))
   (match ((t (:foreground "black" :background "yellow" :weight bold))))
   (minibuffer-prompt ((t (:foreground "yellow"))))
-  (region ((t (:background "yellow" :foreground "black")))) ; region (selection)
+  (region ((t (:background "yellow" :foreground "black" :extend t)))) ; region (selection)
   (secondary-selection ((t (:foreground "black" :background "yellow"))))
   (show-paren-match ((t (:background "cyan" :foreground "black")))) ; matching parentheses
   (smerge-lower ((t (:foreground "black"))))
