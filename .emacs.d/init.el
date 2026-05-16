@@ -83,6 +83,7 @@
   ;; (ediff-odd-diff-Ancestor  ((t (:foreground "black")))) ;; white on grey
   (ediff-odd-diff-B  ((t (:foreground "black"))))
   (ediff-odd-diff-C  ((t (:foreground "black"))))
+  (font-lock-builtin-face ((t (:foreground "color-249"))))
   (font-lock-comment-face ((t (:foreground "blue"))))
   (font-lock-function-name-face ((t (:foreground "cyan"))))
   (font-lock-keyword-face ((t (:foreground "yellow"))))
