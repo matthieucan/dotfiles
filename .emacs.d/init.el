@@ -777,9 +777,12 @@
   (magit-log-author ((t (:foreground "red"))))
   (magit-log-date ((t (:foreground "white"))))
   (magit-log-graph ((t (:foreground "white"))))
+  (magit-diff-added-highlight ((t (:background "#22aa22" :foreground "#cceecc" :extend t :weight bold))))
+  (magit-diff-context-highlight ((t (:background "white" :foreground "black" :extend t :weight bold))))
+  (magit-diff-removed-highlight ((t (:background "#aa2222" :foreground "#eecccc" :extend t :weight bold))))
   (magit-section-heading ((t (:background "yellow" :foreground "black" :weight bold))))
   (magit-section-highlight ((t (:background "color-240" :foreground "white" :weight bold))))
-   )
+  )
 
 ;; https://github.com/emacsorphanage/git-gutter
 (use-package git-gutter
