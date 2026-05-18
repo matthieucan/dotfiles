@@ -100,7 +100,7 @@
   (match ((t (:foreground "black" :background "yellow" :weight bold))))
   (minibuffer-prompt ((t (:foreground "yellow"))))
   (region ((t (:background "yellow" :foreground "black" :extend t)))) ; region (selection)
-  (secondary-selection ((t (:foreground "black" :background "yellow"))))
+  (secondary-selection ((t (:foreground "black" :background "yellow" :extend t)))) ; org-agenda-clocking inherits it
   (show-paren-match ((t (:background "cyan" :foreground "black")))) ; matching parentheses
   (smerge-lower ((t (:foreground "black"))))
   (smerge-markers ((t (:foreground "black"))))
