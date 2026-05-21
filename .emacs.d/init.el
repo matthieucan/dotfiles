@@ -539,16 +539,17 @@
   (setq sml/replacer-regexp-list '((".*" ""))) ; only show file name, not path
   (setq sml/modified-char "*")
 
-  :custom-face
-  (mode-line ((t (:foreground "black" :background "color-233" :underline unspecified))))
-  (mode-line-inactive ((t (:foreground "white" :background unspecified :underline unspecified))))
-  (sml/col-number ((t (:foreground "yellow"))))
-  (sml/line-number ((t (:inherit 'sml/col-number))))
-  (sml/modified ((t (:background "darkred" :foreground "white" :weight bold))))
-
   :config
   (sml/setup)
-  )
+  ;; Faces are set after sml/setup so they win over the smart-mode-line-dark
+  ;; theme that sml/setup loads. use-package's :custom-face uses
+  ;; face-defface-spec, which themes override.
+  (custom-set-faces
+   '(mode-line ((t (:foreground "black" :background "color-233" :underline unspecified))))
+   '(mode-line-inactive ((t (:foreground "white" :background unspecified :underline unspecified))))
+   '(sml/col-number ((t (:foreground "yellow"))))
+   '(sml/line-number ((t (:inherit sml/col-number))))
+   '(sml/modified ((t (:background "darkred" :foreground "white" :weight bold))))))
 
 ;; ====================
 ;; anzu
