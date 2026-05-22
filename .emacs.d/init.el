@@ -224,8 +224,8 @@
    (org-agenda-calendar-sexp ((t (:foreground "brightwhite" :background unspecified :slant normal))))
    (org-agenda-date ((t (:foreground "yellow" :background unspecified :underline unspecified))))
    (org-agenda-date-today ((t (:foreground "yellow" :background unspecified :weight bold :slant normal))))
-   (org-agenda-date-weekend ((t (:inherit 'org-agenda-date))))
-   (org-agenda-date-weekend-today ((t (:inherit 'org-agenda-date-today))))
+   (org-agenda-date-weekend ((t (:inherit org-agenda-date))))
+   (org-agenda-date-weekend-today ((t (:inherit org-agenda-date-today))))
    ;; (org-agenda-dimmed-todo-face ((t (:foreground))))
    (org-agenda-done ((t (:foreground "green"))))
    (org-agenda-structure ((t (:foreground "blue" :background unspecified))))
@@ -243,7 +243,7 @@
    (org-ellipsis ((t (:foreground "blue"))))
    (org-footnote ((t (:foreground "white"))))
    (org-formula ((t (:foreground "yellow"))))
-   (org-headline-done ((t (:foreground "green" :bold unspecified :strike-through t))))
+   (org-headline-done ((t (:foreground "green" :weight normal :strike-through t))))
    ;; (org-hide ((t (:foreground  :background ))))
    (org-level-1 ((t (:weight bold :foreground "blue"))))
    (org-level-2 ((t (:weight bold :foreground "magenta"))))
@@ -623,11 +623,6 @@
 
   :custom-face
    (ivy-highlight-face ((t (:foreground "black" :background "yellow"))))
-   (ivy-minibuffer-match-face-1 ((t (:inherit 'ivy-highlight-face))))
-   (ivy-minibuffer-match-face-2 ((t (:inherit 'ivy-highlight-face))))
-   (ivy-minibuffer-match-face-3 ((t (:inherit 'ivy-highlight-face))))
-   (ivy-minibuffer-match-face-4 ((t (:inherit 'ivy-highlight-face))))
-   (ivy-minibuffer-match-highlight ((t (:inherit 'ivy-highlight-face))))
 
   :config
   (setq
@@ -724,7 +719,7 @@
 (use-package flymake
   :straight (:type built-in)
   :custom-face
-  (flymake-error ((t (:inherit 'flymake-warning))))
+  (flymake-error ((t (:inherit flymake-warning))))
   )
 
 ;; ====================
