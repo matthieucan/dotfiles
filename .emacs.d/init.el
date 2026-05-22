@@ -896,8 +896,8 @@
   ;; add parameters to rg
   ;; https://github.com/Wilfred/deadgrep/issues/24#issuecomment-942290197
   (defun deadgrep--include-args (rg-args)
-    (push "--hidden" rg-args) ; consider hidden folders/files
-    ;; (push "--follow" rg-args) ; follow symlink
+    (cons "--hidden" rg-args) ; consider hidden folders/files
+    ;; (cons "--follow" ...)  ; follow symlink
     )
   (advice-add 'deadgrep--arguments :filter-return #'deadgrep--include-args)
   )
