@@ -930,16 +930,17 @@
   (prog-mode . hs-minor-mode)
 
   :config
+  (defface overlay-string-face
+    '((t (:background "green" :foreground "black" :box t)))
+    "Face to hightlight the ... area of hidden regions"
+    :group 'hideshow)
+
   ;; add overlay to indicate folded lines
   (defun display-folded-overlay (ov)
     (when (eq 'code (overlay-get ov 'hs))
       (let ((overlay-string (format "...%d lines"
                                     (count-lines (overlay-start ov)
                                                  (overlay-end ov)))))
-        (defface overlay-string-face
-          '((t (:background "green" :foreground "black" :box t)))
-          "Face to hightlight the ... area of hidden regions"
-          :group 'hideshow)
         (put-text-property 0 (length overlay-string)
                            'face 'overlay-string-face overlay-string)
         (overlay-put ov 'display overlay-string)
