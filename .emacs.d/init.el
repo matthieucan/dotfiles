@@ -749,7 +749,7 @@
 
   :config
   ; Disable highlight symbol at point and its references
-  (setq eglot-ignored-server-capabilites '(:documentHighlightProvider))
+  (setq eglot-ignored-server-capabilities '(:documentHighlightProvider))
   )
 
 ;; ====================
