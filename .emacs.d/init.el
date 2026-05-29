@@ -982,6 +982,19 @@
   )
 
 ;; ====================
+;; Claude Code
+;; ====================
+
+(use-package claude-code-ide
+  :straight (:type git :host github :repo "manzaltu/claude-code-ide.el")
+
+  :bind (("C-c b" . claude-code-ide-menu))
+
+  :config
+  (setq claude-code-ide-terminal-backend 'eat)
+  (claude-code-ide-emacs-tools-setup)) ; Optionally enable Emacs MCP tools
+
+;; ====================
 ;; prettier minor mode
 ;; ====================
 
