@@ -1,5 +1,9 @@
 ;; emacs configuration
 
+;; Ensure init.el takes precedence over init.elc when newer
+;; Keep it before straight boostrap
+(setq load-prefer-newer t)
+
 ;; ====================
 ;; package management - straight.el / use-package.el
 ;; ====================
