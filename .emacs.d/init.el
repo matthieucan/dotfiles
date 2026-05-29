@@ -960,6 +960,28 @@
   )
 
 ;; ====================
+;; eat - emulate a terminal
+;; ====================
+
+(use-package eat
+  :bind
+  (("C-c o t" . eat)
+   ("C-c o T" . eat-other-window)
+   ;; Make C-c C-e toggle: semi-char -> emacs (default, via the semi-char
+   ;; minor-mode map which takes precedence), emacs -> semi-char (this binding
+   ;; in the always-active major-mode map, reached once semi-char mode is off).
+   (:map eat-mode-map
+         ("C-c C-e" . eat-semi-char-mode))
+   )
+
+  :config
+  (setq eat-kill-buffer-on-exit t)
+  (setq eat-shell-prompt-annotation-failure-margin-indicator "")
+  (setq eat-shell-prompt-annotation-running-margin-indicator "")
+  (setq eat-shell-prompt-annotation-success-margin-indicator "")
+  )
+
+;; ====================
 ;; prettier minor mode
 ;; ====================
 
