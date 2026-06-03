@@ -995,6 +995,15 @@
   (claude-code-ide-emacs-tools-setup)) ; Optionally enable Emacs MCP tools
 
 ;; ====================
+;; Javascript / JSON
+;; ====================
+
+(use-package js
+  :straight nil
+  :custom
+  (js-indent-level 2))
+
+;; ====================
 ;; prettier minor mode
 ;; ====================
 
