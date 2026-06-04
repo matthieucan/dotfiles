@@ -1004,6 +1004,16 @@
   (js-indent-level 2))
 
 ;; ====================
+;; Terraform
+;; ====================
+
+(use-package terraform-mode
+  :straight t
+  :custom (terraform-indent-level 4)
+  :config
+  )
+
+;; ====================
 ;; prettier minor mode
 ;; ====================
 
