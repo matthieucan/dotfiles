@@ -247,7 +247,7 @@
    (org-ellipsis ((t (:foreground "blue"))))
    (org-footnote ((t (:foreground "white"))))
    (org-formula ((t (:foreground "yellow"))))
-   (org-headline-done ((t (:foreground "green" :weight normal :strike-through t))))
+   (org-headline-done ((t (:foreground "green" :weight normal))))
    ;; (org-hide ((t (:foreground  :background ))))
    (org-level-1 ((t (:weight bold :foreground "blue"))))
    (org-level-2 ((t (:weight bold :foreground "magenta"))))
