@@ -776,6 +776,10 @@
   :hook
   (after-save . magit-after-save-refresh-status)
 
+  :bind
+  (("C-c g" . magit-dispatch)
+   ("C-c f" . magit-file-dispatch))
+
   :custom-face
   (magit-diff-context ((t (:foreground "white" :background unspecified))))
   (magit-log-author ((t (:foreground "red"))))
