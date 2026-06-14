@@ -4,6 +4,7 @@ auto-save-list
 bookmarks
 eln-cache/
 elpa/
+eshell/history
 games/
 ido.last
 ido.last~
@@ -14,5 +15,6 @@ recentf
 saveplace
 straight
 !straight/versions/default.el
+tramp
 transient/
 url/
