@@ -18,6 +18,22 @@
         lineNumber = green
         match = red bold
 
+[branch]
+        # Branches with most recent commits first.
+        sort = -committerdate
+
+[diff]
+        # Replace "a/" and "b/" in `git diff` output with "i/" for index, "w/"
+        # for working tree and "/c" for commit.
+        mnemonicPrefix = true
+
+[fetch]
+        # Remove local remote-tracking branches that no longer exist on the
+        # remote.
+        prune = true
+        # Remove local tags that no longer exist on the remote.
+        pruneTags = true
+
 [pager]
         log = colordiff | ~/bin/diff-highlight | less
         show = colordiff | ~/bin/diff-highlight | less
@@ -47,6 +63,37 @@
 
 [pull]
         rebase = true
+
+[rebase]
+        # Squash commits into previous if commit message starts with
+        # "squash! ", "fixup! " or "amend! ".
+        autoSquash = true
+        # Stash local changes before rebasing and apply them after rebasing.
+        autoStash = true
+        # Prevent accidental removal of commits when rebasing.
+        missingCommitsCheck = error
+        # Rebase stacked branches together
+        updateRefs = true
+
+[rerere]
+        # Record resolved conflicts.
+        enabled = true
+        # Automatically apply recorded resolution when the same conflict is
+        # encountered again.
+        autoupdate = true
+
+[gpg]
+        format = ssh
+
+[commit]
+        gpgsign = true
+
+[url "git@github.com:"]
+        insteadOf = "https://github.com/"
+
+[tag]
+        # 2 before 10.
+        sort = version:refname
 
 [help]
 	autocorrect = 20
