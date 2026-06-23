@@ -797,7 +797,9 @@
 
   :bind
   (("C-c g" . magit-dispatch)
-   ("C-c f" . magit-file-dispatch))
+   ("C-c f" . magit-file-dispatch)
+   (:map magit-mode-map
+         ("TAB" . magit-section-cycle)))
 
   :custom-face
   (magit-diff-context ((t (:foreground "white" :background unspecified))))
