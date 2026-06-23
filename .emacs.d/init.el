@@ -87,7 +87,7 @@
   ;; (ediff-odd-diff-Ancestor  ((t (:foreground "black")))) ;; white on grey
   (ediff-odd-diff-B  ((t (:foreground "black"))))
   (ediff-odd-diff-C  ((t (:foreground "black"))))
-  (font-lock-builtin-face ((t (:foreground "color-249"))))
+  (font-lock-builtin-face ((t (:foreground "gray70"))))
   (font-lock-comment-face ((t (:foreground "blue"))))
   (font-lock-function-name-face ((t (:foreground "cyan"))))
   (font-lock-keyword-face ((t (:foreground "yellow"))))
@@ -95,7 +95,7 @@
   (font-lock-type-face ((t (:foreground "green"))))
   (font-lock-variable-name-face ((t (:foreground "cyan"))))
   (highlight ((t (:background "red" :foreground "black" :weight bold))))
-  (hl-line ((t (:background "color-233")))) ; highlighted line around cursor
+  (hl-line ((t (:background "gray3")))) ; highlighted line around cursor
   (isearch ((t (:foreground "black" :background "yellow"))))
   (isearch-fail ((t (:foreground "black" :background "brightred"))))
   (lazy-highlight ((t (:foreground "black" :background "blue"))))
@@ -124,6 +124,25 @@
   (menu-bar-mode -1) ; disable menu bar
   (when (display-graphic-p)
     (scroll-bar-mode -1)) ; disable scroll bar
+
+  (setq xterm-standard-colors
+        '(("black"          0 ( 59  65  81))
+          ("red"            1 (190  96 105))
+          ("green"          2 (163 189 139))
+          ("yellow"         3 (235 202 138))
+          ("blue"           4 (129 160 192))
+          ("magenta"        5 (180 141 172))
+          ("cyan"           6 (136 191 207))
+          ("white"          7 (229 232 239))
+          ("brightblack"    8 ( 76  85 105))
+          ("brightred"      9 (190  96 105))
+          ("brightgreen"   10 (163 189 139))
+          ("brightyellow"  11 (235 202 138))
+          ("brightblue"    12 (129 160 192))
+          ("brightmagenta" 13 (180 141 172))
+          ("brightcyan"    14 (143 187 186))
+          ("brightwhite"   15 (236 238 243)))
+        )
 
   (setq use-short-answers t) ; answer quesions with y/n
   (setq confirm-kill-processes nil)
@@ -266,7 +285,7 @@
    (org-sexp-date ((t (:foreground "white" ))))
    ;; (org-special-keyword ((t (:foreground ))))
    (org-table ((t (:foreground "blue"))))
-   (org-tag ((t (:foreground "yellow" :background "color-234" :weight bold))))
+   (org-tag ((t (:foreground "yellow" :background "gray3" :weight bold))))
    (org-todo ((t (:foreground "red" :weight bold))))
    (org-upcoming-deadline ((t (:foreground "red" :weight bold))))
    (org-upcoming-distant-deadline ((t (:foreground "red" :weight bold))))
@@ -388,7 +407,7 @@
 
   ;; priorities
   (setq org-priority-faces
-        '((?A . (:foreground "darkred" :background "color-246" :weight bold))
+        '((?A . (:foreground "darkred" :background "gray58" :weight bold))
           (?B . (:foreground "yellow"))
           (?C . (:foreground "green"))))
 
@@ -549,7 +568,7 @@
   ;; theme that sml/setup loads. use-package's :custom-face uses
   ;; face-defface-spec, which themes override.
   (custom-set-faces
-   '(mode-line ((t (:foreground "black" :background "color-233" :underline unspecified))))
+   '(mode-line ((t (:foreground "black" :background "gray3" :underline unspecified))))
    '(mode-line-inactive ((t (:foreground "white" :background unspecified :underline unspecified))))
    '(sml/col-number ((t (:foreground "yellow"))))
    '(sml/line-number ((t (:inherit sml/col-number))))
@@ -789,7 +808,7 @@
   (magit-diff-context-highlight ((t (:background "white" :foreground "black" :extend t :weight bold))))
   (magit-diff-removed-highlight ((t (:background "#aa2222" :foreground "#eecccc" :extend t :weight bold))))
   (magit-section-heading ((t (:background "yellow" :foreground "black" :weight bold))))
-  (magit-section-highlight ((t (:background "color-240" :foreground "white" :weight bold))))
+  (magit-section-highlight ((t (:background "gray35" :foreground "white" :weight bold))))
   )
 
 ;; https://github.com/emacsorphanage/git-gutter
