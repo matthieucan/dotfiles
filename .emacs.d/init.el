@@ -611,6 +611,10 @@
 
 (use-package ivy
   :diminish
+
+  :custom-face
+  (ivy-minibuffer-match-face-1 ((t (:foreground "black" :background "green"))))
+
   :bind
   (("M-x" . counsel-M-x)
    ("M-y" . counsel-yank-pop)
