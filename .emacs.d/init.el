@@ -383,7 +383,7 @@
 		   (org-agenda-sorting-strategy '(priority-down todo-state-up))
 		   )
 		  )
-	    (todo "TODO|NEXT|CURR|BLOC|DELG"
+	    (todo "TODO|CURR|BLOC|DELG"
 		  (
 		   (org-agenda-files '("~/org/picnic.org"))
 		   (org-agenda-overriding-header "TODO list")
@@ -413,12 +413,11 @@
 
   ;; todo items
   (setq org-todo-keywords
-        '((sequence "TODO" "BLOC" "NEXT" "CURR" "|" "NOPE" "DONE")))
+        '((sequence "TODO" "BLOC" "CURR" "|" "NOPE" "DONE")))
 
   (setq org-todo-keyword-faces
         '(
          ("TODO" . (:foreground "white" :background "red" :weight bold))
-         ("NEXT" . (:foreground "black" :background "yellow" :weight bold))
          ("CURR" . (:foreground "black" :background "yellow" :weight bold))
          ("REVW" . (:foreground "black" :background "darkgreen" :weight bold))
          ("OPEN" . (:foreground "black" :background "white" :weight bold))
