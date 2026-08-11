@@ -106,9 +106,11 @@
   (region ((t (:background "yellow" :foreground "black" :extend t)))) ; region (selection)
   (secondary-selection ((t (:foreground "black" :background "yellow" :extend t)))) ; org-agenda-clocking inherits it
   (show-paren-match ((t (:background "cyan" :foreground "black")))) ; matching parentheses
-  (smerge-lower ((t (:foreground "black"))))
-  (smerge-markers ((t (:foreground "black"))))
-  (smerge-upper ((t (:foreground "black"))))
+  (smerge-lower ((t (:foreground "white"))))
+  (smerge-markers ((t (:background "white" :foreground "black"))))
+  (smerge-refined-added ((t (:foreground "green"))))
+  (smerge-refined-removed ((t (:foreground "red"))))
+  (smerge-upper ((t (:foreground "white"))))
   (transient-key-exit ((t (:foreground "red" :underline t :weight bold)))) ; magit transient menu
   (vertical-border ((t (:foreground "blue"))))
 
