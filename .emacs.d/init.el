@@ -483,6 +483,10 @@
   (setq org-log-done 'time)
   (setq org-log-into-drawer t)
 
+  ;; persist clock history across restarts
+  (setq org-clock-persist 'history)
+  (org-clock-persistence-insinuate)
+
   ;; duration format in clock tables
   ;; either "1d 2:34" when duration>1day, or "2:34" otherwise
   (setq org-duration-format '(("d" . nil) (special . h:mm)))
