@@ -482,6 +482,9 @@
            :empty-lines 1 :empty-lines-after 2 :clock-keep t)
           ))
 
+  ;; refile
+  (setq org-refile-targets '(("picnic.org" :tag . "ongoing")))
+
   ;; log time when task is done
   (setq org-log-done 'time)
   (setq org-log-into-drawer t)
