@@ -421,7 +421,6 @@
         '(
          ("TODO" . (:foreground "white" :background "red" :weight bold))
          ("CURR" . (:foreground "black" :background "yellow" :weight bold))
-         ("REVW" . (:foreground "black" :background "darkgreen" :weight bold))
          ("OPEN" . (:foreground "black" :background "white" :weight bold))
          ("BLOC" . (:foreground "red" :background "brightblack" :weight bold))
          ("NOPE" . (:foreground "black" :background "blue" :weight bold))
